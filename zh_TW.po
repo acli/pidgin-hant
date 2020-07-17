@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: Pidgin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-09 22:15-0500\n"
-"PO-Revision-Date: 2020-06-06 08:16+0000\n"
-"Last-Translator: Gary Kramlich <grim@reaperworld.com>\n"
+"PO-Revision-Date: 2020-07-16 17:20-0400\n"
+"Last-Translator: Ambrose Li <ambrose.li@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/pidgin/pidgin/"
 "language/zh_TW/)\n"
 "Language: zh_TW\n"
@@ -635,7 +635,7 @@ msgstr "<自動回應> "
 #, c-format
 msgid "List of %d user:\n"
 msgid_plural "List of %d users:\n"
-msgstr[0] ""
+msgstr[0] "%d個使用者：\n"
 
 msgid "Supported debug options are: plugins version"
 msgstr "支援的除錯選項有：plugins version"
@@ -1249,7 +1249,7 @@ msgid "(default)"
 msgstr "(預設)"
 
 msgid "Select Sound File..."
-msgstr ""
+msgstr "請選擇音效檔..."
 
 msgid "Sound Preferences"
 msgstr "音效設定"
@@ -1368,12 +1368,13 @@ msgstr "訊息："
 msgid "Edit Status"
 msgstr "修改狀態"
 
+# FIXME
 msgid "Use a different status for some accounts"
-msgstr ""
+msgstr "讓某些帳號使用不同的狀態"
 
 #. Save and Use
 msgid "Save and Use"
-msgstr ""
+msgstr "儲存並使用"
 
 msgid "Certificates"
 msgstr "憑證"
@@ -1725,7 +1726,7 @@ msgid "Certificate Information"
 msgstr "憑證資訊"
 
 msgid "Unable to find Issuer Certificate"
-msgstr ""
+msgstr "無法找到發行者憑證"
 
 #. Make messages
 #, c-format
@@ -1739,16 +1740,26 @@ msgid ""
 "Activation date: %s\n"
 "Expiration date: %s\n"
 msgstr ""
+"Common name: %s\n"
+"\n"
+"發行者：%s\n"
+"\n"
+"SHA1指紋：%s\n"
+"\n"
+"啟動日期：%s\n"
+"失效日期：%s\n"
 
 msgid "(self-signed)"
-msgstr ""
+msgstr "（自簽）"
 
 msgid "View Issuer Certificate"
-msgstr ""
+msgstr "檢視發行者憑證"
 
+# FIXME - garden path
 msgid "Registration Error"
 msgstr "註冊錯誤"
 
+# FIXME - garden path
 msgid "Unregistration Error"
 msgstr "移除註冊錯誤"
 
@@ -2109,12 +2120,16 @@ msgid ""
 "<span style=\"color: #16569E\"><span style=\"font-size: smaller\">(%s)</"
 "span> <b>%s &lt;AUTO-REPLY&gt;:</b></span> %s<br>\n"
 msgstr ""
+"<span style=\"color: #16569E\"><span style=\"font-size: smaller\">(%s)</"
+"span> <b>%s &lt;自動回覆&gt;：</b></span>%s<br>\n"
 
 #, c-format
 msgid ""
 "<span style=\"color: #A82F2F\"><span style=\"font-size: smaller\">(%s)</"
 "span> <b>%s &lt;AUTO-REPLY&gt;:</b></span> %s<br>\n"
 msgstr ""
+"<span style=\"color: #A82F2F\"><span style=\"font-size: smaller\">(%s)</"
+"span> <b>%s &lt;自動回覆&gt;：</b></span>%s<br>\n"
 
 msgid "<font color=\"red\"><b>Unable to find log path!</b></font>"
 msgstr "<font color=\"red\"><b>找不到日誌檔案！</b></font>"
@@ -2132,6 +2147,9 @@ msgid ""
 "\n"
 "Message from Farsight: "
 msgstr ""
+"\n"
+"\n"
+"Farsight 訊息："
 
 msgid ""
 "Error initializing the call. This probably denotes problem in installation "
@@ -2139,7 +2157,7 @@ msgid ""
 msgstr ""
 
 msgid "Network error."
-msgstr ""
+msgstr "網路錯誤。"
 
 msgid ""
 "Codec negotiation failed. This problem might be resolved by installing more "
@@ -2186,7 +2204,7 @@ msgstr ""
 #. * user to check if her speakers or headphones have been
 #. * set up correctly for voice calling.
 msgid "Test Sound"
-msgstr ""
+msgstr "測試用音效"
 
 msgid "Disabled"
 msgstr "停用"
@@ -2197,7 +2215,7 @@ msgstr "停用"
 #. * the video output has been set up correctly without
 #. * needing a webcam connected to the computer.
 msgid "Test Pattern"
-msgstr ""
+msgstr "測試用視訊"
 
 #, c-format
 msgid "You are using %s, but this plugin requires %s."
@@ -2388,7 +2406,7 @@ msgid "I'dle Mak'er"
 msgstr "I'dle Mak'er"
 
 msgid "Set Account Idle Time"
-msgstr "自定個別帳號的閒置時間"
+msgstr "自訂個別帳號的閒置時間"
 
 msgid "_Set"
 msgstr "設定(_S)"
@@ -2729,10 +2747,12 @@ msgstr "未卜先知"
 msgid "Psychic mode for incoming conversation"
 msgstr "「未卜先知」將要開始的交談"
 
+# NOTE: from old PO file
 msgid ""
 "Causes conversation windows to appear as other users begin to message you.  "
 "This works for AIM, ICQ, XMPP, and Sametime"
 msgstr ""
+"對方一開始與您交談，就立即打開交談視窗。適用於 AIM、ICQ、XMPP 及 Sametime。"
 
 msgid "You feel a disturbance in the force..."
 msgstr "您感受到了原力的擾動..."
@@ -2782,38 +2802,38 @@ msgid "Tests to see that most things are working."
 msgstr "用來測試是否大部份的東西都能正常運作。"
 
 msgid "TLS/SSL Versions"
-msgstr ""
+msgstr "TLS/SSL 版本"
 
 msgid "Minimum Version"
-msgstr ""
+msgstr "版本下限"
 
 msgid "Maximum Version"
-msgstr ""
+msgstr "版本上限"
 
 msgid "SSL 2"
-msgstr ""
+msgstr "SSL 2"
 
 msgid "SSL 3"
-msgstr ""
+msgstr "SSL 3"
 
 msgid "TLS 1.0"
-msgstr ""
+msgstr "TLS 1.0"
 
 msgid "TLS 1.1"
-msgstr ""
+msgstr "TLS 1.1"
 
 msgid "TLS 1.2"
-msgstr ""
+msgstr "TLS 1.2"
 
 msgid "TLS 1.3"
-msgstr ""
+msgstr "TLS 1.3"
 
 #. TODO: look into how to do this for older versions?
 msgid "Not Supported for NSS < 3.14"
-msgstr ""
+msgstr "NSS 3.14 版以下不支援此功能"
 
 msgid "Ciphers"
-msgstr ""
+msgstr "加密方式"
 
 #. *< type
 #. *< ui_requirement
@@ -2822,14 +2842,14 @@ msgstr ""
 #. *< priority
 #. *< id
 msgid "NSS Preferences"
-msgstr ""
+msgstr "NSS 設定"
 
 #. *< name
 #. *< version
 #. *  summary
 #. *  description
 msgid "Configure Ciphers and other Settings for the NSS SSL/TLS Plugin"
-msgstr ""
+msgstr "為 NSS SSL/TLS 模組設定加密方式及其他選項"
 
 #. Scheme name
 msgid "X.509 Certificates"
@@ -3149,9 +3169,10 @@ msgstr "聊天室名稱(_N)："
 msgid "Connecting"
 msgstr "連線中"
 
+# NOTE: from old po file
 #, c-format
 msgid "Unable to resolve hostname: %s"
-msgstr ""
+msgstr "無法解析主機名稱：%s"
 
 msgid "Chat error"
 msgstr "聊天錯誤"
@@ -3306,8 +3327,9 @@ msgstr "編碼"
 msgid "Auto-detect incoming UTF-8"
 msgstr "自動偵測來訊 UTF-8"
 
+# FIXME
 msgid "Ident name"
-msgstr ""
+msgstr "Ident 值"
 
 msgid "Real name"
 msgstr "姓名"
@@ -3320,10 +3342,10 @@ msgid "Use SSL"
 msgstr "使用 SSL"
 
 msgid "Authenticate with SASL"
-msgstr ""
+msgstr "使用 SASL 認證"
 
 msgid "Allow plaintext SASL auth over unencrypted connection"
-msgstr ""
+msgstr "允許使用明文，在未經加密的連線進行 SASL 認證"
 
 msgid "Bad mode"
 msgstr "模式無效"
@@ -3360,10 +3382,10 @@ msgid "Nick"
 msgstr "暱稱"
 
 msgid "Login name"
-msgstr ""
+msgstr "登入名稱"
 
 msgid "Host name"
-msgstr ""
+msgstr "主機名稱"
 
 msgid "Currently on"
 msgstr "所在頻道"
@@ -3525,7 +3547,7 @@ msgid "SASL authentication failed: Initializing SASL failed."
 msgstr ""
 
 msgid "Incorrect Password"
-msgstr ""
+msgstr "密碼錯誤"
 
 msgid "SASL authentication failed: No worthy mechanisms found"
 msgstr ""
@@ -3771,7 +3793,7 @@ msgstr "伺服器可能需要經由未經加密的串流進行明文認證"
 msgid ""
 "%s may require plaintext authentication over an unencrypted connection.  "
 "Allow this and continue authentication?"
-msgstr "%s 可能需要經由未經加密的串流進行明文認證。允許並繼續進行認證？"
+msgstr "%s 可能需要經由未經加密的連線進行明文認證。允許並繼續進行認證？"
 
 msgid "SASL authentication failed"
 msgstr "SASL 認證失敗"
@@ -4647,7 +4669,7 @@ msgstr "BOSH 網址"
 #. * later on
 #.
 msgid "Show Custom Smileys"
-msgstr "顯示自定表情"
+msgstr "顯示自訂表情"
 
 #, c-format
 msgid "%s has left the conversation."
@@ -4755,7 +4777,7 @@ msgid "The queue for %s has reached its maximum length of %u."
 msgstr ""
 
 msgid "XMPP stream management"
-msgstr ""
+msgstr "XMPP 串流管理"
 
 msgid "Stanza queue is full"
 msgstr ""
@@ -5525,10 +5547,10 @@ msgid "Received invalid data on connection with server"
 msgstr "連線至伺服器時收到無效的資料"
 
 msgid "Error parsing response from authentication server"
-msgstr ""
+msgstr "解析認證伺服器的回應時發生錯誤"
 
 msgid "Unknown error during authentication"
-msgstr ""
+msgstr "認證途中出現未知錯誤"
 
 #. *< type
 #. *< ui_requirement
@@ -5658,7 +5680,7 @@ msgstr "您在帳號設定中指定了使用加密，但您的系統不支援加
 msgid ""
 "You required Kerberos authentication but encryption is disabled in your "
 "account settings."
-msgstr ""
+msgstr "您指定了使用 Kerberos 認證，但您在帳號設定停用了加密功能。"
 
 #, c-format
 msgid "You may be disconnected shortly.  If so, check %s for updates."
@@ -6142,17 +6164,19 @@ msgstr "顯示等待認證的好友"
 msgid "Search for Buddy by Email Address..."
 msgstr "使用電子郵件地址搜尋好友..."
 
+# FIXME
 msgid "clientLogin"
-msgstr ""
+msgstr "用戶端登入"
 
 msgid "Kerberos"
-msgstr ""
+msgstr "Kerberos"
 
+# FIXME
 msgid "MD5-based"
-msgstr ""
+msgstr "以MD5為基礎"
 
 msgid "Authentication method"
-msgstr ""
+msgstr "認證方法"
 
 msgid ""
 "Always use AIM/ICQ proxy server for\n"
@@ -7628,7 +7652,7 @@ msgid "Private Key file"
 msgstr "私鑰檔案"
 
 msgid "Cipher"
-msgstr "加密方法"
+msgstr "加密方式"
 
 msgid "HMAC"
 msgstr "HMAC"
@@ -8127,7 +8151,7 @@ msgstr "+++ %s 不再閒置"
 #.
 #, c-format
 msgid "%x %X"
-msgstr "%x %X"
+msgstr "%x%X"
 
 msgid "Calculating..."
 msgstr "計算中..."
@@ -8138,32 +8162,32 @@ msgstr "未知。"
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
+msgstr[0] "%d秒"
 
 #, c-format
 msgid "%d day"
 msgid_plural "%d days"
-msgstr[0] ""
+msgstr[0] "%d天"
 
 #, c-format
 msgid "%s, %d hour"
 msgid_plural "%s, %d hours"
-msgstr[0] ""
+msgstr[0] "%s%d小時"
 
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] ""
+msgstr[0] "%d小時"
 
 #, c-format
 msgid "%s, %d minute"
 msgid_plural "%s, %d minutes"
-msgstr[0] ""
+msgstr[0] "%s%d分"
 
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] ""
+msgstr[0] "%d分"
 
 #, c-format
 msgid "Could not open %s: Redirected too many times"
@@ -8235,20 +8259,21 @@ msgstr ""
 "在解析您的%s時發生錯誤。檔案內的資料並沒有被讀入，同時舊檔案已移至 %s~。"
 
 msgid "Instant Messaging Client"
-msgstr ""
+msgstr "即時通訊用戶端"
 
 msgid ""
 "Pidgin is a chat program which lets you log in to accounts on multiple chat "
 "networks simultaneously."
-msgstr ""
+msgstr "Pidgin 是一個讓你在多個聊天網路同時登入不同帳號的聊天程式。"
 
 msgid ""
 "This means that you can be chatting with friends on AIM, talking to a friend "
 "on Google Talk, and sitting in an IRC chat room all at the same time."
 msgstr ""
+"你可以同時在 AIM 上與好友聊天，又透過 Google Talk 和朋友通話，又待在 IRC 聊天室。"
 
 msgid "The buddy list showing friends on different networks."
-msgstr ""
+msgstr "不同網路上的好友都在一個好友清單上"
 
 msgid "Pidgin Internet Messenger"
 msgstr "Pidgin 網路即時通"
@@ -8256,8 +8281,9 @@ msgstr "Pidgin 網路即時通"
 msgid "Internet Messenger"
 msgstr "網路即時通"
 
+# NOTE: adapted from old po file
 msgid "Chat over IM.  Supports AIM, Google Talk, Jabber/XMPP, and more"
-msgstr ""
+msgstr "透過即時通訊與好友聊天，支援 AIM、Google Talk、Jabber/XMPP 等等"
 
 #. Build the login options frame.
 msgid "Login Options"
@@ -8274,7 +8300,7 @@ msgstr "記住密碼(_W)"
 
 #. Build the user options frame.
 msgid "User Options"
-msgstr "使用者自定選項"
+msgstr "使用者自訂選項"
 
 msgid "_Local alias:"
 msgstr "帳號別名（只在本機生效）(_L)："
@@ -8597,7 +8623,7 @@ msgid "Set Custom Icon"
 msgstr "設定自訂圖示"
 
 msgid "Remove Custom Icon"
-msgstr "移除自定圖示"
+msgstr "移除自訂圖示"
 
 msgid "Add _Buddy..."
 msgstr "新增好友(_B)..."
@@ -8721,7 +8747,7 @@ msgid "/Tools/_Certificates"
 msgstr "/工具/憑證(_C)"
 
 msgid "/Tools/Custom Smile_ys"
-msgstr "/工具/自定表情(_Y)"
+msgstr "/工具/自訂表情(_Y)"
 
 msgid "/Tools/Plu_gins"
 msgstr "/工具/模組(_G)"
@@ -8858,7 +8884,7 @@ msgid_plural "%d unread messages from %s\n"
 msgstr[0] ""
 
 msgid "Manually"
-msgstr "使用者自定"
+msgstr "使用者自訂"
 
 msgid "By status"
 msgstr "依照狀態"
@@ -8972,10 +8998,11 @@ msgid "_Group:"
 msgstr "群組(_G)："
 
 msgid "Automatically _join when account connects"
-msgstr ""
+msgstr "帳號連線時自動加入(_J)"
 
+# FIXME copied old string
 msgid "_Remain in chat after window is closed"
-msgstr ""
+msgstr "關閉視窗時只將聊天隱藏(_R)"
 
 msgid "Please enter the name of the group to be added."
 msgstr "請給您新增的群組輸入名稱。"
@@ -9015,7 +9042,7 @@ msgid "SSL Servers"
 msgstr "SSL 伺服器"
 
 msgid "Supported debug options are: plugins, version"
-msgstr ""
+msgstr "支援的除錯選項：plugins、version"
 
 msgid "Unknown command."
 msgstr "未知的指令"
@@ -9071,7 +9098,7 @@ msgid "Save Icon As..."
 msgstr "儲存圖示..."
 
 msgid "Set Custom Icon..."
-msgstr "自定圖示..."
+msgstr "自訂圖示..."
 
 msgid "Change Size"
 msgstr "更改大小"
@@ -9265,7 +9292,7 @@ msgstr "傳送(_S)"
 
 #. Setup the label telling how many people are in the room.
 msgid "0 people in room"
-msgstr "沒有人在這個房間"
+msgstr "沒有人在聊天室"
 
 msgid "Close Find bar"
 msgstr "關閉文字尋找列"
@@ -9276,7 +9303,7 @@ msgstr "尋找："
 #, c-format
 msgid "%d person in room"
 msgid_plural "%d people in room"
-msgstr[0] ""
+msgstr[0] "有%d個人在聊天室"
 
 msgid "Stopped Typing"
 msgstr "停止輸入"
@@ -9290,10 +9317,13 @@ msgstr "未讀訊息"
 msgid "New Event"
 msgstr "新事件"
 
+# NOTE: from old po file
 msgid ""
 "The account has disconnected and you are no longer in this chat. You will "
 "automatically rejoin the chat when the account reconnects."
 msgstr ""
+"因帳號已停止連線，您已離開這個聊天室；一旦帳號重新連線，即會自動重新加入這個"
+"聊天室。"
 
 msgid "clear: Clears all conversation scrollbacks."
 msgstr "clear：清空所有交談的回捲緩衝區"
@@ -9431,268 +9461,270 @@ msgid "Senior Contributor/QA"
 msgstr "資深貢獻者兼品管"
 
 msgid "Afrikaans"
-msgstr "南非荷蘭文"
+msgstr "斐語"
 
 msgid "Arabic"
-msgstr "阿拉伯文"
+msgstr "阿拉伯語"
 
 msgid "Assamese"
-msgstr "阿薩姆文"
+msgstr "阿薩姆語"
 
 msgid "Asturian"
-msgstr ""
+msgstr "阿斯圖里亞斯語"
 
 msgid "Belarusian Latin"
-msgstr "白俄羅斯文"
+msgstr "白俄羅斯語"
 
 msgid "Bulgarian"
-msgstr "保加利亞文"
+msgstr "保加利亞語"
 
 msgid "Bengali"
-msgstr "孟加拉文"
+msgstr "孟加拉語"
 
 msgid "Bengali-India"
-msgstr "印式孟加拉文"
+msgstr "印式孟加拉語"
 
 msgid "Breton"
-msgstr ""
+msgstr "布列塔尼語"
 
 msgid "Bodo"
-msgstr ""
+msgstr "博多語"
 
 msgid "Bosnian"
-msgstr "波希尼亞文"
+msgstr "波希尼亞語"
 
 msgid "Catalan"
-msgstr "加泰隆文"
+msgstr "加泰隆語"
 
 msgid "Valencian-Catalan"
-msgstr "瓦倫西亞文"
+msgstr "瓦倫西亞語"
 
 msgid "Czech"
-msgstr "捷克文"
+msgstr "捷克語"
 
 msgid "Danish"
-msgstr "丹麥文"
+msgstr "丹麥語"
 
 msgid "German"
-msgstr "德文"
+msgstr "德語"
 
 msgid "Dzongkha"
-msgstr "不丹文"
+msgstr "不丹語"
 
 msgid "Greek"
-msgstr "希臘文"
+msgstr "希臘語"
 
 msgid "Australian English"
-msgstr "澳洲式英文"
+msgstr "澳洲式英語"
 
 msgid "British English"
-msgstr "英式英文"
+msgstr "英式英語"
 
 msgid "Canadian English"
-msgstr "加拿大式英文"
+msgstr "加拿大式英語"
 
 msgid "Esperanto"
 msgstr "世界語"
 
 msgid "Spanish"
-msgstr "西班牙文"
+msgstr "西班牙語"
 
 msgid "Argentine Spanish"
-msgstr ""
+msgstr "阿根廷式西班牙語"
 
 msgid "Estonian"
-msgstr "愛沙尼亞文"
+msgstr "愛沙尼亞語"
 
 msgid "Basque"
-msgstr "巴斯克文"
+msgstr "巴斯克語"
 
 msgid "Persian"
-msgstr "波斯文"
+msgstr "波斯語"
 
 msgid "Finnish"
-msgstr "芬蘭文"
+msgstr "芬蘭語"
 
 msgid "Irish"
-msgstr "愛爾蘭文"
+msgstr "愛爾蘭語"
 
 msgid "Galician"
-msgstr "加里西亞文"
+msgstr "加里西亞語"
 
 msgid "Gujarati"
-msgstr "古吉拉特文"
+msgstr "古吉拉特語"
 
 msgid "Gujarati Language Team"
-msgstr "古吉拉特文翻譯小組"
+msgstr "古吉拉特語翻譯小組"
 
 msgid "Hebrew"
-msgstr "希伯來文"
+msgstr "希伯來語"
 
 msgid "Hindi"
-msgstr "印度文"
+msgstr "印度語"
 
 msgid "Croatian"
-msgstr "克羅埃西亞文"
+msgstr "克羅埃西亞語"
 
 msgid "Hungarian"
-msgstr "匈牙利文"
+msgstr "匈牙利語"
 
 msgid "Indonesian"
-msgstr "印尼文"
+msgstr "印尼語"
 
 msgid "Italian"
-msgstr "義大利文"
+msgstr "義大利語"
 
 msgid "Japanese"
-msgstr "日文"
+msgstr "日語"
 
 msgid "Georgian"
-msgstr "喬治亞文"
+msgstr "喬治亞語"
 
 msgid "Ubuntu Georgian Translators"
 msgstr "Ubuntu 旗下所有喬治亞文翻譯人員"
 
 msgid "Kazakh"
-msgstr ""
+msgstr "哈薩克語"
 
 msgid "Khmer"
-msgstr "高棉文"
+msgstr "高棉語"
 
 msgid "Kannada"
-msgstr "康納達文"
+msgstr "康納達語"
 
 msgid "Kannada Translation team"
 msgstr "康納達文翻譯小組"
 
 msgid "Korean"
-msgstr "韓文"
+msgstr "韓語"
 
 msgid "Kashmiri"
-msgstr ""
+msgstr "喀什米爾語"
 
 msgid "Kurdish"
-msgstr "庫德文"
+msgstr "庫德語"
 
+# FIXME
 msgid "Kurdish (Sorani)"
-msgstr ""
+msgstr "伊拉克式庫德語"
 
 msgid "Lithuanian"
-msgstr "立陶宛文"
+msgstr "立陶宛語"
 
 msgid "Latvian"
-msgstr ""
+msgstr "拉脱維亞語"
 
 msgid "Maithili"
-msgstr "邁蒂利文"
+msgstr "邁蒂利語"
 
 msgid "Meadow Mari"
-msgstr "平地馬里文"
+msgstr "平地馬里語"
 
 msgid "Macedonian"
-msgstr "馬其頓文"
+msgstr "馬其頓語"
 
 msgid "Malay"
-msgstr "馬來文"
+msgstr "馬來語"
 
 msgid "Malayalam"
-msgstr "馬拉亞拉姆文"
+msgstr "馬拉亞拉姆語"
 
 msgid "Mongolian"
-msgstr "蒙古文"
+msgstr "蒙古語"
 
 msgid "Marathi"
-msgstr "馬拉提文"
+msgstr "馬拉提語"
 
 msgid "Burmese"
-msgstr ""
+msgstr "緬甸語"
 
 msgid "Bokmål Norwegian"
-msgstr "標準挪威文"
+msgstr "標準挪威語"
 
 msgid "Nepali"
-msgstr "尼泊爾文"
+msgstr "尼泊爾語"
 
 msgid "Dutch, Flemish"
-msgstr "荷蘭文"
+msgstr "荷蘭語"
 
 msgid "Norwegian Nynorsk"
-msgstr "新挪威文"
+msgstr "新挪威語"
 
 msgid "Occitan"
-msgstr "奧西坦文"
+msgstr "奧西坦語"
 
 msgid "Oriya"
-msgstr "奧里亞文"
+msgstr "奧里亞語"
 
 msgid "Punjabi"
-msgstr "旁遮普文"
+msgstr "旁遮普語"
 
 msgid "Polish"
-msgstr "波蘭文"
+msgstr "波蘭語"
 
 msgid "Portuguese"
-msgstr "標準萄文"
+msgstr "標準萄語"
 
 msgid "Portuguese-Brazil"
-msgstr "巴西萄文"
+msgstr "巴西萄語"
 
 msgid "Pashto"
-msgstr "普什圖文"
+msgstr "普什圖語"
 
 msgid "Romanian"
-msgstr "羅馬尼亞文"
+msgstr "羅馬尼亞語"
 
 msgid "Russian"
-msgstr "俄文"
+msgstr "俄語"
 
+# FIXME
 msgid "Sindhi"
-msgstr ""
+msgstr "信德語"
 
 msgid "Slovak"
-msgstr "斯洛伐克文"
+msgstr "斯洛伐克語"
 
 msgid "Slovenian"
-msgstr "斯洛維尼亞文"
+msgstr "斯洛維尼亞語"
 
 msgid "Albanian"
-msgstr "阿爾巴尼亞文"
+msgstr "阿爾巴尼亞語"
 
 msgid "Serbian"
-msgstr "塞爾維亞文"
+msgstr "塞爾維亞語"
 
 msgid "Serbian Latin"
-msgstr ""
+msgstr "塞爾維亞文（拉丁字母）"
 
 msgid "Sinhala"
-msgstr "僧伽羅文"
+msgstr "僧伽羅語"
 
 msgid "Swedish"
-msgstr "瑞典文"
+msgstr "瑞典語"
 
 msgid "Swahili"
-msgstr "斯瓦西里文"
+msgstr "斯瓦西里語"
 
 msgid "Tamil"
-msgstr "坦米爾文"
+msgstr "坦米爾語"
 
 msgid "Telugu"
-msgstr "德拉威文"
+msgstr "德拉威語"
 
 msgid "Thai"
-msgstr "泰文"
+msgstr "泰語"
 
 msgid "Tatar"
-msgstr ""
+msgstr "韃靼語"
 
 msgid "Ukranian"
-msgstr "烏克蘭文"
+msgstr "烏克蘭語"
 
 msgid "Urdu"
-msgstr "烏爾都文"
+msgstr "烏爾都語"
 
 msgid "Uzbek"
-msgstr ""
+msgstr "烏茲別克語"
 
 #. Translators: This is a person's name. For most languages we recommend
 #. not translating it.
@@ -9700,7 +9732,7 @@ msgid "Akmal Khushvakov"
 msgstr ""
 
 msgid "Vietnamese"
-msgstr "越南文"
+msgstr "越南語"
 
 msgid "Simplified Chinese"
 msgstr "簡體中文"
@@ -9712,19 +9744,19 @@ msgid "Traditional Chinese"
 msgstr "正體中文"
 
 msgid "Amharic"
-msgstr "阿姆哈拉文"
+msgstr "阿姆哈拉語"
 
 msgid "French"
-msgstr "法文"
+msgstr "法語"
 
 msgid "Armenian"
-msgstr "亞美尼亞文"
+msgstr "亞美尼亞語"
 
 msgid "Lao"
-msgstr "寮國文"
+msgstr "寮國語"
 
 msgid "Turkish"
-msgstr "土耳其文"
+msgstr "土耳其語"
 
 msgid "T.M.Thanh and the Gnome-Vi Team"
 msgstr "T.M.Thanh 及 Gnome 越南文翻譯小組之其他組員"
@@ -9763,6 +9795,12 @@ msgid ""
 "welcome to post in another language, but the responses may be less helpful."
 "<br/>"
 msgstr ""
+"<font size=\"4\">如果希望獲得其他 Pidgin 使用者提供的支援</font>，可電郵至<a "
+"href=\"mailto:support@pidgin.im\">support@pidgin.im</a>。<br/>這是個<b>公開的"
+"</b>郵件論壇！（<a href=\"http://pidgin.im/pipermail/support/\">論壇存檔請點"
+"擊這裡</a>）<br/>本論壇恕不為第三者開發的通訊協定或其他模組提供任何支"
+"援！<br/>發帖請以<b>英文</b>為主；以中文或其他語文發帖亦可，但收到的回覆未必"
+"有用。<br/>"
 
 #, c-format
 msgid "About %s"
@@ -10372,7 +10410,7 @@ msgid "_Hangup"
 msgstr "掛斷(_H)"
 
 msgid "Media error"
-msgstr ""
+msgstr "媒體錯誤"
 
 #, c-format
 msgid "%s wishes to start an audio/video session with you."
@@ -10428,17 +10466,17 @@ msgid "_Pause"
 msgstr "暫停(_P)"
 
 msgid "_Mute"
-msgstr ""
+msgstr "靜音(_M)"
 
 #, c-format
 msgid "%s has %d new message."
 msgid_plural "%s has %d new messages."
-msgstr[0] ""
+msgstr[0] "%s 有%d個新訊息。"
 
 #, c-format
 msgid "<b>%d new email.</b>"
 msgid_plural "<b>%d new emails.</b>"
-msgstr[0] ""
+msgstr[0] "<b>%d個新電子郵件。</b>"
 
 #, c-format
 msgid "The browser command \"%s\" is invalid."
@@ -10453,10 +10491,10 @@ msgstr "啟動 \"%s\" 時發生錯誤：%s"
 
 msgid ""
 "The 'Manual' browser command has been chosen, but no command has been set."
-msgstr "您選用了「使用者自定瀏覽器」，卻未有設定指令。"
+msgstr "您選用了「使用者自訂瀏覽器」，卻未有設定指令。"
 
 msgid "Unable to open URL: the 'Manual' browser command seems invalid."
-msgstr ""
+msgstr "無法開啟網頁，因為您的「使用者自訂瀏覽器」似乎是無效的指令。"
 
 msgid "No message"
 msgstr "沒有訊息"
@@ -10635,7 +10673,7 @@ msgid "Unknown.... Please report this!"
 msgstr "未知的捕捉事件……請回報這個問題！"
 
 msgid "(Custom)"
-msgstr "（使用者自定）"
+msgstr "（使用者自訂）"
 
 msgid "Penguin Pimps"
 msgstr ""
@@ -10821,7 +10859,7 @@ msgid "_Enable automatic router port forwarding"
 msgstr "啟用路由器的自動連接埠轉送(_E)"
 
 msgid "_Manually specify range of ports to listen on:"
-msgstr "自定通訊埠監聽範圍(_M)："
+msgstr "自訂通訊埠監聽範圍(_M)："
 
 msgid "_Start:"
 msgstr "起始(_S)："
@@ -10895,7 +10933,7 @@ msgid "Chromium (chrome)"
 msgstr "Chromium (chrome)"
 
 msgid "Manual"
-msgstr "使用者自定"
+msgstr "使用者自訂"
 
 msgid "Browser Selection"
 msgstr "選擇瀏覽器"
@@ -10929,7 +10967,7 @@ msgid ""
 "_Manual:\n"
 "(%s for URL)"
 msgstr ""
-"使用者自定(_M)：\n"
+"使用者自訂(_M)：\n"
 "(請以 %s 代表網址)"
 
 msgid "Proxy Server"
@@ -11071,16 +11109,18 @@ msgstr "靜音"
 
 #, c-format
 msgid "Silence threshold: %d%%"
-msgstr ""
+msgstr "靜音門檻值：%d%%"
 
 msgid "Volume:"
 msgstr "音量："
 
+# NOTE: this is the button to start the test
 msgid "Test Audio"
-msgstr ""
+msgstr "啟動語音測試"
 
+# NOTE: this is the button to start the test
 msgid "Test Video"
-msgstr ""
+msgstr "啟動視訊測試"
 
 msgid "_Device"
 msgstr "裝置(_D)"
@@ -11110,7 +11150,7 @@ msgid "Themes"
 msgstr "主題"
 
 msgid "Voice/Video"
-msgstr ""
+msgstr "語音及視訊"
 
 msgid "Allow all users to contact me"
 msgstr "允許所有的使用者和我聯絡"
@@ -11227,10 +11267,10 @@ msgstr ""
 
 #, c-format
 msgid "%s (%d✕%d @ %d,%d)"
-msgstr ""
+msgstr "%s (%d✕%d @ %d,%d)"
 
 msgid "Unknown output"
-msgstr ""
+msgstr "未知的輸出裝置"
 
 #. list button
 msgid "_Get List"
@@ -11265,7 +11305,7 @@ msgstr "為部份帳號設定不同的狀態(_D)"
 
 #. Save and Use button
 msgid "Sa_ve and Use"
-msgstr ""
+msgstr "儲存並使用(_V)"
 
 #, c-format
 msgid "Status for %s"
@@ -11580,14 +11620,14 @@ msgstr "好友優先次序"
 #. *< summary
 msgid ""
 "Allows for controlling the values associated with different buddy states."
-msgstr "讓你自定各個好友狀態的得分值。"
+msgstr "讓你自訂各個好友狀態的得分值。"
 
 #. *< description
 msgid ""
 "Allows for changing the point values of idle/away/offline states for buddies "
 "in contact priority computations."
 msgstr ""
-"讓你自定「閒置」、「離開」及「離線」狀態的得分值，以便計算好友帳號的優先次"
+"讓你自訂「閒置」、「離開」及「離線」狀態的得分值，以便計算好友帳號的優先次"
 "序。"
 
 msgid "Conversation Colors"
@@ -11991,10 +12031,10 @@ msgid "Notify For"
 msgstr "通知種類"
 
 msgid "\tS_ystem messages"
-msgstr ""
+msgstr "\t系統訊息(_Y)"
 
 msgid "\t_Only when someone says your username"
-msgstr "只當有人提到您的帳號(_O)"
+msgstr "\t只當有人提到您的帳號(_O)"
 
 msgid "_Focused windows"
 msgstr "焦點視窗(_F)"
@@ -12179,10 +12219,13 @@ msgstr ""
 msgid "Lets you send raw input to text-based protocols."
 msgstr "讓您直接輸入指令對各種文字模式的通訊協定進行操作。"
 
+# NOTE: from old po file
 msgid ""
 "Lets you send raw input to text-based protocols (XMPP, IRC, TOC). Hit "
 "'Enter' in the entry box to send. Watch the debug window."
 msgstr ""
+"讓您直接輸入指令對各種文字模式的通訊協定（例如 XMPP、IRC 及 TOC）進行操"
+"作。在輸入欄位輸入指令，按 Enter 後鍵送出；相關資訊會在除錯視窗顯示。"
 
 #, c-format
 msgid "You can upgrade to %s %s today."
@@ -12463,7 +12506,7 @@ msgstr "訊息時間戳記格式"
 #. *< version
 #. *  summary
 msgid "Customizes the message timestamp formats."
-msgstr "使用者自定的訊息時間戳記格式。"
+msgstr "使用者自訂的訊息時間戳記格式。"
 
 #. *  description
 msgid ""
@@ -12515,11 +12558,13 @@ msgstr "透明度"
 msgid "Variable Transparency for the buddy list and conversations."
 msgstr "交談視窗及好友清單產生的半透明效果。"
 
+# NOTE: from old po file
 #. *  description
 msgid ""
 "This plugin enables variable alpha transparency on conversation windows and "
 "the buddy list."
 msgstr ""
+"這個模組可以讓交談視窗及好友清單產生半透明的效果。"
 
 #. Alerts
 msgid "Chatroom alerts"
@@ -12558,13 +12603,13 @@ msgstr ""
 #. *< priority
 #. *< id
 msgid "Unity Integration"
-msgstr ""
+msgstr "Unity 整合功能"
 
 #. *< name
 #. *< version
 #. *  summary
 msgid "Provides integration with Unity."
-msgstr ""
+msgstr "提供和 Unity 整合的功能。"
 
 #. *  description
 msgid "Provides integration with Unity's messaging menu and launcher."
@@ -12746,10 +12791,13 @@ msgid ""
 "version will be installed without removing the currently installed version."
 msgstr "無法移除目前的 Pidgin 版本，新版本會在不移除舊版本的情況下被安裝。"
 
+# NOTE: from old po file
 msgid ""
 "Pidgin requires a compatible GTK+ Runtime (which does not appear to be "
 "installed).$\\rAre you sure you want to skip installing the GTK+ Runtime?"
 msgstr ""
+"Pidgin 需要相容的 GTK+ 執行環境才能運作，但系統內似乎還沒有安裝相容的 GTK+ 執"
+"行環境。$\\r您確定不要安裝 GTK+ 執行環境？"
 
 #. Installer Subsection Text
 msgid "URI Handlers"

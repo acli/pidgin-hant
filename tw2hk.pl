@@ -130,7 +130,9 @@ sub translate_header() {
         my $curdate = strftime ("%Y-%m-%d %H:%M+0800", localtime());
 
         $msg_str =~ s/^("PO-Revision-Date: ).*\\n"/$1$curdate\\n"/m;
-        $msg_str =~ s/^("Language-Team: ).*\\n"/$1Chinese (Hong Kong) <community\@linuxhall.org>\\n"/m;
+        #$msg_str =~ s/^("Language-Team: ).*?\\n"/$1Chinese (Hong Kong) <community\@linuxhall.org>\\n"/ms;
+        $msg_str =~ s/^("Language-Team: ).*?\\n"/$1Chinese (Hong Kong) <http:\/\/www.transifex.com\/pidgin\/pidgin\/language\/zh_HK\/>\\n"/ms;
+        $msg_str =~ s/^("Language: ).*\\n"/$1zh_HK\\n"/m;
         return;
         # }}}
 }
@@ -177,7 +179,7 @@ sub translate() {
         do_trans("坦尚尼亞", "坦桑尼亞");               # Tanzania
         do_trans("格瑞[納那]達", "格林納達");           # Grenada
         do_trans("亞賽拜然", "亞塞拜彊");               # Azerbaijan
-        do_trans("波士尼亞", "波斯尼亞");               # Bosnia
+        do_trans("波(?:士|希)尼亞", "波斯尼亞");		# Bosnia
         do_trans("賽普勒斯", "賽浦路斯");               # Cyprus
         do_trans("[依衣]索[比匹]亞", "埃塞俄比亞");     # Ethiopia
         do_trans("瓜地馬拉", "危地馬拉");               # Guatemala
@@ -264,10 +266,14 @@ sub translate() {
         do_trans("馬利(?!蘭)", "馬里");                 # Mali
 
         # language names
+        do_trans("斐語", "南非荷蘭語");					# Afrikaans
+        do_trans("(?<!世界)語(?=\"|翻譯)", "文");
         #do_trans("布列塔尼", "不列塔尼");              # Breton
         #do_trans("加泰隆", "加泰羅");                  # Catalan
         #do_trans("弗里西亞", "弗里斯蘭");
         #do_trans("印地語", "印度語");                  # Hindi
+        do_trans("庫德", "庫爾德");						# Kurdish
+        do_trans("正體中文", "台式中文");
 
         # special name, movie
         # might be seen in screensavers
@@ -277,6 +283,7 @@ sub translate() {
         # Certificate and PKI related
         do_trans("憑證廢止清冊", "證書撤銷清單");       # Certificate Revocation List
         do_trans("憑證管理中心", "核證機關");           # Certificate Authority
+		do_trans("發行者", "發出人");					# Issuer
         do_trans("密鑰對", "配對密碼匙");                       # Key pair
         do_trans("私鑰", "私人密碼匙");                         # Private key
         do_trans("公鑰", "公開密碼匙");                         # Public key
@@ -299,8 +306,8 @@ sub translate() {
         do_trans("土豆", "花生");
         do_trans("計程車", "的士");
         do_trans("公車", "巴士");
-        do_trans("[台撞]球" ,"桌球");
         do_trans("桌球" ,"乒乓球");
+        do_trans("[台撞]球" ,"桌球");
         do_trans("冰淇淋" ,"雪糕");
         do_trans("衛生" ,"衞生");
         #do_trans("老人" ,"長者");
@@ -361,7 +368,7 @@ sub translate() {
         do_trans("解析度", "解像度");
         do_trans("笨蛋節", "愚人節");
         do_trans("撥接", "撥號");
-        do_trans("正體", "繁體");
+        #do_trans("正體", "繁體");
         do_trans("團隊", "隊伍");
         do_trans("名片", "卡片");
         do_trans("內建", "內置");
@@ -390,13 +397,13 @@ sub translate() {
         do_trans("(?<=[日月])全食", "全蝕");
         do_trans("(?<=[日月])偏食", "偏蝕");
         do_trans("(?<=[日月])環食", "環蝕");
-        do_trans("溼度", "濕度");               # humidity
-        do_trans("潮溼", "潮濕");
+        do_trans("溼", "濕");
         do_trans("自訂(?!閱)", "自選");
         do_trans("公尺", "米");
         do_trans("依照", "根據");               # Ambrose:「依照」不是香港口語，台灣也會用
         do_trans("依(?![從然靠])", "根據");
         do_trans("[暱昵]稱", "網名");                   # 這兒反而是口語化顯得生動活潑
+        do_trans("未知(?!道|之數)", "不明");
 
         # online ???
         do_trans("線上(?=(銀行|搜尋|字典|交易|遊戲|文件|說明|服務))", "網上");
@@ -572,5 +579,5 @@ if ($msg_id || $msg_str) {
         # }}}
 }
 
-# ex: softtabstop=4: tabstop=4: shiftwidth=4: noexpandtab: foldmethod=marker
+# ex: sw=4 ts=4 noet:
 # -*- mode: perl; tab-width: 4; indent-tabs-mode: t; coding: utf-8 -*-
