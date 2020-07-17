@@ -40,9 +40,10 @@
 # And the per-string choice documented above overrides this global choice.
 #
 ######################################################################
+# (c) 2008, 2020 by Ambrose Li <ambrose.li@gmail.com>
 # (c) 2005, 06, 07 Abel Cheung <abelcheung [AT] gmail [DOT] com>
 #
-# Based on Americal -> British english conversion script written by:
+# Based on American -> British english conversion script written by:
 # (c) 2000 Abigail Brady
 #     2002 Bastien Nocera
 #
