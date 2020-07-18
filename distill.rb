@@ -42,13 +42,15 @@ def flush
 end
 
 MAX_WIDTH = 64
+$max_width = MAX_WIDTH
+
 def present( s )
    it = ''
    a = s.split(/\\n/)
    0.upto(a.length - 2) {|i| a[i] += "\\n" }
    a.each {|x|
-      0.step(x.length, MAX_WIDTH) {|y|
-	 it += "\"" + x[y...y+MAX_WIDTH] + "\"\n"
+      0.step(x.length, $max_width) {|y|
+	 it += "\"" + x[y...y+$max_width] + "\"\n"
       }
    }
    return it
@@ -70,7 +72,7 @@ opts.each do |opt, arg|
    when '--verbose'
       verbose_p = true
    when '--dont-wrap'
-      MAX_WIDTH=65535
+      $max_width=65535
    end
 end
 
