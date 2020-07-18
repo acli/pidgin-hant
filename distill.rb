@@ -1,4 +1,5 @@
 #!/usr/bin/ruby -K0
+# vim: set sw=3 ai sm:
 #
 # Simple script to extract either untranslated strings or fuzzies from a PO file
 # so that we know what's still left to translate.
@@ -143,6 +144,7 @@ break if s.nil?
 flush
 
 list_all_p = (list_fuzzy_p.nil? && list_untranslated_p.nil? )
+$something_done_p = nil
 $strings.sort.each { |a|
    msgid, msgstr = a
    if list_all_p
@@ -152,9 +154,11 @@ $strings.sort.each { |a|
       if list_all_p || (list_fuzzy_p && $string_fuzzy_p[msgid]) \
 		    || (list_untranslated_p && $strings[msgid].length == 0)
 
+	 puts "" if $something_done_p
 	 puts $string_directives[msgid] unless $string_directives[msgid].nil?
 	 puts "msgid #{ present(msgid) }"
 	 puts "msgstr #{ present(msgstr) }"
+	 $something_done_p = true
       end
    else
       first_p = true
@@ -163,15 +167,16 @@ $strings.sort.each { |a|
 	 if list_all_p || (list_fuzzy_p && $string_fuzzy_p[msgid]) \
 		       || (list_untranslated_p && s.length == 0)
 
+	    puts "" if $something_done_p
 	    if first_p
 	       first_p = false
-	       puts "msgid_plural #{ present(msgid) }"
 	       puts $string_directives[msgid] unless $string_directives[msgid].nil?
+	       puts "msgid_plural #{ present(msgid) }"
 	    end
 	    puts "msgstr[#{ i }] #{ present(s) }"
+	    $something_done_p = true
 	 end
 	 i += 1
       }
    end
-   puts "" if list_all_p
 }
