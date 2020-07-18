@@ -1,14 +1,16 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Pidgin's Chinese (Hong Kong) translation
+# This file is distributed under the same license as the "Pidgin" package.
 #
 # Translators:
+# Copyright (C) 2002-2011,       Paladin R. Liu <paladin@ms1.hinet.net>
+# Copyright (C) 2003-2011, 2020  Ambrose C. Li  <ambrose.li@gmail.com>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Pidgin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-09 22:15-0500\n"
-"PO-Revision-Date: 2020-07-17 20:35+0800\n"
+"PO-Revision-Date: 2020-07-18 00:00+0800\n"
 "Last-Translator: Ambrose Li <ambrose.li@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <http://www.transifex.com/pidgin/pidgin/language/zh_HK/>\n"
 "Language: zh_HK\n"

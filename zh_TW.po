@@ -1,8 +1,10 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Pidgin's Traditional Chinese translation
+# This file is distributed under the same license as the "Pidgin" package.
 #
 # Translators:
+# Copyright (C) 2002-2011,       Paladin R. Liu <paladin@ms1.hinet.net>
+# Copyright (C) 2003-2011, 2020  Ambrose C. Li  <ambrose.li@gmail.com>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Pidgin\n"
