@@ -900,10 +900,11 @@ msgstr "發信人"
 msgid "Subject"
 msgstr "主題"
 
+# NOTE - from old po file
 #, c-format
 msgid "%s (%s) has %d new message."
 msgid_plural "%s (%s) has %d new messages."
-msgstr[0] ""
+msgstr[0] "%s (%s) 有 %d 封新郵件。"
 
 msgid "New Mail"
 msgstr "新郵件"
@@ -5813,40 +5814,46 @@ msgstr "加入(_A)"
 msgid "_Decline"
 msgstr "婉拒(_D)"
 
+# NOTE: from old po file
 #, c-format
 msgid "You missed %hu message from %s because it was invalid."
 msgid_plural "You missed %hu messages from %s because they were invalid."
-msgstr[0] ""
+msgstr[0] "您遺失了 %hu 個由 %s 送來的訊息，因為它是無效的。"
 
+# NOTE: adapted from old po file (adapted for nplurals=1)
 #, c-format
 msgid "You missed %hu message from %s because it was too large."
 msgid_plural "You missed %hu messages from %s because they were too large."
-msgstr[0] ""
+msgstr[0] "您遺失了 %hu 個由 %s 送來的訊息，因為訊息太大了。"
 
+# NOTE: adapted from old po file (adapted for nplurals=1)
 #, c-format
 msgid ""
 "You missed %hu message from %s because the rate limit has been exceeded."
 msgid_plural ""
 "You missed %hu messages from %s because the rate limit has been exceeded."
-msgstr[0] ""
+msgstr[0] "您遺失了 %hu 個由 %s 送來的訊息，因為訊息傳送的速度太快。"
 
+# NOTE: from old po file
 #, c-format
 msgid ""
 "You missed %hu message from %s because his/her warning level is too high."
 msgid_plural ""
 "You missed %hu messages from %s because his/her warning level is too high."
-msgstr[0] ""
+msgstr[0] "您遺失了 %hu 個由 %s 送來的訊息，因為他（她）的警告等級過高。"
 
+# NOTE: from old po file
 #, c-format
 msgid "You missed %hu message from %s because your warning level is too high."
 msgid_plural ""
 "You missed %hu messages from %s because your warning level is too high."
-msgstr[0] ""
+msgstr[0] "您遺失了 %hu 個由 %s 送來的訊息，因為您的警告等級過高。"
 
+# NOTE: from old po file
 #, c-format
 msgid "You missed %hu message from %s for an unknown reason."
 msgid_plural "You missed %hu messages from %s for an unknown reason."
-msgstr[0] ""
+msgstr[0] "您遺失了 %hu 個由 %s 送來的訊息，原因不明。"
 
 msgid "Your AIM connection may be lost."
 msgstr "您的 AIM 可能斷線了。"
@@ -5864,10 +5871,11 @@ msgstr "帳號格式化只能改變大寫以及空白。"
 msgid "Pop-Up Message"
 msgstr "彈出訊息"
 
+# NOTE: from old po file
 #, c-format
 msgid "The following username is associated with %s"
 msgid_plural "The following usernames are associated with %s"
-msgstr[0] ""
+msgstr[0] "下列是 %s 的帳號"
 
 #, c-format
 msgid "No results found for email address %s"
@@ -8880,10 +8888,11 @@ msgstr "/工具/隱私設定"
 msgid "/Tools/Room List"
 msgstr "/工具/聊天室清單"
 
+# FIXME - from old po file
 #, c-format
 msgid "%d unread message from %s\n"
 msgid_plural "%d unread messages from %s\n"
-msgstr[0] ""
+msgstr[0] "%d 個由 %s 發出的未讀取訊息\n"
 
 msgid "Manually"
 msgstr "使用者自訂"
@@ -9731,7 +9740,7 @@ msgstr "烏茲別克語"
 #. Translators: This is a person's name. For most languages we recommend
 #. not translating it.
 msgid "Akmal Khushvakov"
-msgstr ""
+msgstr "Akmal Khushvakov"
 
 msgid "Vietnamese"
 msgstr "越南語"
@@ -10431,38 +10440,38 @@ msgstr "來電通知"
 #.
 #. Letters on the '2' key of a numeric keypad
 msgid "ABC"
-msgstr ""
+msgstr "ABC"
 
 #. Letters on the '3' key of a numeric keypad
 msgid "DEF"
-msgstr ""
+msgstr "DEF"
 
 #. Letters on the '4' key of a numeric keypad
 msgid "GHI"
-msgstr ""
+msgstr "GHI"
 
 #. Letters on the '5' key of a numeric keypad
 msgid "JKL"
-msgstr ""
+msgstr "JKL"
 
 #. Letters on the '6' key of a numeric keypad
 msgid "MNO"
-msgstr ""
+msgstr "MNO"
 
 #. Letters on the '7' key of a numeric keypad
 msgid "PQRS"
-msgstr ""
+msgstr "PQRS"
 
 #. Letters on the '8' key of a numeric keypad
 msgid "TUV"
-msgstr ""
+msgstr "TUV"
 
 #. Letters on the '9' key of a numeric keypad
 msgid "WXYZ"
-msgstr ""
+msgstr "WXYZ"
 
 msgid "_Hold"
-msgstr ""
+msgstr "保留(_H)"
 
 msgid "_Pause"
 msgstr "暫停(_P)"
