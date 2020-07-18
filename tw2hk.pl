@@ -55,7 +55,9 @@
 require 5.8.0;
 use strict;
 use utf8;
-use encoding 'utf8';
+use open qw( :encoding(UTF-8) :std );
+use charnames qw( :full :short );
+use feature "unicode_strings";
 use POSIX qw(strftime);
 use Term::ReadLine;
 
