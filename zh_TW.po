@@ -1556,8 +1556,9 @@ msgstr ""
 msgid "lastlog: Searches for a substring in the backlog."
 msgstr "lastlog：在交談的回捲緩衝區搜尋字串。"
 
+# XXX not sure why this is marked translatable
 msgid "GntLastlog"
-msgstr ""
+msgstr "GntLastlog"
 
 msgid "Lastlog plugin."
 msgstr "Lastlog 模組。"
@@ -1794,7 +1795,7 @@ msgstr "無法送出訊息。"
 
 #. Meaningful name in case a UI doesn't actually honour the INVISIBLE flag
 msgid "(internal) Temporary IM peers"
-msgstr ""
+msgstr "【內部專用】即時傳訊臨時同級端點"
 
 msgid "Send Message"
 msgstr "送出訊息"
@@ -11291,7 +11292,7 @@ msgid "Screencast \"CreateSession\" failed."
 msgstr "螢幕共享無法「建立工作階段」(CreateSession)"
 
 msgid "Test image"
-msgstr ""
+msgstr "測試用影像"
 
 msgid "Select window"
 msgstr "選擇視窗"
