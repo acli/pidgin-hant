@@ -1502,7 +1502,7 @@ msgid "TinyURL for above: %s"
 msgstr "上列網址的 TinyURL：%s"
 
 msgid "Please wait while TinyURL fetches a shorter URL..."
-msgstr ""
+msgstr "TinyURL 正在取得較短的網址，請稍候..."
 
 msgid "Only create TinyURL for URLs of this length or greater"
 msgstr "只在網址長度為這個數值或以上時才建立 TinyURL"
@@ -1517,7 +1517,7 @@ msgid "TinyURL plugin"
 msgstr "TinyURL 模組"
 
 msgid "Shorten URLs in messages using TinyURL"
-msgstr ""
+msgstr "使用 TinyURL 來縮短訊息中的網址"
 
 msgid "Online"
 msgstr "上線"
@@ -2166,7 +2166,7 @@ msgstr "網路錯誤。"
 msgid ""
 "Codec negotiation failed. This problem might be resolved by installing more "
 "GStreamer codecs."
-msgstr ""
+msgstr "轉碼器協商失敗。安裝額外的 Gstreamer 轉碼器可能會解決這個問題。"
 
 msgid ""
 "No codecs found. Install some GStreamer codecs found in GStreamer plugins "
@@ -2178,8 +2178,9 @@ msgid ""
 msgstr ""
 "由於在 fs-codecs.conf 中指定的轉碼器偏好過於嚴格，沒有乎合偏好的轉碼器可用。"
 
+# FIXME
 msgid "Could not connect to the remote party"
-msgstr ""
+msgstr "無法連線至遠端"
 
 msgid "A non-recoverable Farsight2 error has occurred."
 msgstr "發生了一個嚴重的 Farsight2 錯誤。"
@@ -12593,16 +12594,16 @@ msgstr ""
 
 #. Launcher integration
 msgid "Launcher Icon"
-msgstr ""
+msgstr "啟動器圖示"
 
 msgid "_Disable launcher integration"
-msgstr ""
+msgstr "停用啟動器整合功能(_D)"
 
 msgid "Show number of unread _messages on launcher icon"
-msgstr ""
+msgstr "在啟動器圖示上顯示未讀訊息的數量(_M)"
 
 msgid "Show number of unread co_nversations on launcher icon"
-msgstr ""
+msgstr "在啟動器圖示上顯示未讀交談的數量(_N)"
 
 #. Messaging menu integration
 msgid "Messaging Menu"
