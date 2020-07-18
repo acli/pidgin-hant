@@ -144,7 +144,8 @@ break if s.nil?
 flush
 
 list_all_p = (list_fuzzy_p.nil? && list_untranslated_p.nil? )
-$something_done_p = nil
+something_done_p = nil
+n = 0
 $strings.sort.each { |a|
    msgid, msgstr = a
    if list_all_p
@@ -154,11 +155,12 @@ $strings.sort.each { |a|
       if list_all_p || (list_fuzzy_p && $string_fuzzy_p[msgid]) \
 		    || (list_untranslated_p && $strings[msgid].length == 0)
 
-	 puts "" if $something_done_p
+	 puts "" if something_done_p
 	 puts $string_directives[msgid] unless $string_directives[msgid].nil?
 	 puts "msgid #{ present(msgid) }"
 	 puts "msgstr #{ present(msgstr) }"
-	 $something_done_p = true
+	 something_done_p = true
+	 n += 1
       end
    else
       first_p = true
@@ -167,16 +169,21 @@ $strings.sort.each { |a|
 	 if list_all_p || (list_fuzzy_p && $string_fuzzy_p[msgid]) \
 		       || (list_untranslated_p && s.length == 0)
 
-	    puts "" if $something_done_p
+	    puts "" if something_done_p
 	    if first_p
 	       first_p = false
 	       puts $string_directives[msgid] unless $string_directives[msgid].nil?
 	       puts "msgid_plural #{ present(msgid) }"
 	    end
 	    puts "msgstr[#{ i }] #{ present(s) }"
-	    $something_done_p = true
+	    something_done_p = true
+	    n += 1
 	 end
 	 i += 1
       }
    end
 }
+
+if n > 0
+   puts "\n# " + n.to_s + (list_fuzzy_p ? " fuzzy": (list_untranslated_p ? " untranslated": "")) + (n == 1? " string": " strings") + " found."
+end
