@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Pidgin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-09 22:15-0500\n"
-"PO-Revision-Date: 2020-07-18 00:00+0800\n"
+"PO-Revision-Date: 2020-07-18 05:13+0800\n"
 "Last-Translator: Ambrose Li <ambrose.li@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <http://www.transifex.com/pidgin/pidgin/language/zh_HK/>\n"
 "Language: zh_HK\n"
@@ -724,10 +724,11 @@ msgstr "過濾器："
 msgid "Pause"
 msgstr "暫停"
 
+# NOTE: from old po file
 #, c-format
 msgid "File Transfers - %d%% of %d file"
 msgid_plural "File Transfers - %d%% of %d files"
-msgstr[0] ""
+msgstr[0] "檔案傳輸：%2$d 個檔案完成了 %1$d%%"
 
 #. Create the window.
 msgid "File Transfers"
@@ -887,10 +888,11 @@ msgstr "發信人"
 msgid "Subject"
 msgstr "主題"
 
+# NOTE - from old po file
 #, c-format
 msgid "%s (%s) has %d new message."
 msgid_plural "%s (%s) has %d new messages."
-msgstr[0] ""
+msgstr[0] "%s (%s) 有 %d 封新郵件。"
 
 msgid "New Mail"
 msgstr "新郵件"
@@ -1487,7 +1489,7 @@ msgid "TinyURL for above: %s"
 msgstr "上列網址的 TinyURL：%s"
 
 msgid "Please wait while TinyURL fetches a shorter URL..."
-msgstr ""
+msgstr "TinyURL 正在取得較短的網址，請稍候..."
 
 msgid "Only create TinyURL for URLs of this length or greater"
 msgstr "只在網址長度為這個數值或以上時才建立 TinyURL"
@@ -1502,7 +1504,7 @@ msgid "TinyURL plugin"
 msgstr "TinyURL 模組"
 
 msgid "Shorten URLs in messages using TinyURL"
-msgstr ""
+msgstr "使用 TinyURL 來縮短訊息中的網址"
 
 msgid "Online"
 msgstr "上線"
@@ -2138,7 +2140,7 @@ msgstr ""
 msgid ""
 "Error initializing the call. This probably denotes problem in installation "
 "of GStreamer or Farsight."
-msgstr ""
+msgstr "給呼叫進行初始化時出現了錯誤，這可能表示 GStreamer 或 Farsight 的安裝出現了問題。"
 
 msgid "Network error."
 msgstr "網絡錯誤。"
@@ -2146,7 +2148,7 @@ msgstr "網絡錯誤。"
 msgid ""
 "Codec negotiation failed. This problem might be resolved by installing more "
 "GStreamer codecs."
-msgstr ""
+msgstr "轉碼器協商失敗。安裝額外的 Gstreamer 轉碼器可能會解決這個問題。"
 
 msgid ""
 "No codecs found. Install some GStreamer codecs found in GStreamer plugins "
@@ -2157,14 +2159,15 @@ msgid ""
 "No codecs left. Your codec preferences in fs-codecs.conf are too strict."
 msgstr "由於在 fs-codecs.conf 中指定的轉碼器偏好過於嚴格，沒有乎合偏好的轉碼器可用。"
 
+# FIXME
 msgid "Could not connect to the remote party"
-msgstr ""
+msgstr "無法連線至遠端"
 
 msgid "A non-recoverable Farsight2 error has occurred."
 msgstr "發生了一個嚴重的 Farsight2 錯誤。"
 
 msgid "A non-recoverable Farstream error has occurred."
-msgstr ""
+msgstr "發生了一個不可恢復的 Farstream 錯誤。"
 
 msgid "Error with your microphone"
 msgstr "你的麥克風出現錯誤"
@@ -2180,7 +2183,7 @@ msgid "Error creating session: %s"
 msgstr "建立通話工作階段失敗：%s"
 
 msgid "Could not create media pipeline"
-msgstr ""
+msgstr "無法建位媒體管線"
 
 #. Translators: This is a noun that refers to one
 #. * possible audio input device. The device can help the
@@ -2935,10 +2938,11 @@ msgid ""
 "install ActiveTCL from http://www.activestate.com\n"
 msgstr "找不到 ActiveTCL；如果打算使用 TCL 寫成的模組，請到 http://www.activestate.com 下載及安裝 ActiveTCL。\n"
 
+# NOTE: adapted from old po file (adapted for new URL)
 msgid ""
 "Unable to find Apple's \"Bonjour for Windows\" toolkit, see https://"
 "developer.pidgin.im/BonjourWindows for more information."
-msgstr ""
+msgstr "找不到 Apple 的「Bonjour For Windows」工具，詳情請到網址 https://developer.pidgin.im/BonjourWindows 查閱。"
 
 msgid "Unable to listen for incoming IM connections"
 msgstr "無法監聽來訊的即時訊息連線"
@@ -3498,27 +3502,27 @@ msgstr "來自 %s 的 Wallops"
 
 #, c-format
 msgid "Failed to initialize SASL authentication: %s"
-msgstr ""
+msgstr "無法為 SASL 認證初始化：%s"
 
 msgid "SASL authentication failed: No worthy authentication mechanisms found."
-msgstr ""
+msgstr "SASL 認證失敗：找不到值得使用的認證機制"
 
 #, c-format
 msgid "SASL authentication failed: %s"
-msgstr ""
+msgstr "SASL 認證失敗：%s"
 
 msgid ""
 "SASL authentication failed: Server does not support SASL authentication."
-msgstr ""
+msgstr "SASL 認證失敗：伺服器並不支援 SASL 認證"
 
 msgid "SASL authentication failed: Initializing SASL failed."
-msgstr ""
+msgstr "SASL 認證失敗：無法為 SASL 初始化"
 
 msgid "Incorrect Password"
 msgstr "密碼錯誤"
 
 msgid "SASL authentication failed: No worthy mechanisms found"
-msgstr ""
+msgstr "SASL 認證失敗：找不到值得使用的機制"
 
 msgid "action &lt;action to perform&gt;:  Perform an action."
 msgstr "action &lt;要執行的動作&gt;：執行一個動作。"
@@ -4699,16 +4703,16 @@ msgstr "請指定檔案應該傳送至 %s 的那一個 Resource"
 
 #, c-format
 msgid "The queue for %s has reached its maximum length of %u."
-msgstr ""
+msgstr "%s佇列目前長度為 %u，已達上限"
 
 msgid "XMPP stream management"
 msgstr "XMPP 串流管理"
 
 msgid "Stanza queue is full"
-msgstr ""
+msgstr "段落佇列已滿"
 
 msgid "No further messages will be queued"
-msgstr ""
+msgstr "訊息將不能再加入佇列中"
 
 msgid "Afraid"
 msgstr "害怕"
@@ -5721,40 +5725,46 @@ msgstr "加入(_A)"
 msgid "_Decline"
 msgstr "婉拒(_D)"
 
+# NOTE: from old po file
 #, c-format
 msgid "You missed %hu message from %s because it was invalid."
 msgid_plural "You missed %hu messages from %s because they were invalid."
-msgstr[0] ""
+msgstr[0] "你遺失了 %hu 個由 %s 送來的訊息，因為它是無效的。"
 
+# NOTE: adapted from old po file (adapted for nplurals=1)
 #, c-format
 msgid "You missed %hu message from %s because it was too large."
 msgid_plural "You missed %hu messages from %s because they were too large."
-msgstr[0] ""
+msgstr[0] "你遺失了 %hu 個由 %s 送來的訊息，因為訊息太大了。"
 
+# NOTE: adapted from old po file (adapted for nplurals=1)
 #, c-format
 msgid ""
 "You missed %hu message from %s because the rate limit has been exceeded."
 msgid_plural ""
 "You missed %hu messages from %s because the rate limit has been exceeded."
-msgstr[0] ""
+msgstr[0] "你遺失了 %hu 個由 %s 送來的訊息，因為訊息傳送的速度太快。"
 
+# NOTE: from old po file
 #, c-format
 msgid ""
 "You missed %hu message from %s because his/her warning level is too high."
 msgid_plural ""
 "You missed %hu messages from %s because his/her warning level is too high."
-msgstr[0] ""
+msgstr[0] "你遺失了 %hu 個由 %s 送來的訊息，因為他（她）的警告等級過高。"
 
+# NOTE: from old po file
 #, c-format
 msgid "You missed %hu message from %s because your warning level is too high."
 msgid_plural ""
 "You missed %hu messages from %s because your warning level is too high."
-msgstr[0] ""
+msgstr[0] "你遺失了 %hu 個由 %s 送來的訊息，因為你的警告等級過高。"
 
+# NOTE: from old po file
 #, c-format
 msgid "You missed %hu message from %s for an unknown reason."
 msgid_plural "You missed %hu messages from %s for an unknown reason."
-msgstr[0] ""
+msgstr[0] "你遺失了 %hu 個由 %s 送來的訊息，原因不明。"
 
 msgid "Your AIM connection may be lost."
 msgstr "你的 AIM 可能斷線了。"
@@ -5772,10 +5782,11 @@ msgstr "帳號格式化只能改變大寫以及空白。"
 msgid "Pop-Up Message"
 msgstr "彈出訊息"
 
+# NOTE: from old po file
 #, c-format
 msgid "The following username is associated with %s"
 msgid_plural "The following usernames are associated with %s"
-msgstr[0] ""
+msgstr[0] "下列是 %s 的帳號"
 
 #, c-format
 msgid "No results found for email address %s"
@@ -5849,6 +5860,7 @@ msgid ""
 "fully connected."
 msgstr "你在未登入完成前要求修改你的個人資料，所以這些資訊並未被修改。請在完成登入後再重新進行設定。"
 
+# NOTE: from old po file
 #, c-format
 msgid ""
 "The maximum profile length of %d byte has been exceeded.  It has been "
@@ -5856,11 +5868,12 @@ msgid ""
 msgid_plural ""
 "The maximum profile length of %d bytes has been exceeded.  It has been "
 "truncated for you."
-msgstr[0] ""
+msgstr[0] "個人資料的長度超出了 %d 個位元組的上限，過長部分已被截去。"
 
 msgid "Profile too long."
 msgstr "個人資料過長。"
 
+# NOTE: from old po file
 #, c-format
 msgid ""
 "The maximum away message length of %d byte has been exceeded.  It has been "
@@ -5868,7 +5881,7 @@ msgid ""
 msgid_plural ""
 "The maximum away message length of %d bytes has been exceeded.  It has been "
 "truncated for you."
-msgstr[0] ""
+msgstr[0] "離開訊息的長度超出了 %d 個位元組的上限，過長部分已被截去。"
 
 msgid "Away message too long."
 msgstr "離開訊息過長。"
@@ -6068,9 +6081,8 @@ msgstr "用戶端登入"
 msgid "Kerberos"
 msgstr "Kerberos"
 
-# FIXME
 msgid "MD5-based"
-msgstr "以MD5為基礎"
+msgstr "基於 MD5 算法"
 
 msgid "Authentication method"
 msgstr "認證方法"
@@ -6490,7 +6502,7 @@ msgid "Topic:"
 msgstr "主題："
 
 msgid "A server is required to connect this account"
-msgstr ""
+msgstr "必須設定伺服器，才能啟動帳號"
 
 #, c-format
 msgid "Unknown (0x%04x)<br>"
@@ -8400,11 +8412,12 @@ msgstr "聊天室中有人提到你的網名而你未讀該訊息時聊天室名
 msgid "The text information for a buddy's status"
 msgstr "好友狀態的字體及文字顏色"
 
+# NOTE: adapted from old po file (adapted for nplurals=1)
 #, c-format
 msgid "You have %d contact named %s. Would you like to merge them?"
 msgid_plural ""
 "You currently have %d contacts named %s. Would you like to merge them?"
-msgstr[0] ""
+msgstr[0] "你目前有 %d 個稱為「%s」的聯絡人，你要把聯絡人合併嗎？"
 
 msgid ""
 "Merging these contacts will cause them to share a single entry on the buddy "
@@ -8730,10 +8743,11 @@ msgstr "/工具/私隱設定"
 msgid "/Tools/Room List"
 msgstr "/工具/聊天室清單"
 
+# FIXME - from old po file
 #, c-format
 msgid "%d unread message from %s\n"
 msgid_plural "%d unread messages from %s\n"
-msgstr[0] ""
+msgstr[0] "%d 個由 %s 發出的未讀取訊息\n"
 
 msgid "Manually"
 msgstr "使用者自選"
@@ -8764,11 +8778,12 @@ msgstr "SSL 常見問題"
 msgid "Welcome back!"
 msgstr "歡迎歸來！"
 
+# NOTE: from old po file
 #, c-format
 msgid "%d account was disabled because you signed on from another location:"
 msgid_plural ""
 "%d accounts were disabled because you signed on from another location:"
-msgstr[0] ""
+msgstr[0] "%d個帳已被停用，因為你由其他的地方登入："
 
 msgid "<b>Username:</b>"
 msgstr "<b>使用者名稱：</b>"
@@ -9577,7 +9592,7 @@ msgstr "烏茲別克文"
 #. Translators: This is a person's name. For most languages we recommend
 #. not translating it.
 msgid "Akmal Khushvakov"
-msgstr ""
+msgstr "Akmal Khushvakov"
 
 msgid "Vietnamese"
 msgstr "越南文"
@@ -9718,6 +9733,7 @@ msgstr "給聊天室改別名"
 msgid "Enter an alias for this chat."
 msgstr "請為這個聊天室輸入一個別名。"
 
+# NOTE: from old po file
 #, c-format
 msgid ""
 "You are about to remove the contact containing %s and %d other buddy from "
@@ -9725,7 +9741,7 @@ msgid ""
 msgid_plural ""
 "You are about to remove the contact containing %s and %d other buddies from "
 "your buddy list.  Do you want to continue?"
-msgstr[0] ""
+msgstr[0] "你正嘗試將好友 %s 及包含在同一個聯絡人的其他 %d 個好友從你的好友清單中移除。你要繼續這個動作嗎？"
 
 msgid "Remove Contact"
 msgstr "移除聯絡人"
@@ -10231,6 +10247,17 @@ msgid ""
 "how to get the backtrace, please read the instructions at\n"
 "%swiki/GetABacktrace\n"
 msgstr ""
+"%s %s 出現了一個區段錯誤，並已嘗試倒出一個 core（磁心）檔案。\n"
+"這表示本軟件內存有錯誤，你什麼也沒有做錯。\n"
+"\n"
+"假如你發現令故障重現的方法，請知會開發者，方法是透過以下的網址\n"
+"匯報錯誤：\n"
+"%ssimpleticket/\n"
+"\n"
+"匯報錯誤時，請務必說明出現錯誤前你在做什麼，並請附上 core 檔的\n"
+"backtrace （函數呼叫順序）。如果你不知道怎樣取得 backtrace，請\n"
+"參閱下列網頁的說明：\n"
+"%swiki/GetABacktrace\n"
 
 #, c-format
 msgid "Exiting because another libpurple client is already running.\n"
@@ -10262,38 +10289,38 @@ msgstr "來電通知"
 #.
 #. Letters on the '2' key of a numeric keypad
 msgid "ABC"
-msgstr ""
+msgstr "ABC"
 
 #. Letters on the '3' key of a numeric keypad
 msgid "DEF"
-msgstr ""
+msgstr "DEF"
 
 #. Letters on the '4' key of a numeric keypad
 msgid "GHI"
-msgstr ""
+msgstr "GHI"
 
 #. Letters on the '5' key of a numeric keypad
 msgid "JKL"
-msgstr ""
+msgstr "JKL"
 
 #. Letters on the '6' key of a numeric keypad
 msgid "MNO"
-msgstr ""
+msgstr "MNO"
 
 #. Letters on the '7' key of a numeric keypad
 msgid "PQRS"
-msgstr ""
+msgstr "PQRS"
 
 #. Letters on the '8' key of a numeric keypad
 msgid "TUV"
-msgstr ""
+msgstr "TUV"
 
 #. Letters on the '9' key of a numeric keypad
 msgid "WXYZ"
-msgstr ""
+msgstr "WXYZ"
 
 msgid "_Hold"
-msgstr ""
+msgstr "保留(_H)"
 
 msgid "_Pause"
 msgstr "暫停(_P)"
@@ -11066,34 +11093,34 @@ msgid "Select Folder..."
 msgstr "選擇資料匣..."
 
 msgid "Screen share error"
-msgstr ""
+msgstr "螢幕共享發生錯誤"
 
 msgid "Error creating screencast request"
-msgstr ""
+msgstr "建立螢幕共享要求時發生錯誤"
 
 msgid "OpenPipeWireRemote request failed"
-msgstr ""
+msgstr "OpenPipeWireRemote 要求失敗"
 
 msgid "No file descriptor found"
-msgstr ""
+msgstr "找不到檔案描述符"
 
 msgid "Screencast \"Start\" failed"
-msgstr ""
+msgstr "螢幕共享無法「開始」(Start)"
 
 msgid "Screencast \"SelectSources\" failed"
-msgstr ""
+msgstr "螢幕共享無法「選擇來源」(SelectSources)"
 
 msgid "Screencast \"CreateSession\" failed."
-msgstr ""
+msgstr "螢幕共享無法「建立工作階段」(CreateSession)"
 
 msgid "Test image"
 msgstr ""
 
 msgid "Select window"
-msgstr ""
+msgstr "選擇視窗"
 
 msgid "Use monitor"
-msgstr ""
+msgstr "使用顯示器"
 
 #, c-format
 msgid "%s (%d✕%d @ %d,%d)"
@@ -11121,7 +11148,7 @@ msgid "Title already in use.  You must choose a unique title."
 msgstr "目前標題正在使用中。你必須選取一個唯一的標題。"
 
 msgid "Different"
-msgstr "差異"
+msgstr "使用不同狀態"
 
 msgid "_Title:"
 msgstr "標題(_T)："
@@ -11139,7 +11166,7 @@ msgstr "儲存並使用(_V)"
 
 #, c-format
 msgid "Status for %s"
-msgstr "狀態：%s"
+msgstr "%s 的狀態設定"
 
 #, c-format
 msgid ""
@@ -11254,7 +11281,7 @@ msgstr "你可以透過插入訊息，或者把它當成是你的好友圖示等
 #. * return.
 #. The original patch sent the icon used by the launcher.  That's probably wrong
 msgid "Cannot send launcher"
-msgstr "無法傳送啟動器"
+msgstr "不可傳送啟動器"
 
 msgid ""
 "You dragged a desktop launcher. Most likely you wanted to send the target of "
@@ -12033,16 +12060,16 @@ msgid "Provides access to commonly used gtkrc settings."
 msgstr "提供一般 gtkrc 設定的存取"
 
 msgid "Raw"
-msgstr ""
+msgstr "原始模式"
 
 msgid "Lets you send raw input to text-based protocols."
-msgstr "讓你直接輸入指令對各種文字模式的通訊協定進行操作。"
+msgstr "讓你使用文字為基的通訊協定時，可以使用原始指令。"
 
 # NOTE: from old po file
 msgid ""
 "Lets you send raw input to text-based protocols (XMPP, IRC, TOC). Hit "
 "'Enter' in the entry box to send. Watch the debug window."
-msgstr "讓你直接輸入指令對各種文字模式的通訊協定（例如 XMPP、IRC 及 TOC）進行操作。在輸入欄位輸入指令，按 Enter 後鍵送出；相關資訊會在除錯視窗顯示。"
+msgstr "讓你使用各種文字為基的通訊協定時（例如 XMPP、IRC 及 TOC），可以直接輸入原始指令進行操作。在輸入欄位輸入指令，按 Enter 鍵送出，相關資訊會在除錯視窗顯示。"
 
 #, c-format
 msgid "You can upgrade to %s %s today."
@@ -12390,16 +12417,16 @@ msgstr ""
 
 #. Launcher integration
 msgid "Launcher Icon"
-msgstr ""
+msgstr "啟動器圖示"
 
 msgid "_Disable launcher integration"
-msgstr ""
+msgstr "停用啟動器整合功能(_D)"
 
 msgid "Show number of unread _messages on launcher icon"
-msgstr ""
+msgstr "在啟動器圖示上顯示未讀訊息的數量(_M)"
 
 msgid "Show number of unread co_nversations on launcher icon"
-msgstr ""
+msgstr "在啟動器圖示上顯示未讀交談的數量(_N)"
 
 #. Messaging menu integration
 msgid "Messaging Menu"
