@@ -11448,7 +11448,7 @@ msgstr ""
 #. * return.
 #. The original patch sent the icon used by the launcher.  That's probably wrong
 msgid "Cannot send launcher"
-msgstr "無法傳送啟動器"
+msgstr "不可傳送啟動器"
 
 msgid ""
 "You dragged a desktop launcher. Most likely you wanted to send the target of "
