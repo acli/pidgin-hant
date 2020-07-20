@@ -1,0 +1,58 @@
+# Pidgin's Traditional Chinese translation
+# Copyright (C) 2002-2011, Paladin R. Liu <paladin@ms1.hinet.net>
+# Copyright (C) 2003-2011, Ambrose C. Li <ambrose.li@gmail.com>
+#
+# PLEASE DO NOT ATTEMPT TO UPDATE THIS FILE IF THERE ARE NO
+# LINE NUMBERS (LINES BEGINNING WITH #:) IN THIS FILE.
+#
+# This file is distributed under the same license as the "Pidgin" package.
+# $Id: zh_TW.po,v 1.675 2011/08/17 20:26:30 acli Exp $
+#
+# ----------------------------------------------------------
+# For internal use only:
+# FIXME 表示發現了問題，遲早要解決
+# NOTE  表示翻譯有困難，解決了，但不寫下會不明白為什麼這樣譯
+# TODO  表示發現了問題，但不知如何解決
+# XXX   表示可能有問題，要複查；有問題需討論
+# ANS   表示對 XXX 的看法回覆 (問題解決後 XXX 與 ANS 一概刪除)
+# ----------------------------------------------------------
+# 注意： screen name = user name = 帳號 = 使用者名稱
+#        screen name 和 user name 在意義上是沒有分別的！
+# 理據如下
+# (01時52分58秒) wing: hmm. does "screen name" mean "user name" now, or has it actually always meant "user name"?
+# (02時09分45秒) KingAnt: wing: They're the same thing.  If you're unhappy with the change please email the gaim-devel mailing list.  (I'm unhappy with the change.)
+# ----------------------------------------------------------
+# Jabber術語 (20091127) presence、subscription 等參閱
+# - http://www.2cm.com.tw/coverstory_content.asp?sn=0701010062
+# - http://nctur.lib.nctu.edu.tw/handle/987654321/3479
+# - http://voiplab.niu.edu.tw/Course98.html (尤其是 http://voiplab.niu.edu.tw/ppt/SIP/05.IMPS.pdf)
+# - presence service 如出現譯「現狀資訊服務」
+# - subscribe to presence 譯「訂閱XXX的狀態資訊」
+# - identifier 譯「辨識碼」
+# - message body 譯「訊息內容」
+# SILC問題：似乎臺灣和香港的「密碼學」術語相差甚遠，很頭痛 (^^;)
+# - Key 暫譯「密鑰」，原因：「Key Exchange」既有譯文為「交換密鑰」
+# - Public Key 暫譯「公鑰」
+# - Private Key 暫譯「私鑰」
+# - Key Agreement 與 Key Exchange 似乎同義，譯「交換密鑰」
+# - Passphrase 譯「密碼」
+# (是否應參照 Mozilla 的譯法 <http://ccca.nctu.edu.tw/~hlb/tavi/MozillaGlossary>?)
+# 另有 SILC 術語：
+# - Private Group 係聊天室內的一種小圈子，譯無可譯之下，暫譯「小圈子」 (XXX)
+# - KE Group 即 Key Exchange Group, 暫譯「密鑰交換群組」，有可能是誤譯 (TODO)
+# - Kill 意為 Remove client from network, 暫直譯「從網路上移除」 (XXX)
+# - Detach 意即跟伺服器停止連線，但不登出，暫譯「暫停連線」
+#   - Detach 的相反詞 Resume 暫譯「恢復連線」
+# - Watch 暫時意譯「伺服器端的好友狀態捕捉」
+# - SILC 的全名暫時意譯「安全性網際網路即時會議協定」
+#
+# FIXME 未有統一譯法的字詞：Buddy List, Postal code、Profile、match、connect、user info
+# FIXME「such」應為「斯」，即「這種/這樣的」，但目前譯文沒有統一
+# NOTE  中文統一用「」引號；URL、指令等該用 '/" 者除外
+# NOTE  以前分「Deny」(拒絕) 和「Block」(封鎖)，現在不分了
+# NOTE  拒絕可以說等同於封鎖和某一個使用者的聯繫，有時用封鎖比較好。
+# NOTE  MSN6.0中文版對「Block」一詞的譯文為「封鎖」
+# NOTE  nplurals 重設為 2，因為部分原文要分辨例如「它」及「它們」一類的字眼
+# NOTE 所有語文名稱（除「世界語」外）一概譯成「XX文」，不譯「XX語」，因為寫下的是文，不是語
+# ----------------------------------------------------------
+#
