@@ -24,6 +24,13 @@ delete
 R
 =
 
+resource¹
+- 資源
+
+resource²
+- (XMPP) 用戶端(識別號)
+- Note that there is *no* official translation so this translation is technically “wrong”, but this is what it actually means in XMPP.
+
 room
 - 聊天室
 
