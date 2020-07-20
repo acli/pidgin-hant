@@ -6249,7 +6249,7 @@ msgid "Games"
 msgstr "遊戲"
 
 msgid "ICQ Xtraz"
-msgstr ""
+msgstr "ICQ 額外功能"
 
 msgid "Add-Ins"
 msgstr "模組"
