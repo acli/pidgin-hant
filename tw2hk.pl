@@ -407,6 +407,7 @@ sub translate() {
         do_trans("依(?![從然靠])", "根據");
         do_trans("[暱昵]稱", "網名");                   # 這兒反而是口語化顯得生動活潑
         do_trans("未知(?!道|之數)", "不明");
+        do_trans("(?<=[早午晚])飯", "餐");						# breakfast, lunch, dinner
 
         # online ???
         do_trans("線上(?=(銀行|搜尋|字典|交易|遊戲|文件|說明|服務))", "網上");

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Pidgin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-09 22:15-0500\n"
-"PO-Revision-Date: 2020-07-18 05:13+0800\n"
+"PO-Revision-Date: 2020-07-20 19:17+0800\n"
 "Last-Translator: Ambrose Li <ambrose.li@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <http://www.transifex.com/pidgin/pidgin/language/zh_HK/>\n"
 "Language: zh_HK\n"
@@ -1543,8 +1543,9 @@ msgstr ""
 msgid "lastlog: Searches for a substring in the backlog."
 msgstr "lastlog：在交談的回捲緩衝區搜尋字串。"
 
+# XXX not sure why this is marked translatable
 msgid "GntLastlog"
-msgstr ""
+msgstr "GntLastlog"
 
 msgid "Lastlog plugin."
 msgstr "Lastlog 模組。"
@@ -1780,7 +1781,7 @@ msgstr "無法送出訊息。"
 
 #. Meaningful name in case a UI doesn't actually honour the INVISIBLE flag
 msgid "(internal) Temporary IM peers"
-msgstr ""
+msgstr "【內部專用】即時傳訊臨時同級端點"
 
 msgid "Send Message"
 msgstr "送出訊息"
@@ -3881,6 +3882,7 @@ msgstr "本地端時間："
 msgid "Priority"
 msgstr "優先次序"
 
+# NOTE: XMPP jargon. Does not seem to have any official translation
 msgid "Resource"
 msgstr ""
 
@@ -5960,7 +5962,7 @@ msgid "iTunes Music Store Link"
 msgstr "iTunes Store 網站連結"
 
 msgid "Lunch"
-msgstr "午飯"
+msgstr "午餐"
 
 #, c-format
 msgid "Buddy Comment for %s"
@@ -11114,7 +11116,7 @@ msgid "Screencast \"CreateSession\" failed."
 msgstr "螢幕共享無法「建立工作階段」(CreateSession)"
 
 msgid "Test image"
-msgstr ""
+msgstr "測試用圖像"
 
 msgid "Select window"
 msgstr "選擇視窗"
@@ -12408,12 +12410,13 @@ msgid ""
 "the buddy list."
 msgstr "這個模組可以讓交談視窗及好友清單產生半透明的效果。"
 
+# FIXME - 警報 is supposed to be the correct IT translation but it sounds totally inappropriate in the context
 #. Alerts
 msgid "Chatroom alerts"
-msgstr ""
+msgstr "聊天室通告"
 
 msgid "Chatroom message alerts _only where someone says your username"
-msgstr ""
+msgstr "有人提到你的帳號才發出聊天室通告"
 
 #. Launcher integration
 msgid "Launcher Icon"
@@ -12428,15 +12431,16 @@ msgstr "在啟動器圖示上顯示未讀訊息的數量(_M)"
 msgid "Show number of unread co_nversations on launcher icon"
 msgstr "在啟動器圖示上顯示未讀交談的數量(_N)"
 
+# NOTE - this is apparently just an icon with no text
 #. Messaging menu integration
 msgid "Messaging Menu"
-msgstr ""
+msgstr "通訊清單"
 
 msgid "Show number of _unread messages for conversations in messaging menu"
-msgstr ""
+msgstr "在通訊清單顯示未讀訊息數量(_U)"
 
 msgid "Show _elapsed time for unread conversations in messaging menu"
-msgstr ""
+msgstr "在通訊清單顯示未讀交談收到訊息是多少時間之前(_E)"
 
 #. *< type
 #. *< ui_requirement
@@ -12455,7 +12459,7 @@ msgstr "提供和 Unity 整合的功能。"
 
 #. *  description
 msgid "Provides integration with Unity's messaging menu and launcher."
-msgstr ""
+msgstr "提供和 Unity 的訊息清單和啟動器的整合功能。"
 
 msgid "_Plugin"
 msgstr "模組(_P)"
