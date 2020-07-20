@@ -3957,7 +3957,7 @@ msgstr "優先次序"
 
 # NOTE: XMPP jargon. Does not seem to have any official translation
 msgid "Resource"
-msgstr ""
+msgstr "Resource（用戶端識別號）"
 
 msgid "Uptime"
 msgstr "工作時間"
@@ -4436,7 +4436,7 @@ msgid "Bad Namespace Prefix"
 msgstr "無效的 Namespace Prefix"
 
 msgid "Resource Conflict"
-msgstr "已經以指定的 Resource 在其他地方登入"
+msgstr "Resource 衝突：同一的用戶端識別號在其他地方登入"
 
 msgid "Connection Timeout"
 msgstr "連線已逾時"
@@ -4557,9 +4557,10 @@ msgstr "無法與 %s 進行媒體通話，因為這個 JID 是無效的"
 msgid "Unable to initiate media with %s: user is not online"
 msgstr "無法與 %s 進行媒體通話，因為對方目前沒有連線"
 
+# NOTE: This is jabber. "Resource" is probably the XMPP jargon so a client identifier, not a resource in the usual sense
 #, c-format
 msgid "Unable to initiate media with %s: resource is not online"
-msgstr ""
+msgstr "無法與 %s 進行媒體通話，因為對方目前沒有在給定的用戶端 (Resource) 連線"
 
 #, c-format
 msgid "Unable to initiate media with %s: not subscribed to user presence"
@@ -4572,10 +4573,10 @@ msgstr "媒體通話啟動失敗"
 msgid ""
 "Please select the resource of %s with which you would like to start a media "
 "session."
-msgstr "請指定與 %s 的那一個 Resource 進行媒體通話。"
+msgstr "請指定與 %s 的那一個用戶端 (Resource) 進行媒體通話。"
 
 msgid "Select a Resource"
-msgstr "選擇一個 Resource"
+msgstr "選擇一個用戶端 (Resource)"
 
 msgid "Initiate Media"
 msgstr "媒體通話"
@@ -4781,7 +4782,7 @@ msgstr "無法傳送檔案至 %s，因為未有訂閱對方的狀態資訊"
 
 #, c-format
 msgid "Please select the resource of %s to which you would like to send a file"
-msgstr "請指定檔案應該傳送至 %s 的那一個 Resource"
+msgstr "請指定檔案應該傳送至 %s 的那一個用戶端 (Resource)"
 
 #, c-format
 msgid "The queue for %s has reached its maximum length of %u."
