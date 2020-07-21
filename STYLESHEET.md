@@ -1,5 +1,8 @@
+Terms
+=====
+
 A
-=
+-
 
 **Afrikaans**
 (*n.*)
@@ -14,7 +17,7 @@ A
 Note existing inconsistency: 登入，驗證.
 
 C
-=
+-
 
 **cipher**
 (*n.*)
@@ -25,21 +28,21 @@ C
 [快捷選單](http://terms.naer.edu.tw/detail/7263224/).
 
 D
-=
+-
 
 **delete**
 (*v.*)
 移除.
 
 I
-=
+-
 
 **identifier**
 (*n.*)
 [識別符](http://terms.naer.edu.tw/detail/1279935/?index=3).
 
 R
-=
+-
 
 **resource**¹
 (*n.*)
@@ -57,7 +60,7 @@ R
 聊天室.
 
 V
-=
+-
 
 **video game**
 (*n.*)
@@ -66,6 +69,7 @@ V
 (Hong Kong)
 電子遊戲.
 
+---
 
 Useful links
 ============
