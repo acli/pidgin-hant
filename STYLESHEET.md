@@ -3,7 +3,8 @@ A
 
 **Afrikaans**
 (*n.*)
-[斐語](https://www.mofa.gov.tw/CountryInfo.aspx?CASN=D33B55D537402BAA&n=1C6028CA080A27B3&sms=26470E539B6FA395&s=4892E8B8F5C0E174).
+[斐語](https://www.mofa.gov.tw/CountryInfo.aspx?CASN=D33B55D537402BAA&n=1C6028CA080A27B3&sms=26470E539B6FA395&s=4892E8B8F5C0E174),
+南非荷蘭文.
 
 **authenticate**
 (*v.*)

@@ -454,7 +454,7 @@ sub translate() {
         # Hong Kong tend to use 圖像, but 影像 means lots of different
         # things (image, video, graphics, ...) so ask instead of forcefully
         # convert
-        query_trans("(?<!光碟)影像", "圖像", "圖片", "圖案");
+        query_trans("(?<!光碟)影像(?!遊戲)", "圖像", "圖片", "圖案");
 
         # some characters are used solely in Hong Kong but infrequently in Taiwan
         do_trans("您", "你");
