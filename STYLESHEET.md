@@ -4,8 +4,8 @@ New working style sheet for 2020
 for [Pidgin’s traditional Chinese translations](https://www.transifex.com/pidgin/pidgin/languages/).
 Primary goal here is internal consistency while minimizing changes to existing style.
 Where inconsistencies are found,
-[NAER](http://terms.naer.edu.tw/) terms are preferred for Taiwanese Chinese unless obviously not used in the wild;
-for Hong Kong Chinese, CSB terms are preferred unless obviously not used in the wild.
+[NAER](http://terms.naer.edu.tw/) terms are preferred for Taiwanese Chinese 🅃 unless obviously not used in the wild;
+for Hong Kong Chinese 🄷, CSB terms are preferred unless obviously not used in the wild.
 
 (The [original style sheet from 2011](doc/style_sheet_from_2011.txt),
 unfortunately removed during the Transifex migration,
@@ -16,9 +16,9 @@ A
 
 **Afrikaans**
 (*n.*)
-*Taiwan*
+🅃
 [斐語](https://www.mofa.gov.tw/CountryInfo.aspx?CASN=D33B55D537402BAA&n=1C6028CA080A27B3&sms=26470E539B6FA395&s=4892E8B8F5C0E174),
-*Hong Kong*
+🄷
 南非荷蘭文.
 
 **authenticate**
@@ -124,16 +124,16 @@ V
 
 **video**
 (*adj.*)
-*Taiwan*
+🅃
 視訊,
-*Hong Kong*
+🄷
 視像.
 
 **video game**
 (*n.*)
-*Taiwan*
+🅃
 [電動遊戲](http://terms.naer.edu.tw/detail/7365301/),
-*Hong Kong*
+🄷
 電子遊戲.
 
 ---
