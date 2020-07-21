@@ -113,6 +113,13 @@ V
 **video game**
 (*n.*)
 (Taiwan)
+視訊,
+(Hong Kong)
+視像.
+
+**video game**
+(*n.*)
+(Taiwan)
 [電動遊戲](http://terms.naer.edu.tw/detail/7365301/),
 (Hong Kong)
 電子遊戲.

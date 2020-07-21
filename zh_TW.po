@@ -5925,7 +5925,7 @@ msgid "Security Enabled"
 msgstr "有保安功能"
 
 msgid "Video Chat"
-msgstr "視像聊天"
+msgstr "視訊聊天"
 
 msgid "iChat AV"
 msgstr "iChat 視像聊天"
@@ -7320,7 +7320,7 @@ msgid "Paging"
 msgstr "傳呼"
 
 msgid "Video Conferencing"
-msgstr "視像會議"
+msgstr "視訊會議"
 
 msgid "Computer"
 msgstr "電腦"
@@ -7916,7 +7916,7 @@ msgid "Use _silence suppression"
 msgstr "使用靜音壓縮(_S)"
 
 msgid "_Voice and Video"
-msgstr "語音及視像功能(_V)"
+msgstr "語音及視訊功能(_V)"
 
 msgid "Unable to save new account"
 msgstr "無法儲存新帳號"
@@ -8937,7 +8937,7 @@ msgid "lead developer"
 msgstr "主要開發者"
 
 msgid "voice and video"
-msgstr "語音及視像功能"
+msgstr "語音及視訊功能"
 
 msgid "support"
 msgstr "支援"
@@ -9888,11 +9888,11 @@ msgstr "媒體錯誤"
 
 #, c-format
 msgid "%s wishes to start an audio/video session with you."
-msgstr "%s 希望跟您進行語音／視像通話。"
+msgstr "%s 希望跟您進行語音／視訊通話。"
 
 #, c-format
 msgid "%s wishes to start a video session with you."
-msgstr "%s 希望跟您進行視像通話。"
+msgstr "%s 希望跟您進行視訊通話。"
 
 msgid "Incoming Call"
 msgstr "來電通知"
