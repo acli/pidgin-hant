@@ -111,7 +111,7 @@ V
 [驗證](http://terms.naer.edu.tw/detail/7364600/).
 
 **video**
-(*n.*)
+(*adj.*)
 (Taiwan)
 視訊,
 (Hong Kong)
