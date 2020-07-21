@@ -110,7 +110,7 @@ V
 (*v.*)
 [驗證](http://terms.naer.edu.tw/detail/7364600/).
 
-**video game**
+**video**
 (*n.*)
 (Taiwan)
 視訊,
