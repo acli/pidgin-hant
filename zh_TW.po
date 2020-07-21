@@ -2276,7 +2276,7 @@ msgstr "加密測試"
 #. *  summary
 #. *  description
 msgid "Tests the ciphers that ship with libpurple."
-msgstr "測試 libpurple 提供的各種加密方式 (cipher)。"
+msgstr "測試 libpurple 提供的各種加密法。"
 
 #. *< type
 #. *< ui_requirement
@@ -2717,7 +2717,7 @@ msgid "Not Supported for NSS < 3.14"
 msgstr "NSS 3.14 版以下不支援此功能"
 
 msgid "Ciphers"
-msgstr "加密方式"
+msgstr "加密法"
 
 #. *< type
 #. *< ui_requirement
@@ -2733,7 +2733,7 @@ msgstr "NSS 設定"
 #. *  summary
 #. *  description
 msgid "Configure Ciphers and other Settings for the NSS SSL/TLS Plugin"
-msgstr "為 NSS SSL/TLS 模組設定加密方式及其他選項"
+msgstr "為 NSS SSL/TLS 模組設定加密法及其他選項"
 
 #. Scheme name
 msgid "X.509 Certificates"
@@ -6584,7 +6584,7 @@ msgstr "<br><b>頻道創立者：</b>%s"
 
 #, c-format
 msgid "<br><b>Channel Cipher:</b> %s"
-msgstr "<br><b>頻道加密方式 (Cipher)：</b>%s"
+msgstr "<br><b>頻道加密法：</b>%s"
 
 #. Definition of HMAC: http://en.wikipedia.org/wiki/HMAC
 #, c-format
@@ -7227,7 +7227,7 @@ msgid "Private Key file"
 msgstr "私鑰檔案"
 
 msgid "Cipher"
-msgstr "加密方式"
+msgstr "加密法"
 
 msgid "HMAC"
 msgstr "HMAC"
@@ -7362,7 +7362,7 @@ msgstr "失敗：遠端不支援建議中的密鑰交換群組 (KE group)"
 
 #, c-format
 msgid "Failure: Remote does not support proposed cipher"
-msgstr "失敗：遠端不支援建議中的加密方式 (cipher)"
+msgstr "失敗：遠端不支援建議中的加密法"
 
 #, c-format
 msgid "Failure: Remote does not support proposed PKCS"

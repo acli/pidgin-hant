@@ -12,8 +12,8 @@ C
 =
 
 cipher
-- 加密方式
-- note existing inconsistency: 加密方法
+- [加密法](http://terms.naer.edu.tw/detail/7257661/)
+- Replaces existing translation 加密方式 and old translation 加密方法
 
 D
 =
