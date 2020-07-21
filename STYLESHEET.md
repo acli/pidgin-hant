@@ -21,6 +21,10 @@ C
 [加密法](http://terms.naer.edu.tw/detail/7257661/).
 Replaces existing translation 加密方式 and old translation 加密方法
 
+**contextual menu**
+(*n.*)
+[快捷選單](http://terms.naer.edu.tw/detail/7263224/).
+
 D
 =
 

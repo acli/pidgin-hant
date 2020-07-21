@@ -237,7 +237,7 @@ msgid "Add Chat"
 msgstr "新增聊天室"
 
 msgid "You can edit more information from the context menu later."
-msgstr "如果要繼續修改其他細節，請用快顯選單。"
+msgstr "如果要繼續修改其他細節，請用快捷選單。"
 
 msgid "Error adding group"
 msgstr "新增群組發生了錯誤"
