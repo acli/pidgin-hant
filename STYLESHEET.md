@@ -73,6 +73,10 @@ I
 P
 -
 
+**passphrase**
+(*n.*)
+[密碼](http://terms.naer.edu.tw/detail/7328178/).
+
 **pimps**
 (*n.*)
 *Note that this means [“something that is really cool”](https://www.urbandictionary.com/author.php?author=Lindsie)*.
