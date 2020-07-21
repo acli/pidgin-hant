@@ -1,4 +1,5 @@
 .*.swp
+*.po.annotated
 
 fuzzies.out
 untranslated.out

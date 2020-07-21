@@ -21,6 +21,12 @@ D
 delete
 - 移除
 
+I
+=
+
+identifier
+- [識別符](http://terms.naer.edu.tw/detail/1279935/?index=3)
+
 R
 =
 
@@ -28,7 +34,7 @@ resource¹
 - 資源
 
 resource²
-- (XMPP) 用戶端(識別號)
+- (XMPP) [用戶端](http://terms.naer.edu.tw/detail/1217777/)([識別符](http://terms.naer.edu.tw/detail/1279935/?index=3))
 - Note that there is *no* official translation so this translation is technically “wrong”, but this is what it actually means in XMPP.
 
 room
