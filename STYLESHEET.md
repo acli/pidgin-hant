@@ -37,7 +37,8 @@ C
 撥打.
 (*n.*)
 通話.
-**incoming** ~
+□
+**incoming ⁓**
 來電.
 
 **call**²
