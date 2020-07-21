@@ -19,11 +19,18 @@ A
 
 **authenticate**
 (*v.*)
-認證.
-Note existing inconsistency: 登入，驗證.
+[認證](http://terms.naer.edu.tw/detail/3452705/).
+
+**authentication**
+(*n.*)
+[認證](http://terms.naer.edu.tw/detail/691655/).
 
 C
 -
+
+**certify**
+(*v.*)
+[認證](http://terms.naer.edu.tw/detail/7256177/).
 
 **cipher**
 (*n.*)
@@ -45,7 +52,7 @@ I
 
 **identifier**
 (*n.*)
-[識別符](http://terms.naer.edu.tw/detail/1279935/?index=3).
+[識別符](http://terms.naer.edu.tw/detail/1279935/).
 
 P
 -
@@ -64,7 +71,7 @@ R
 **resource**²
 (*n.*)
 (XMPP)
-[用戶端](http://terms.naer.edu.tw/detail/1217777/)[識別符](http://terms.naer.edu.tw/detail/1279935/?index=3) (Resource),
+[用戶端](http://terms.naer.edu.tw/detail/1217777/)[識別符](http://terms.naer.edu.tw/detail/1279935/) (Resource),
 [用戶端](http://terms.naer.edu.tw/detail/1217777/) (Resource).
 *Unofficial translation based on [the official definition](https://wiki.xmpp.org/web/Jabber_Resources).*
 
@@ -82,6 +89,10 @@ T
 
 V
 -
+
+**validate**
+(*v.*)
+[驗證](http://terms.naer.edu.tw/detail/7364600/).
 
 **video game**
 (*n.*)

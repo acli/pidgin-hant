@@ -1587,7 +1587,7 @@ msgid "The certificate is self-signed and cannot be automatically checked."
 msgstr "這張憑證是自簽的，無法自動進行核實。"
 
 msgid "The certificate is not trusted because no certificate that can verify it is currently trusted."
-msgstr "無法信賴這張憑證，因為目前沒有可信賴的憑證可以驗證這張憑證。"
+msgstr "無法信賴這張憑證，因為目前沒有可信賴的憑證可以認證這張憑證。"
 
 msgid "The certificate is not valid yet.  Check that your computer's date and time are accurate."
 msgstr "這個憑證尚未生效，請確認您電腦上的日期及時間是正確的。"
@@ -1600,7 +1600,7 @@ msgid "The certificate presented is not issued to this domain."
 msgstr "這張憑證在這個網域是無效的。"
 
 msgid "You have no database of root certificates, so this certificate cannot be validated."
-msgstr "無法核實這張憑證，因為您沒有根憑證機構憑證 (root certificate) 的資料庫。"
+msgstr "無法驗證這張憑證，因為您沒有根憑證機構憑證 (root certificate) 的資料庫。"
 
 msgid "The certificate chain presented is invalid."
 msgstr "這張憑證所出示的憑證鍊是無效的。"
@@ -3577,10 +3577,10 @@ msgid "You require encryption, but it is not available on this server."
 msgstr "您要求加密，但這伺服器沒有加密功能。"
 
 msgid "Invalid challenge from server"
-msgstr "伺服器送來了無效的驗證挑戰"
+msgstr "伺服器送來了無效的認證挑戰"
 
 msgid "Server thinks authentication is complete, but client does not"
-msgstr "伺服器認為驗證程序已經完畢，但用戶端不認同"
+msgstr "伺服器認為認證程序已經完畢，但用戶端不認同"
 
 msgid "Server may require plaintext authentication over an unencrypted stream"
 msgstr "伺服器可能需要經由未經加密的串流進行明文認證"
@@ -3630,7 +3630,7 @@ msgid "Unable to canonicalize password"
 msgstr "無法把密碼轉成正準形式"
 
 msgid "Malicious challenge from server"
-msgstr "伺服器送來了惡意的驗證挑戰"
+msgstr "伺服器送來了惡意的認證挑戰"
 
 msgid "Unexpected response from server"
 msgstr "伺服器發出了奇怪的回應"
@@ -5110,10 +5110,10 @@ msgid "The server returned an empty response"
 msgstr "伺服器送出了空白的回應。"
 
 msgid "Server requested that you fill out a CAPTCHA in order to sign in, but this client does not currently support CAPTCHAs."
-msgstr "伺服器表示登入前必須完成圖片驗證，但這用戶端尚未支援圖片驗證。"
+msgstr "伺服器表示登入前必須完成圖片認證，但這用戶端尚未支援圖片認證。"
 
 msgid "AOL does not allow your screen name to authenticate here"
-msgstr "AOL 不允許您的帳號在這裡登入"
+msgstr "AOL 不允許您的帳號在這裡認證"
 
 msgid "(There was an error receiving this message.  The buddy you are speaking with is probably using a different encoding than expected.  If you know what encoding he is using, you can specify it in the advanced account options for your AIM/ICQ account.)"
 msgstr "（接收這個訊息時發生了錯誤。正在跟您交談的好友很可能在使用與您想像不乎的字元編碼；如果您知道那是什麼編碼，請在您的 AIM/ICQ 帳號的「進階設定」中的「編碼」欄位指定。）"
@@ -5759,7 +5759,7 @@ msgid "Re-request Authorization"
 msgstr "重新要求認證"
 
 msgid "Require authorization"
-msgstr "必須驗證"
+msgstr "必須認證"
 
 msgid "Web aware (enabling this will cause you to receive SPAM!)"
 msgstr "允許在網路上檢視您目前的狀態（會導致您收到垃圾訊息！）"
@@ -5771,7 +5771,7 @@ msgid "Change Address To:"
 msgstr "變更地址為："
 
 msgid "you are not waiting for authorization"
-msgstr "您並沒有在等待驗證"
+msgstr "您並沒有在等待認證"
 
 msgid "You are awaiting authorization from the following buddies"
 msgstr "您目前正在等待下列好友的認證"
@@ -6589,7 +6589,7 @@ msgstr "<br><b>頻道加密法：</b>%s"
 #. Definition of HMAC: http://en.wikipedia.org/wiki/HMAC
 #, c-format
 msgid "<br><b>Channel HMAC:</b> %s"
-msgstr "<br><b>頻道身份驗證代碼 (HMAC)：</b>%s"
+msgstr "<br><b>頻道身份認證代碼 (HMAC)：</b>%s"
 
 #, c-format
 msgid "<br><b>Channel Topic:</b><br>%s"
@@ -6923,7 +6923,7 @@ msgid "Resuming session"
 msgstr "恢復工作階段中"
 
 msgid "Authenticating connection"
-msgstr "為連線進行驗證中"
+msgstr "為連線進行認證中"
 
 msgid "Verifying server public key"
 msgstr "核實伺服器的公鑰中"
@@ -7374,7 +7374,7 @@ msgstr "失敗：遠端不支援建議中的雜湊函數 (hash function)"
 
 #, c-format
 msgid "Failure: Remote does not support proposed HMAC"
-msgstr "失敗：遠端不支援建議中的身份驗證代碼 (HMAC)"
+msgstr "失敗：遠端不支援建議中的身份認證代碼 (HMAC)"
 
 #, c-format
 msgid "Failure: Incorrect signature"
