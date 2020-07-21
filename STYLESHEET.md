@@ -84,6 +84,10 @@ P
 R
 -
 
+**raw**
+(*adj.*)
+[原始](http://terms.naer.edu.tw/detail/1285016/).
+
 **resource**¹
 (*n.*)
 資源.
