@@ -1,9 +1,10 @@
 Terms
 =====
 New working style sheet for 2020.
-For Taiwan, NAER terms are preferred unless obviously not used in the wild.
-For Hong Kong, CSB terms are preferred unless obviously not used in the wild.
-Aiming for internal consistency while minimizing changes to existing style.
+Primary goal here is internal consistency while minimizing changes to existing style.
+Where inconsistencies are found,
+for Taiwanese Chinese, NAER terms are preferred unless obviously not used in the wild;
+while for Hong KongTaiwanese Chinese CSB terms are preferred unless obviously not used in the wild.
 
 ([Original style sheet from 2011](doc/style_sheet_from_2011.txt) available for reference.)
 
@@ -85,7 +86,7 @@ T
 **text shortcut theme**
 (*n.*, Pidgin-specific)
 按鍵捷徑主題.
-*“Key theme” in usual GTK lingo. There seems to be no official translation.*
+*“Key theme” in usual GTK lingo; no official translation.*
 
 V
 -
