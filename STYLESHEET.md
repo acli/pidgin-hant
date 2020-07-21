@@ -79,7 +79,7 @@ P
 
 **pimps**
 (*n.*)
-*Note that this means [“something that is really cool”](https://www.urbandictionary.com/author.php?author=Lindsie)*.
+*[Something that is really cool](https://www.urbandictionary.com/author.php?author=Lindsie)*.
 
 R
 -
@@ -97,7 +97,7 @@ R
 (XMPP)
 [用戶端](http://terms.naer.edu.tw/detail/1217777/)[識別符](http://terms.naer.edu.tw/detail/1279935/) (Resource),
 [用戶端](http://terms.naer.edu.tw/detail/1217777/) (Resource).
-*Unofficial translation based on [the official definition](https://wiki.xmpp.org/web/Jabber_Resources).*
+*[A user-specified arbitrary identifier that represents the user’s location, app, device, etc.](https://wiki.xmpp.org/web/Jabber_Resources).*
 
 **room**
 (*n.*)
@@ -109,7 +109,7 @@ T
 **text shortcut theme**
 (*n.*, Pidgin-specific)
 按鍵捷徑主題.
-*“Key theme” in usual GTK lingo; no official translation.*
+*A GTK “key theme”.*
 
 V
 -
