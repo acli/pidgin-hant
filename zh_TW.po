@@ -4228,7 +4228,7 @@ msgid "Invalid XML"
 msgstr "無效的 XML"
 
 msgid "Non-matching Hosts"
-msgstr "主機名稱不相乎"
+msgstr "主機名稱不相符"
 
 msgid "Policy Violation"
 msgstr "違反了服務政策"
@@ -5116,7 +5116,7 @@ msgid "AOL does not allow your screen name to authenticate here"
 msgstr "AOL 不允許您的帳號在這裡認證"
 
 msgid "(There was an error receiving this message.  The buddy you are speaking with is probably using a different encoding than expected.  If you know what encoding he is using, you can specify it in the advanced account options for your AIM/ICQ account.)"
-msgstr "（接收這個訊息時發生了錯誤。正在跟您交談的好友很可能在使用與您想像不乎的字元編碼；如果您知道那是什麼編碼，請在您的 AIM/ICQ 帳號的「進階設定」中的「編碼」欄位指定。）"
+msgstr "（接收這個訊息時發生了錯誤。正在跟您交談的好友很可能在使用與您想像不符的字元編碼；如果您知道那是什麼編碼，請在您的 AIM/ICQ 帳號的「進階設定」中的「編碼」欄位指定。）"
 
 #, c-format
 msgid "(There was an error receiving this message.  Either you and %s have different encodings selected, or %s has a buggy client.)"
