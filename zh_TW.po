@@ -3289,7 +3289,7 @@ msgstr "%s 的主題為：%s"
 
 #, c-format
 msgid "Topic for %s set by %s at %s on %s"
-msgstr "%s 的主題為 %s 於 %4$s %3$s 設定"
+msgstr "%1$s 的主題為 %2$s 於 %4$s %3$s 設定"
 
 #, c-format
 msgid "Unknown message '%s'"
@@ -10144,8 +10144,7 @@ msgid "Unknown.... Please report this!"
 msgstr "未知的捕捉事件……請回報這個問題！"
 
 #. Dummy strings to make some audio/video sources appear in the PO file
-#, fuzzy
-msgid "Built-in Digital Analog Stereo (HDMI)"
+msgid "Built-in Audio Digital Stereo (HDMI)"
 msgstr "內建數位立體聲音響 (HDMI)"
 
 msgid "Built-in Audio Analog Stereo"

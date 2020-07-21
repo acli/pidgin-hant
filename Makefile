@@ -17,11 +17,14 @@ $(dest_po)/%: %
 
 reports: fuzzies.out untranslated.out
 
+check:
+	for lang in $(langs); do msgfmt --statistics -cvo /dev/null $$lang.po; done
+
 merge: $(gaim_pot)
 	for lang in $(langs); do msgmerge -w 9999 -o $$lang.po.new $$lang.po $(gaim_pot) && mv -fv $$lang.po.new $$lang.po.annotated; done
 	for lang in $(langs); do msgmerge -w 9999 --no-location -o $$lang.po.new $$lang.po $(gaim_pot) && mv -fv $$lang.po.new $$lang.po; done
 
-install: $(addprefix $(dest_po)/,$(addsuffix .po,$(langs)))
+install: check $(addprefix $(dest_po)/,$(addsuffix .po,$(langs)))
 
 fuzzies.out: zh_TW.po distill.rb
 	./distill.rb --fuzzy --dont-wrap < $< > $@
