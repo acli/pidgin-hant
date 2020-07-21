@@ -5248,7 +5248,7 @@ msgstr "正在喝咖啡"
 
 #. Playing video games
 msgid "Gaming"
-msgstr "正在玩影像遊戲"
+msgstr "正在玩電動遊戲"
 
 msgid "Browsing the web"
 msgstr "在瀏覽網頁"

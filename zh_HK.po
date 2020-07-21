@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Pidgin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-21 01:51-0400\n"
-"PO-Revision-Date: 2020-07-21 02:29+0800\n"
+"PO-Revision-Date: 2020-07-21 11:57+0800\n"
 "Last-Translator: Ambrose Li <ambrose.li@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <http://www.transifex.com/pidgin/pidgin/language/zh_HK/>\n"
 "Language: zh_HK\n"
@@ -2081,7 +2081,7 @@ msgid "Network error."
 msgstr "網絡錯誤。"
 
 msgid "Codec negotiation failed. This problem might be resolved by installing more GStreamer codecs."
-msgstr "轉碼器協商失敗。安裝額外的 Gstreamer 轉碼器可能會解決這個問題。"
+msgstr "轉碼器協商失敗。安裝額外的 GStreamer 轉碼器可能會解決這個問題。"
 
 msgid "No codecs found. Install some GStreamer codecs found in GStreamer plugins packages."
 msgstr "找不到任何轉碼器。請安裝一些提供轉碼器的 GStreamer 套件。"
@@ -2276,7 +2276,7 @@ msgstr "加密測試"
 #. *  summary
 #. *  description
 msgid "Tests the ciphers that ship with libpurple."
-msgstr "測試 libpurple 提供的各種加密方式 (cipher)。"
+msgstr "測試 libpurple 提供的各種加密法。"
 
 #. *< type
 #. *< ui_requirement
@@ -2717,7 +2717,7 @@ msgid "Not Supported for NSS < 3.14"
 msgstr "NSS 3.14 版以下不支援此功能"
 
 msgid "Ciphers"
-msgstr "加密方式"
+msgstr "加密法"
 
 #. *< type
 #. *< ui_requirement
@@ -2733,7 +2733,7 @@ msgstr "NSS 設定"
 #. *  summary
 #. *  description
 msgid "Configure Ciphers and other Settings for the NSS SSL/TLS Plugin"
-msgstr "為 NSS SSL/TLS 模組設定加密方式及其他選項"
+msgstr "為 NSS SSL/TLS 模組設定加密法及其他選項"
 
 #. Scheme name
 msgid "X.509 Certificates"
@@ -3732,7 +3732,7 @@ msgstr "優先次序"
 
 # NOTE: XMPP jargon. Does not seem to have any official translation
 msgid "Resource"
-msgstr "Resource（用戶端識別號）"
+msgstr "Resource（用戶端識別符）"
 
 msgid "Uptime"
 msgstr "工作時間"
@@ -4204,7 +4204,7 @@ msgid "Bad Namespace Prefix"
 msgstr "無效的 Namespace Prefix"
 
 msgid "Resource Conflict"
-msgstr "Resource 衝突：同一的用戶端識別號在其他地方登入"
+msgstr "Resource 衝突：同一的用戶端識別符在其他地方登入"
 
 msgid "Connection Timeout"
 msgstr "連線已逾時"
@@ -5248,7 +5248,7 @@ msgstr "正在喝咖啡"
 
 #. Playing video games
 msgid "Gaming"
-msgstr "正在玩影像遊戲"
+msgstr "正在玩電子遊戲"
 
 msgid "Browsing the web"
 msgstr "在瀏覽網頁"
@@ -6584,7 +6584,7 @@ msgstr "<br><b>頻道創立者：</b>%s"
 
 #, c-format
 msgid "<br><b>Channel Cipher:</b> %s"
-msgstr "<br><b>頻道加密方式 (Cipher)：</b>%s"
+msgstr "<br><b>頻道加密法：</b>%s"
 
 #. Definition of HMAC: http://en.wikipedia.org/wiki/HMAC
 #, c-format
@@ -7227,7 +7227,7 @@ msgid "Private Key file"
 msgstr "私人密碼匙檔案"
 
 msgid "Cipher"
-msgstr "加密方式"
+msgstr "加密法"
 
 msgid "HMAC"
 msgstr "HMAC"
@@ -7362,7 +7362,7 @@ msgstr "失敗：遠端不支援建議中的密碼匙交換羣組 (KE group)"
 
 #, c-format
 msgid "Failure: Remote does not support proposed cipher"
-msgstr "失敗：遠端不支援建議中的加密方式 (cipher)"
+msgstr "失敗：遠端不支援建議中的加密法"
 
 #, c-format
 msgid "Failure: Remote does not support proposed PKCS"
@@ -10144,6 +10144,7 @@ msgid "Unknown.... Please report this!"
 msgstr "不明的捕捉事件……請匯報這個問題！"
 
 #. Dummy strings to make some audio/video sources appear in the PO file
+#, fuzzy
 msgid "Built-in Digital Analog Stereo (HDMI)"
 msgstr "內置數碼立體聲音響 (HDMI)"
 
@@ -10737,7 +10738,7 @@ msgid "Screencast \"CreateSession\" failed."
 msgstr "螢幕共享無法「建立工作階段」(CreateSession)"
 
 msgid "Test image"
-msgstr "測試用圖像"
+msgstr "測試用影像"
 
 msgid "Select window"
 msgstr "選擇視窗"

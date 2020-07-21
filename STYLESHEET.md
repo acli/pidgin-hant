@@ -3,7 +3,9 @@ A
 
 **Afrikaans**
 (*n.*)
+(Taiwan)
 [斐語](https://www.mofa.gov.tw/CountryInfo.aspx?CASN=D33B55D537402BAA&n=1C6028CA080A27B3&sms=26470E539B6FA395&s=4892E8B8F5C0E174),
+(Hong Kong)
 南非荷蘭文.
 
 **authenticate**
@@ -50,6 +52,16 @@ Note that there is *no* official translation so this translation is technically 
 **room**
 (*n.*)
 聊天室.
+
+V
+=
+
+**video game**
+(*n.*)
+(Taiwan)
+[電動遊戲](http://terms.naer.edu.tw/detail/7365301/),
+(Hong Kong)
+電子遊戲.
 
 
 Useful links
