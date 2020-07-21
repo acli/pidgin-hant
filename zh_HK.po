@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Pidgin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-09 22:15-0500\n"
-"PO-Revision-Date: 2020-07-20 19:27+0800\n"
+"PO-Revision-Date: 2020-07-20 22:56+0800\n"
 "Last-Translator: Ambrose Li <ambrose.li@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <http://www.transifex.com/pidgin/pidgin/language/zh_HK/>\n"
 "Language: zh_HK\n"
@@ -1536,8 +1536,9 @@ msgstr "巢狀分組（實驗性功能）"
 msgid "Provides alternate buddylist grouping options."
 msgstr "為好友清單提供另類的分組顯示方法。"
 
+# XXX tentative
 msgid "Lastlog"
-msgstr ""
+msgstr "回捲搜尋"
 
 #. Translator Note: The "backlog" is the conversation buffer/history.
 msgid "lastlog: Searches for a substring in the backlog."
@@ -1548,7 +1549,7 @@ msgid "GntLastlog"
 msgstr "GntLastlog"
 
 msgid "Lastlog plugin."
-msgstr "Lastlog 模組。"
+msgstr "回捲搜尋模組。"
 
 msgid "accounts"
 msgstr "帳號清單"
@@ -6139,7 +6140,7 @@ msgid "Games"
 msgstr "遊戲"
 
 msgid "ICQ Xtraz"
-msgstr ""
+msgstr "ICQ 額外功能"
 
 msgid "Add-Ins"
 msgstr "模組"
@@ -10538,8 +10539,10 @@ msgstr "不明的捕捉事件……請匯報這個問題！"
 msgid "(Custom)"
 msgstr "（使用者自選）"
 
+# NOTE: "Pimps" means "something that is really cool"
+# XXX tentative
 msgid "Penguin Pimps"
-msgstr ""
+msgstr "企鵝之選"
 
 msgid "The default Pidgin sound theme"
 msgstr "預設的 Pidgin 音效主題"
@@ -12028,8 +12031,9 @@ msgstr "為%s選擇字型"
 msgid "GTK+ Interface Font"
 msgstr "GTK+介面字型"
 
+# NOTE: at one point this was actually translated "GTK+ 文字捷徑主題" but this doesn't really make any sense nor describe the thing
 msgid "GTK+ Text Shortcut Theme"
-msgstr ""
+msgstr "GTK+ 按鍵捷徑主題"
 
 msgid "Disable Typing Notification Text"
 msgstr "停用輸入通知"
