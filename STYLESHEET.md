@@ -6,7 +6,9 @@ Where inconsistencies are found,
 NAER terms are preferred for Taiwanese Chinese unless obviously not used in the wild;
 for Hong Kong Chinese, CSB terms are preferred unless obviously not used in the wild.
 
-([Original style sheet from 2011](doc/style_sheet_from_2011.txt) available for reference.)
+(The [original style sheet from 2011](doc/style_sheet_from_2011.txt),
+unfortunately removed during the Transifex migration,
+is available for reference.)
 
 A
 -
