@@ -6696,7 +6696,7 @@ msgid "Cannot join private group"
 msgstr "無法加入小圈子"
 
 msgid "Call Command"
-msgstr "呼叫指令"
+msgstr "執行指令"
 
 msgid "Cannot call command"
 msgstr "無法執行指令"
@@ -8121,10 +8121,10 @@ msgid "_Audio Call"
 msgstr "語音通話(_A)"
 
 msgid "Audio/_Video Call"
-msgstr "語音／視像通話"
+msgstr "語音／視訊通話"
 
 msgid "_Video Call"
-msgstr "視像通話(_V)"
+msgstr "視訊通話(_V)"
 
 msgid "_Send File..."
 msgstr "傳送檔案(_S)..."
@@ -8654,10 +8654,10 @@ msgid "/Conversation/Media/_Audio Call"
 msgstr "/交談/媒體/語音通話(_A)"
 
 msgid "/Conversation/Media/_Video Call"
-msgstr "/交談/媒體/視像通話(_V)"
+msgstr "/交談/媒體/視訊通話(_V)"
 
 msgid "/Conversation/Media/Audio\\/Video _Call"
-msgstr "/交談/媒體/語音／視像通話(_C)"
+msgstr "/交談/媒體/語音／視訊通話(_C)"
 
 msgid "/Conversation/Se_nd File..."
 msgstr "/交談/傳送檔案(_N)..."
@@ -8738,10 +8738,10 @@ msgid "/Conversation/Media/Audio Call"
 msgstr "/交談/媒體/語音通話"
 
 msgid "/Conversation/Media/Video Call"
-msgstr "/交談/媒體/視像通話"
+msgstr "/交談/媒體/視訊通話"
 
 msgid "/Conversation/Media/Audio\\/Video Call"
-msgstr "/交談/媒體/語音／視像通話"
+msgstr "/交談/媒體/語音／視訊通話"
 
 msgid "/Conversation/Send File..."
 msgstr "/交談/傳送檔案..."

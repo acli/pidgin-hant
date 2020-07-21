@@ -31,6 +31,18 @@ A
 C
 -
 
+**call**¹
+(*v.*)
+撥打.
+(*n.*)
+通話.
+**incoming ~**
+來電.
+
+**call**²
+(*v.*)
+執行.
+
 **certify**
 (*v.*)
 [認證](http://terms.naer.edu.tw/detail/7256177/).
