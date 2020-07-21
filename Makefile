@@ -1,15 +1,20 @@
+# vi: set sw=8 ts=8 ai sm noet:
+
 dest_po=../pidgin/po
 gaim_pot=$(dest_po)/pidgin.pot
 
-langs=zh_TW zh_HK
+langs=zh_TW zh_HK yue_HK
 
-all: reports zh_HK.po
+all: reports $(addsuffix .po,$(filter-out %_TW,$(langs)))
 
 install: all
 
 
 zh_HK.po: zh_TW.po tw2hk.pl
-	./tw2hk.pl < $< > zh_HK.tmp && mv zh_HK.tmp $@
+	./tw2hk.pl < $< > $*.tmp && mv $*.tmp $@
+
+yue_HK.po: zh_HK.po hk2yue.pl
+	./hk2yue.pl < $< > $*.tmp && mv $*.tmp $@
 
 $(dest_po)/%: %
 	msgmerge --no-location -o $*.tmp $< $(gaim_pot) && mv -fv $*.tmp $@
