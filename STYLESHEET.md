@@ -1,9 +1,10 @@
 Terms
 =====
-New working style sheet for 2020.
+New working style sheet for 2020
+for [Pidgin’s traditional Chinese translations](https://www.transifex.com/pidgin/pidgin/languages/).
 Primary goal here is internal consistency while minimizing changes to existing style.
 Where inconsistencies are found,
-NAER terms are preferred for Taiwanese Chinese unless obviously not used in the wild;
+[NAER](http://terms.naer.edu.tw/) terms are preferred for Taiwanese Chinese unless obviously not used in the wild;
 for Hong Kong Chinese, CSB terms are preferred unless obviously not used in the wild.
 
 (The [original style sheet from 2011](doc/style_sheet_from_2011.txt),
@@ -116,9 +117,3 @@ V
 (Hong Kong)
 電子遊戲.
 
----
-
-Useful links
-============
-- [National Academy for Educational Research](http://terms.naer.edu.tw/)
-- [Pidgin: Languages](https://www.transifex.com/pidgin/pidgin/languages/) on Transifex
