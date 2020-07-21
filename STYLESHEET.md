@@ -47,6 +47,13 @@ I
 (*n.*)
 [識別符](http://terms.naer.edu.tw/detail/1279935/?index=3).
 
+P
+-
+
+**pimps**
+(*n.*)
+*Note that this means [“something that is really cool”](https://www.urbandictionary.com/author.php?author=Lindsie)*.
+
 R
 -
 
