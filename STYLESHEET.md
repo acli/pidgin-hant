@@ -5,7 +5,7 @@ For Taiwan, NAER terms are preferred unless obviously not used in the wild.
 For Hong Kong, CSB terms are preferred unless obviously not used in the wild.
 Aiming for internal consistency while minimizing changes to existing style.
 
-([Original style sheet from 2011](STYLESHEET.OLD) available for reference.)
+([Original style sheet from 2011](doc/style_sheet_from_2011.txt) available for reference.)
 
 A
 -
