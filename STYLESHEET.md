@@ -115,6 +115,14 @@ T
 按鍵捷徑主題 —
 *a GTK “key theme”; a predefined set of keybindings.*
 
+U
+-
+
+**user temporarily unavailable**
+*(OSCAR)*
+*[user is migrating or the server is down (USER_TEMP_UNAVAIL)](https://devinsmith.net/backups/OSCAR/) —
+it does not just mean the user is offline*.
+
 V
 -
 
