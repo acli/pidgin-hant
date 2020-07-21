@@ -3,8 +3,8 @@ Terms
 New working style sheet for 2020.
 Primary goal here is internal consistency while minimizing changes to existing style.
 Where inconsistencies are found,
-for Taiwanese Chinese, NAER terms are preferred unless obviously not used in the wild;
-while for Hong KongTaiwanese Chinese CSB terms are preferred unless obviously not used in the wild.
+NAER terms are preferred for Taiwanese Chinese unless obviously not used in the wild;
+for Hong Kong Chinese, CSB terms are preferred unless obviously not used in the wild.
 
 ([Original style sheet from 2011](doc/style_sheet_from_2011.txt) available for reference.)
 
