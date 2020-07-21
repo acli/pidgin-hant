@@ -34,3 +34,8 @@ resource²
 room
 - 聊天室
 
+
+Useful links
+============
+- [National Academy for Educational Research](http://terms.naer.edu.tw/)
+- [Pidgin: Languages](https://www.transifex.com/pidgin/pidgin/languages/) on Transifex
