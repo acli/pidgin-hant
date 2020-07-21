@@ -16,9 +16,9 @@ A
 
 **Afrikaans**
 (*n.*)
-(Taiwan)
+(*Taiwan*)
 [斐語](https://www.mofa.gov.tw/CountryInfo.aspx?CASN=D33B55D537402BAA&n=1C6028CA080A27B3&sms=26470E539B6FA395&s=4892E8B8F5C0E174),
-(Hong Kong)
+(*Hong Kong*)
 南非荷蘭文.
 
 **authenticate**
@@ -94,10 +94,10 @@ R
 
 **resource**²
 (*n.*)
-(XMPP)
+(*XMPP*)
 [用戶端](http://terms.naer.edu.tw/detail/1217777/)[識別符](http://terms.naer.edu.tw/detail/1279935/) (Resource),
 [用戶端](http://terms.naer.edu.tw/detail/1217777/) (Resource).
-*[A user-specified arbitrary identifier that represents the user’s location, app, device, etc.](https://wiki.xmpp.org/web/Jabber_Resources).*
+*[A user-specified arbitrary identifier that represents the user’s location, device, app, etc.](https://wiki.xmpp.org/web/Jabber_Resources)*
 
 **room**
 (*n.*)
@@ -107,9 +107,9 @@ T
 -
 
 **text shortcut theme**
-(*n.*, Pidgin-specific)
+(*n.*, *Pidgin-specific*)
 按鍵捷徑主題.
-*A GTK “key theme”.*
+*A GTK “key theme”; a predefined set of keybindings.*
 
 V
 -
@@ -120,16 +120,16 @@ V
 
 **video**
 (*adj.*)
-(Taiwan)
+(*Taiwan*)
 視訊,
-(Hong Kong)
+(*Hong Kong*)
 視像.
 
 **video game**
 (*n.*)
-(Taiwan)
+(*Taiwan*)
 [電動遊戲](http://terms.naer.edu.tw/detail/7365301/),
-(Hong Kong)
+(*Hong Kong*)
 電子遊戲.
 
 ---
