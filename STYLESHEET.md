@@ -65,6 +65,14 @@ R
 (*n.*)
 聊天室.
 
+T
+-
+
+**text shortcut theme**
+(*n., Pidgin-specific)
+按鍵捷徑主題.
+*“Key theme” in usual GTK lingo. There seems to be no official translation.*
+
 V
 -
 
