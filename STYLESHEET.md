@@ -66,7 +66,7 @@ R
 (XMPP)
 [用戶端](http://terms.naer.edu.tw/detail/1217777/)[識別符](http://terms.naer.edu.tw/detail/1279935/?index=3) (Resource),
 [用戶端](http://terms.naer.edu.tw/detail/1217777/) (Resource).
-*Note that there is no official translation so this translation is technically “wrong” but this is what it actually means.*
+*Unofficial translation based on [the official definition](https://wiki.xmpp.org/web/Jabber_Resources).*
 
 **room**
 (*n.*)
