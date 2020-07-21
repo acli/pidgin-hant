@@ -79,7 +79,7 @@ P
 
 **pimps**
 (*n.*)
-*[Something that is really cool](https://www.urbandictionary.com/author.php?author=Lindsie)*.
+*[something that is really cool](https://www.urbandictionary.com/author.php?author=Lindsie)*.
 
 R
 -
@@ -96,8 +96,8 @@ R
 (*n.*)
 (*XMPP*)
 [用戶端](http://terms.naer.edu.tw/detail/1217777/)[識別符](http://terms.naer.edu.tw/detail/1279935/) (Resource),
-[用戶端](http://terms.naer.edu.tw/detail/1217777/) (Resource).
-*[A user-specified arbitrary identifier that represents the user’s location, device, app, etc.](https://wiki.xmpp.org/web/Jabber_Resources)*
+[用戶端](http://terms.naer.edu.tw/detail/1217777/) (Resource) —
+*[a user-specified arbitrary identifier that represents the user’s location, device, app, etc.](https://wiki.xmpp.org/web/Jabber_Resources)*
 
 **room**
 (*n.*)
@@ -108,8 +108,8 @@ T
 
 **text shortcut theme**
 (*n.*, *Pidgin-specific*)
-按鍵捷徑主題.
-*A GTK “key theme”; a predefined set of keybindings.*
+按鍵捷徑主題 —
+*a GTK “key theme”; a predefined set of keybindings.*
 
 V
 -
