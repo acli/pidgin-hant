@@ -117,3 +117,10 @@ V
 (Hong Kong)
 電子遊戲.
 
+
+Punctuation
+===========
+
+Chinese quotation marks (「」) should be used throughout unless there’s a strong reason to use English quotation marks.
+
+
