@@ -84,9 +84,11 @@ my %remembered_choice = ();
 use vars qw( $verbs );
 $verbs = sprintf('(?:%s)', join('|', qw(
 		中斷
+		使用
 		修改
 		停用
 		允許
+		兼容
         出現
 		出示
 		分組
@@ -95,20 +97,29 @@ $verbs = sprintf('(?:%s)', join('|', qw(
 		同意
 		「咇」
 		執行
+		够
+		夠
+		大於
+		存在
 		完成
+		容許
 		寫
 		拒絕
 		拖曳
 		指定
+		提供
 		支援
 		收到
+		明白
 		清除
 		發出
 		發生
 		相符
+		知道
 		要求
 		記住
 		設定
+		認同
 		超出
 		超過
 		輸入
