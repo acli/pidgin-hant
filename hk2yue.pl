@@ -81,8 +81,7 @@ my $msg_str = "";
 my $force_msg_str = "";
 my %remembered_choice = ();
 
-use vars qw( $verbs );
-$verbs = sprintf('(?:%s)', join('|', qw(
+my @verbs = qw(
 		中斷
 		使用
 		修改
@@ -104,9 +103,11 @@ $verbs = sprintf('(?:%s)', join('|', qw(
 		完成
 		容許
 		寫
+		感受
 		拒絕
 		拖曳
 		指定
+		捕捉
 		提供
 		支援
 		收到
@@ -138,7 +139,7 @@ $verbs = sprintf('(?:%s)', join('|', qw(
 		離開
 		顯示
 		飲醉
-	)));
+	);
 
 #
 # Replace word with another
@@ -219,6 +220,7 @@ sub translate() {
 		# 咗 = 着 but no one writes 着
 		# 喺 = 在 but no one writes 在
 
+		# Patterns would've been useful, but backreferences don't work in do_trans (though it does match on patterns)...
         do_trans("(?<!之)的(?!確)",								'嘅');
         do_trans("他們/她們|他們（她們）|他（她）們|他們|她們",	'佢哋');
         do_trans("他/她|他（她）|(?<!其)他|她",					'佢');
@@ -229,17 +231,22 @@ sub translate() {
         do_trans("忘記",										'唔記得');
         do_trans("只在",										'淨係喺');
         do_trans("不是",										'唔係');
-        do_trans("不(會|再|到)",								'唔$1');
-        do_trans("不(自動|同)",									'唔$1');
-        do_trans("不($verbs)",									'唔$1');
+		for my $word (qw( 會 再 到 自動 同 ), @verbs) {
+			do_trans("不$word",									"唔$word");
+		}
         do_trans("不為(?!意)",									'唔係');
         do_trans("不可(?!能)(?:以)?",							'唔可以');
         do_trans("(?<!吃)喝",									'飲');
         do_trans("嗶",											'咇');
 
 		# This needs to be near the end
-        do_trans("($verbs)了",									'$1咗');
-        do_trans("了(，|；|：|。)",								'$1');
+		for my $word (@verbs) {
+			do_trans("${word}到了(?!(?:解|結))",				"${word}到");
+		}
+		for my $word (@verbs) {
+			do_trans("${word}了(?!(?:解|結))",					"${word}咗");
+		}
+        do_trans("了(?=(?:，|；|：|。|！|？|\"))",				'');
 
         # }}}
 }
