@@ -81,6 +81,8 @@ my $msg_str = "";
 my $force_msg_str = "";
 my %remembered_choice = ();
 
+my $是 = '是(?!(?:非|日))';
+
 my @verbs = qw(
 		中斷
 		使用
@@ -139,6 +141,30 @@ my @verbs = qw(
 		離開
 		顯示
 		飲醉
+	);
+
+my @nouns = qw(
+		JID
+		Pidgin
+		下列
+		域名
+		描述
+		方法
+		清單
+		目錄
+		訊息
+		認證
+		證書
+		證書鍊
+	);
+
+my @adjectives = qw(
+		(?:一|兩|\d+)(?:個)
+		唯讀
+		有版權
+		正確
+		無效
+		離線
 	);
 
 #
@@ -226,18 +252,38 @@ sub translate() {
         do_trans("他/她|他（她）|(?<!其)他|她",					'佢');
         do_trans("誰(?!人)",									'邊個');
         do_trans("這個",										'呢個');
+        do_trans("這是",										'呢個係');
         do_trans("沒有",										'冇');
         do_trans("忘記了",										'唔記得咗');
         do_trans("忘記",										'唔記得');
         do_trans("只在",										'淨係喺');
-        do_trans("不是",										'唔係');
+        do_trans("都是",										'都係');
+        do_trans("即$是",										'即係');
+        do_trans("或$是",										'或者係');
+        #do_trans("還是",										'定係');
+        do_trans("亦可",										'都得');
+		do_trans("是不是",										"係唔係");
+		do_trans("不是",										"唔係");
 		for my $word (qw( 會 再 到 自動 同 ), @verbs) {
+			do_trans("${word}不$word",							"${word}唔$word");
 			do_trans("不$word",									"唔$word");
 		}
+        do_trans("可能$是",										'可能係');
+        do_trans("除非$是",										'除非係');
         do_trans("不為(?!意)",									'唔係');
         do_trans("不可(?!能)(?:以)?",							'唔可以');
         do_trans("(?<!吃)喝",									'飲');
         do_trans("嗶",											'咇');
+
+		do_trans("是否",										"係唔係");
+		for my $word (@nouns) {
+			do_trans("$word$是",								"${word}係");
+			do_trans("$word $是",								"${word} 係") if $word =~ /[a-z0-9]$/;
+		}
+		for my $word (@adjectives) {
+			do_trans("是${word}",								"係${word}");
+			do_trans("是 ${word}",								"係 ${word}") if $word =~ /^[A-Za-z0-9]/;
+		}
 
 		# This needs to be near the end
 		for my $word (@verbs) {
