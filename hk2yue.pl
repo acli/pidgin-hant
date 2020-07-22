@@ -147,19 +147,34 @@ my @nouns = qw(
 		JID
 		Pidgin
 		下列
+		交談
+		伺服器
+		即時訊息
+		呢度
 		域名
+		對話視窗
 		描述
 		方法
+		日誌瀏覽器
+		標準錯誤輸出
 		清單
 		目錄
+		空位
+		終端機
+		網域
+		聊天室
 		訊息
 		認證
 		證書
 		證書鍊
+		通訊協定
+		選項
 	);
 
 my @adjectives = qw(
 		(?:一|兩|\d+)(?:個|份)
+		下面嘅
+		呢個
 		唯讀
 		有版權
 		正確
@@ -254,51 +269,61 @@ sub translate() {
         # order of the words can sometimes be important!
 
 		# Note to Taiwanese readers:
+		# 乜 = 物 but no one writes 物
+		# 佢 = 渠 but no one writes 渠
+		# 冇 = 無 (and some people actually write 無)
 		# 咗 = 着 but no one writes 着
 		# 喺 = 在 but no one writes 在
+		# 嗰 = 個 but no one writes 個
+
+		my $quoted_thing = '(?:「(?:(?!(?:「|」)).)+」)';
+		my $noun = mkre(@nouns);
+		my $verb = mkre(@verbs);
+		my $adjective = mkre(@adjectives, map { sprintf('%s%s嘅', $_, (/[A-Za-z0-9]$/? '\s*': '')); } ($quoted_thing, @nouns));
+		my $noun_phrase = "(?:$adjective*$quoted_thing?$adjective*$noun)";
 
 		# Patterns would've been useful, but backreferences don't work in do_trans (though it does match on patterns)...
-        do_trans("(?<!之)的(?!確)",								'嘅');
-        do_trans("他們/她們|他們（她們）|他（她）們|他們|她們",	'佢哋');
-        do_trans("他/她|他（她）|(?<!其)他|她",					'佢');
-        do_trans("誰(?!人)",									'邊個');
-        do_trans("這是個",										'呢個係');
-        do_trans("這是",										'呢個係');
-        do_trans("這個",										'呢個');
-        do_trans("沒有",										'冇');
-        do_trans("忘記了",										'唔記得咗');
-        do_trans("忘記",										'唔記得');
-        do_trans("只在",										'淨係喺');
-        do_trans("都是",										'都係');
-        do_trans("即$是",										'即係');
-        do_trans("或$是",										'或者係');
-        #do_trans("還是",										'定係');
-        do_trans("亦可",										'都得');
-		do_trans("是不是",										"係唔係");
-		do_trans("(?<!恕)不是",									"唔係");
-		do_trans(sprintf('(%s)不\1', mkre((qw( 會 再 到 自動 同 ), @verbs))),
-																'\1唔\1');
-		do_trans(sprintf('不(%s)', mkre((qw( 會 再 到 自動 同 ), @verbs))),
-																'唔\1');
-        do_trans("可能$是",										'可能係');
-        do_trans("除非$是",										'除非係');
-        do_trans("不為(?!意)",									'唔係');
-        do_trans("不可(?!能)(?:以)?",							'唔可以');
-        do_trans("(?<!吃)喝",									'飲');
-        do_trans("嗶",											'咇');
+        do_trans('(?<!之)的(?!確)',												'嘅');
+        do_trans('他們/她們|他們（她們）|他（她）們|他們|她們',					'佢哋');
+        do_trans('他/她|他（她）|(?<!其)他|她',									'佢');
+        do_trans('誰(?!人)',													'邊個');
+        do_trans('這是個',														'呢個係');
+        do_trans('這是',														'呢個係');
+        do_trans('這個',														'呢個');
+        do_trans('沒有',														'冇');
+        do_trans('忘記了',														'唔記得咗');
+        do_trans('忘記',														'唔記得');
+        do_trans('只在',														'淨係喺');
+        do_trans('都是',														'都係');
+        do_trans("即$是",														'即係');
+        do_trans("或$是",														'或者係');
+        #do_trans('還是',														'定係');
+        do_trans('亦可',														'都得');
+		do_trans('是不是',														'係唔係');
+		do_trans('(?<!恕)不是',													'唔係');
+		do_trans(sprintf('(%s)不\1', mkre((qw( 會 再 到 自動 同 ), @verbs))),	'\1唔\1');
+		do_trans(sprintf('不(%s)', mkre((qw( 會 再 到 自動 同 ), @verbs))),		'唔\1');
+        do_trans("可能$是",														'可能係');
+        do_trans("除非$是",														'除非係');
+        do_trans('不為(?!意)',													'唔係');
+        do_trans('不可(?!能)(?:以)?',											'唔可以');
+        do_trans('(?<!吃)喝',													'飲');
+        do_trans('嗶',															'咇');
+        do_trans('現在',														'而今');
+        do_trans('時才',														'嘅時候先至');
+        do_trans('這(?:裏|裡|兒)',												'呢度');
 
-		do_trans("是否",										"係唔係");
-		do_trans(sprintf('(%s\s*)是', mkre(@nouns)),			'\1係');
-		do_trans(sprintf('是(%s\s*)', mkre(@adjectives)),		'係\1');
+		do_trans('是否',														'係唔係');
+		do_trans(sprintf('(%s\s*)是', $noun_phrase),							'\1係');
+		do_trans(sprintf('是(%s\s*)', $adjective),								'係\1');
 
-		do_trans(sprintf('在(%s\s*)', mkre(@adjectives)),		'喺\1');
+		do_trans(sprintf('(?<!所)在(%s)', $noun_phrase),						'喺\1');
+		do_trans(sprintf('正在(%s\s*)', $verb),									'\1緊');
 
 		# This needs to be near the end
-		do_trans(sprintf('(%s\s*)到了(?!(?:解|結))', mkre(@verbs)),
-																'\1到');
-		do_trans(sprintf('(%s\s*)了(?!(?:解|結))', mkre(@verbs)),
-																'\1咗');
-        do_trans("了(?=(?:，|；|：|。|！|？|\"))",				'');
+		do_trans(sprintf('(%s\s*)到了(?!(?:解|結))', $verb),					'\1到');
+		do_trans(sprintf('(%s\s*)了(?!(?:解|結))', $verb),						'\1咗');
+        do_trans('了(?=(?:，|；|：|。|！|？|"))',								'');
 
         # }}}
 }
