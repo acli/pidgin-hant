@@ -159,7 +159,7 @@ my @nouns = qw(
 	);
 
 my @adjectives = qw(
-		(?:一|兩|\d+)(?:個)
+		(?:一|兩|\d+)(?:個|份)
 		唯讀
 		有版權
 		正確
@@ -167,12 +167,23 @@ my @adjectives = qw(
 		離線
 	);
 
+sub mkre (@) {
+	return sprintf('(?:%s)', join('|', @_));
+}
+
 #
 # Replace word with another
 #
 sub do_trans {
         my ($tf, $tt) = @_;
-        $msg_str =~ s/$tf/$tt/g;
+        $msg_str =~ s{$tf}{
+				my($pat, $it) = @_;
+				if (defined $^N) {
+					my $t = "$^N";
+					$it =~ s/[\\\$]1/$t/;
+				}
+				$it;
+			}egp;
 }
 
 #
@@ -251,8 +262,9 @@ sub translate() {
         do_trans("他們/她們|他們（她們）|他（她）們|他們|她們",	'佢哋');
         do_trans("他/她|他（她）|(?<!其)他|她",					'佢');
         do_trans("誰(?!人)",									'邊個');
-        do_trans("這個",										'呢個');
+        do_trans("這是個",										'呢個係');
         do_trans("這是",										'呢個係');
+        do_trans("這個",										'呢個');
         do_trans("沒有",										'冇');
         do_trans("忘記了",										'唔記得咗');
         do_trans("忘記",										'唔記得');
@@ -263,11 +275,11 @@ sub translate() {
         #do_trans("還是",										'定係');
         do_trans("亦可",										'都得');
 		do_trans("是不是",										"係唔係");
-		do_trans("不是",										"唔係");
-		for my $word (qw( 會 再 到 自動 同 ), @verbs) {
-			do_trans("${word}不$word",							"${word}唔$word");
-			do_trans("不$word",									"唔$word");
-		}
+		do_trans("(?<!恕)不是",									"唔係");
+		do_trans(sprintf('(%s)不\1', mkre((qw( 會 再 到 自動 同 ), @verbs))),
+																'\1唔\1');
+		do_trans(sprintf('不(%s)', mkre((qw( 會 再 到 自動 同 ), @verbs))),
+																'唔\1');
         do_trans("可能$是",										'可能係');
         do_trans("除非$是",										'除非係');
         do_trans("不為(?!意)",									'唔係');
@@ -276,22 +288,16 @@ sub translate() {
         do_trans("嗶",											'咇');
 
 		do_trans("是否",										"係唔係");
-		for my $word (@nouns) {
-			do_trans("$word$是",								"${word}係");
-			do_trans("$word $是",								"${word} 係") if $word =~ /[a-z0-9]$/;
-		}
-		for my $word (@adjectives) {
-			do_trans("是${word}",								"係${word}");
-			do_trans("是 ${word}",								"係 ${word}") if $word =~ /^[A-Za-z0-9]/;
-		}
+		do_trans(sprintf('(%s\s*)是', mkre(@nouns)),			'\1係');
+		do_trans(sprintf('是(%s\s*)', mkre(@adjectives)),		'係\1');
+
+		do_trans(sprintf('在(%s\s*)', mkre(@adjectives)),		'喺\1');
 
 		# This needs to be near the end
-		for my $word (@verbs) {
-			do_trans("${word}到了(?!(?:解|結))",				"${word}到");
-		}
-		for my $word (@verbs) {
-			do_trans("${word}了(?!(?:解|結))",					"${word}咗");
-		}
+		do_trans(sprintf('(%s\s*)到了(?!(?:解|結))', mkre(@verbs)),
+																'\1到');
+		do_trans(sprintf('(%s\s*)了(?!(?:解|結))', mkre(@verbs)),
+																'\1咗');
         do_trans("了(?=(?:，|；|：|。|！|？|\"))",				'');
 
         # }}}
