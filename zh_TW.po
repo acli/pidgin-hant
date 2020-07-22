@@ -151,10 +151,10 @@ msgid "%s%s%s%s wants to add %s to his or her buddy list%s%s"
 msgstr "使用者 %s%s%s%s 想要將 %s 加入他（她）的好友清單%s%s。"
 
 msgid "Authorize buddy?"
-msgstr "給予認證？"
+msgstr "允許？"
 
 msgid "Authorize"
-msgstr "給予認證"
+msgstr "允許"
 
 msgid "Deny"
 msgstr "拒絕"
