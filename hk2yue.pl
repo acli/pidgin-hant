@@ -106,7 +106,7 @@ my @verbs = qw(
 	加入
 	取消
 	同意
-	「咇」
+	咇
 	執行
 	够
 	夠
@@ -127,6 +127,7 @@ my @verbs = qw(
 	明白
 	服務
 	清除
+	瀏覽
 	登入
 	發出
 	發生
@@ -210,6 +211,7 @@ my @nouns = qw(
 	呢度
 	嘢
 	回捲緩衝區
+	地址
 	地方
 	域名
 	好友
@@ -247,6 +249,7 @@ my @nouns = qw(
 	網址
 	網域
 	網絡
+	網頁
 	羣組
 	聊天室
 	訊息
@@ -265,13 +268,14 @@ my @nouns = qw(
 	錯誤訊息
 	閒置時間
 	除錯選項
+	電子郵件
 	項目
 	顏色
 	麥克風
     );
 
 my @adjectives = qw(
-	(?:(?:一|兩|\d+)(?:個|份))
+	(?:(?:一|兩|\d+\s*)(?:個|份|張))
 	其他
 	各種
 	呢個
@@ -283,7 +287,6 @@ my @adjectives = qw(
 	無效
 	自動
 	離線
-	離線
     );
 
 my @adverbs = qw(
@@ -291,17 +294,67 @@ my @adverbs = qw(
 	重新
     );
 
+# Convert a word list into a regexp matching any of the specified words
 sub mkre (@) {
     return sprintf('(?:%s)', join('|', @_));
 }
 
+# Convert ugly \s*\s* sequences into a single \s*
+sub slightly_simplify ($) {
+    my($re) = @_;
+    $re =~ s/(\\s\*)+/$1/g;
+    return $re;
+}
+
+# Given a tag and a regexp, insert the comment in front of the regexp
+sub tagre ($$) {
+    my($tag, $re) = @_;
+    $tag =~ s/[\(\)]//sg;
+    $re = slightly_simplify $re;
+    return "(?:(?#$tag)$re)";
+}
+
+# Convert a word list into its quoted equivalents, i.e., {x: x → 「x」} where x is any word
+sub quotify (@) {
+    return map { s/^\s+//; s/\s+$//; "「$_」"; } @_;
+}
+
+# Convert a word list into itself unioned with its quoted equivalent
+sub quotable (@) {
+    return (@_, quotify @_);
+}
+
+# Join a bunch of words together, inserting \s* between them where appropriate
+# NOTE: if any of these words are actually regexps the behaviour is undefined =P
+sub cat (@) {
+    my($it, @rest) = @_;
+    for my $next (@rest) {
+	if ($it =~ /(?:\p{Latin})$/ && $next =~ /^(?:\p{Latin})/) {
+	    $it .= '\s+';
+	} elsif (!($it =~ /(?:\pP|\p{Han})$/ && $next =~ /^(?:\pP|\p{Han})/)) {
+	    $it .= '\s*';
+	}
+	$it .= $next;
+    }
+    return $it;
+}
+
 my $quoted_thing = '(?:「(?:(?!(?:「|」)).)+」)';
-my $noun = sprintf('(?:\s*(?:%s+)\s*)', mkre(@nouns, @pronouns));
-my $verb = mkre(@verbs);
-my $adjective = mkre(@adjectives, map { sprintf('%s\s*%s\s*嘅', $_, (/[A-Za-z0-9]$/? '\s*': '')); } ($quoted_thing, @nouns));
-my $adverb = mkre(@adverbs, map { sprintf('%s\s*咁', $_); } @adjectives);
-my $noun_phrase = "(?:$adjective*$quoted_thing?$adjective*$noun)";
-my $verb_phrase = "(?:$adverb*$verb)";
+my $valid_beginning_letter = '(?:\p{Latin}|\047|’)';
+my $valid_medial_letter = '(?:\p{Latin}|-|–|:|\047|’|\.)';
+my $valid_terminal_letter = '(?:\p{Latin}|\047|’)';
+my $english_word = "(?:$valid_beginning_letter(?:$valid_medial_letter*$valid_terminal_letter+)?)";
+my $placeholder = '(?:\s*%(?:\d+\$)?(?:\d+\.?|\d*\.\d+)?s\s*)';
+my $wildcard = mkre($quoted_thing, $english_word, $placeholder);
+my $noun = tagre('N', sprintf('(?:\s*(?:%s+)\s*)', mkre($wildcard, quotable @nouns, @pronouns)));
+my $verb = tagre('V', mkre(quotable @verbs));
+my $adjective = tagre('ADJ', mkre(map { cat($_, '嘅'); } ($quoted_thing, @nouns), $wildcard, @adjectives));
+my $adverb = tagre('A', mkre(map { cat($_, '咁'); } @adjectives, $wildcard, @adverbs));
+my $noun_phrase = tagre('NP', "(?:$adjective*$noun+)");
+my $verb_phrase = tagre('VP', "(?:$adverb*$verb)");
+my $eot = '(?=(?:，|；|：|。|！|？|"))';
+
+print STDERR "noun_phrase = /$noun_phrase/\n";
 
 #
 # Replace word with another
@@ -393,9 +446,7 @@ sub translate() {
     # 喺 = 在 but no one writes 在
     # 嗰 = 個 but no one writes 個
 
-    #do_trans('(?<!之)的(?!確)',						'嘅');
-    #do_trans(sprintf('(%s)(?:的|之)(?=%s)', $noun, $noun_phrase),		'\1嘅');
-    do_trans(sprintf('(?:的|之)(%s)', $noun_phrase),				'嘅\1');
+    do_trans(sprintf('(?:(?<!(?:目|之))的|之)(%s)', $noun_phrase),		'嘅\1');
     do_trans('他們/她們|他們（她們）|他（她）們|他們|她們|它們',		'佢哋');
     do_trans('他/她|他（她）|(?<!其)他|她|它',					'佢');
     do_trans('誰(?!人)',							'邊個');
@@ -423,19 +474,27 @@ sub translate() {
     do_trans('不為(?!意)',							'唔係');
     do_trans('不可(?!能)(?:以)?',						'唔可以');
     do_trans('(?<!吃)喝',							'飲');
+    do_trans('(?<!尋)找',							'搵');
     do_trans('嗶',								'咇');
     do_trans('現在',								'而今');
+    do_trans('可在',								'可以喺');
     do_trans('時才',								'嘅時候先至');
     do_trans('這裏',								'呢度');
     do_trans('東西(?!南北|薈萃)',						'嘢');
     do_trans('無法找到',							'搵唔到');
     do_trans('看見',								'睇見');
+    do_trans('一起',								'一齊');
 
-    do_trans(sprintf('這(\s*%s)', $noun_phrase),				'呢個\1');	# XXX this is technically wrong because counters
+    do_trans(sprintf('這(%s)', $noun_phrase),					'呢個\1');	# XXX this is technically wrong because counters
 
     do_trans('是否(?:為)?',							'係唔係');
-    do_trans(sprintf('(%s\s*)是', $noun_phrase),				'\1係');
-    do_trans(sprintf('是(%s\s*)', $adjective),					'係\1');
+    do_trans(sprintf('(%s)是(?!日)', $noun_phrase),				'\1係');
+    do_trans(sprintf('是(%s)', $adjective),					'係\1');
+
+    # This need to go first
+    do_trans(sprintf('正在(%s)', $verb),					'\1緊');
+    #do_trans(sprintf('在(%s)(%s)中', $verb, $noun),				'\1緊\2');	# FIXME... hmm this is going to be hard
+    do_trans(sprintf('在(%s)中', $verb),					'\1緊');
 
     # FIXME: These look sound but they're producing strange, unexpected (albeit often correct) behaviour
     do_trans(sprintf('在(%s?%s)之?前', $noun_phrase, $verb_phrase),		'喺\1之前');
@@ -448,14 +507,14 @@ sub translate() {
 
     do_trans(sprintf('不在(%s)', $noun_phrase),					'唔喺\1');
     do_trans(sprintf('(?<!所)在(%s)', $noun_phrase),				'喺\1');
-    do_trans(sprintf('正在(%s\s*)', $verb_phrase),				'\1緊');
 
     do_trans(sprintf('(%s)和(?=%s)', $noun_phrase, $noun_phrase),		'\1同');
 
     # This needs to be near the end
-    do_trans(sprintf('(%s\s*)到了(?!(?:解|結))', $verb_phrase),			'\1到');
-    do_trans(sprintf('(%s\s*)了(?!(?:解|結))', $verb_phrase),			'\1咗');
-    do_trans('了(?=(?:，|；|：|。|！|？|"))',					'');
+    do_trans(sprintf('(%s)到了(?!(?:解|結))', $verb_phrase),			'\1到');
+    do_trans(sprintf('(%s)了(?!(?:解|結))', $verb_phrase),			'\1咗');
+    do_trans(sprintf('(%s咗%s%s)咗%s', $verb, $verb, $noun_phrase, $eot),	'\1');
+    do_trans("了$eot",								'');
 
     # }}}
 }
