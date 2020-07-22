@@ -151,15 +151,18 @@ my @verbs = qw(
 	);
 
 my @nouns = qw(
+		IRC
 		JID
 		Pidgin
 		下列
 		交談
 		伺服器
 		即時訊息
+		名稱
 		呢度
 		域名
 		對話視窗
+		帳號
 		描述
 		方法
 		日誌瀏覽器
@@ -168,6 +171,7 @@ my @nouns = qw(
 		目錄
 		空位
 		終端機
+		網名
 		網域
 		聊天室
 		訊息
@@ -284,7 +288,7 @@ sub translate() {
 		# 嗰 = 個 but no one writes 個
 
 		my $quoted_thing = '(?:「(?:(?!(?:「|」)).)+」)';
-		my $noun = mkre(@nouns);
+		my $noun = sprintf('(?:%s+)', mkre(@nouns));
 		my $verb = mkre(@verbs);
 		my $adjective = mkre(@adjectives, map { sprintf('%s%s嘅', $_, (/[A-Za-z0-9]$/? '\s*': '')); } ($quoted_thing, @nouns));
 		my $noun_phrase = "(?:$adjective*$quoted_thing?$adjective*$noun)";
@@ -317,14 +321,16 @@ sub translate() {
         do_trans('嗶',															'咇');
         do_trans('現在',														'而今');
         do_trans('時才',														'嘅時候先至');
-        do_trans('這(?:裏|裡|兒)',												'呢度');
+        do_trans('這裏',														'呢度');
 
-		do_trans('是否',														'係唔係');
+		do_trans('是否(?:為)?',													'係唔係');
 		do_trans(sprintf('(%s\s*)是', $noun_phrase),							'\1係');
 		do_trans(sprintf('是(%s\s*)', $adjective),								'係\1');
 
 		do_trans(sprintf('(?<!所)在(%s)', $noun_phrase),						'喺\1');
 		do_trans(sprintf('正在(%s\s*)', $verb),									'\1緊');
+
+		do_trans(sprintf('(%s)和(?=%s)', $noun_phrase, $noun_phrase),			'\1同');
 
 		# This needs to be near the end
 		do_trans(sprintf('(%s\s*)到了(?!(?:解|結))', $verb),					'\1到');
