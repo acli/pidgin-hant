@@ -92,9 +92,12 @@ my $是 = '是(?!(?:非|日))';
 
 my @verbs = qw(
 		中斷
+		交談
 		使用
 		修改
 		停用
+		傳輸
+		傳送
 		允許
 		兼容
         出現
@@ -109,6 +112,7 @@ my @verbs = qw(
 		夠
 		大於
 		存在
+		安裝
 		完成
 		容許
 		寫
@@ -121,6 +125,7 @@ my @verbs = qw(
 		支援
 		收到
 		明白
+		服務
 		清除
 		登入
 		發出
@@ -130,12 +135,15 @@ my @verbs = qw(
 		要求
 		記住
 		設定
+		設定
 		認同
+		請求
 		超出
 		超過
 		輸入
 		送來
 		送出
+		連線
 		達到
 		違反
 		選取
@@ -162,48 +170,119 @@ my @pronouns = qw(
 	);
 
 my @nouns = qw(
+		D-BUS
+		Farsight2
+		Farstream
+		GStreamer
+		ID
+		IPC
 		IRC
 		JID
 		Pidgin
+		TinyURL
+		webcam
 		下列
 		下面
+		主機
 		交談
+		人數
 		伺服器
+		伺服器端
+		使用
+		使用者
+		個人資料
+		備註
+		傳輸
+		傳送
+		內容
+		函數
+		分組顯示方法
+		列表
+		剪貼簿
+		功能
+		加密法
+		動作
+		協定模組
 		即時訊息
+		參數
+		名字
 		名稱
 		呢度
+		嘢
+		回捲緩衝區
+		地方
 		域名
+		好友
+		安裝
+		密碼
 		對話視窗
 		帳號
+		情況
+		指令
+		捕捉事件
 		描述
+		擾動
+		支援
+		方式
 		方法
-		日誌瀏覽器
+		日期
+		日誌
+		時間
+		服務
 		標準錯誤輸出
+		標題
+		模組
+		檔案
+		欄位
 		清單
+		瀏覽器
+		特別字符
+		狀態
 		登入
+		目錄
 		目錄
 		空位
 		終端機
 		網名
+		網址
 		網域
 		網絡
+		羣組
 		聊天室
 		訊息
+		設定
 		認證
+		說明
+		請求
 		證書
 		證書鍊
+		資料庫
+		資訊
+		轉碼器
 		通訊協定
+		連線
 		選項
+		錯誤訊息
+		閒置時間
+		除錯選項
+		項目
+		顏色
+		麥克風
 	);
 
 my @adjectives = qw(
 		(?:(?:一|兩|\d+)(?:個|份))
+		其他
+		各種
 		呢個
 		唯讀
+		所有
+		新
 		有版權
 		正確
 		無效
 		自動
+		離線
 		離線
 	);
 
@@ -217,10 +296,10 @@ sub mkre (@) {
 }
 
 my $quoted_thing = '(?:「(?:(?!(?:「|」)).)+」)';
-my $noun = sprintf('(?:%s+)', mkre(@nouns, @pronouns));
+my $noun = sprintf('(?:\s*(?:%s+)\s*)', mkre(@nouns, @pronouns));
 my $verb = mkre(@verbs);
-my $adjective = mkre(@adjectives, map { sprintf('%s%s嘅', $_, (/[A-Za-z0-9]$/? '\s*': '')); } ($quoted_thing, @nouns));
-my $adverb = mkre(@adverbs, map { sprintf('%s咁', $_); } @adjectives);
+my $adjective = mkre(@adjectives, map { sprintf('%s\s*%s\s*嘅', $_, (/[A-Za-z0-9]$/? '\s*': '')); } ($quoted_thing, @nouns));
+my $adverb = mkre(@adverbs, map { sprintf('%s\s*咁', $_); } @adjectives);
 my $noun_phrase = "(?:$adjective*$quoted_thing?$adjective*$noun)";
 my $verb_phrase = "(?:$adverb*$verb)";
 
@@ -314,13 +393,16 @@ sub translate() {
 		# 喺 = 在 but no one writes 在
 		# 嗰 = 個 but no one writes 個
 
-        do_trans('(?<!之)的(?!確)',												'嘅');
-        do_trans('他們/她們|他們（她們）|他（她）們|他們|她們',					'佢哋');
-        do_trans('他/她|他（她）|(?<!其)他|她',									'佢');
+        #do_trans('(?<!之)的(?!確)',												'嘅');
+		#do_trans(sprintf('(%s)(?:的|之)(?=%s)', $noun, $noun_phrase),			'\1嘅');
+		do_trans(sprintf('(?:的|之)(%s)', $noun_phrase),						'嘅\1');
+        do_trans('他們/她們|他們（她們）|他（她）們|他們|她們|它們',			'佢哋');
+        do_trans('他/她|他（她）|(?<!其)他|她|它',								'佢');
         do_trans('誰(?!人)',													'邊個');
         do_trans('這是個',														'呢個係');
         do_trans('這是',														'呢個係');
-        do_trans('這個',														'呢個');
+        do_trans('這樣',														'咁樣');
+        do_trans('這(個|張|種|項)',												'呢\1');
         do_trans('這些',														'呢啲');
         do_trans('有些',														'有啲');
         do_trans('沒有',														'冇');
@@ -345,8 +427,11 @@ sub translate() {
         do_trans('現在',														'而今');
         do_trans('時才',														'嘅時候先至');
         do_trans('這裏',														'呢度');
+        do_trans('東西(?!南北|薈萃)',											'嘢');
         do_trans('無法找到',													'搵唔到');
         do_trans('看見',														'睇見');
+
+		do_trans(sprintf('這(\s*%s)', $noun_phrase),							'呢個\1');	# XXX this is technically wrong because counters
 
 		do_trans('是否(?:為)?',													'係唔係');
 		do_trans(sprintf('(%s\s*)是', $noun_phrase),							'\1係');
@@ -472,5 +557,4 @@ if ($msg_id || $msg_str) {
         # }}}
 }
 
-# ex: sw=4 ts=4 noet ai sm:
-# -*- mode: perl; tab-width: 4; indent-tabs-mode: t; coding: utf-8 -*-
+# ex: sw=4 ts=8 noet ai sm:
