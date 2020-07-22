@@ -91,208 +91,208 @@ my %remembered_choice = ();
 my $是 = '是(?!(?:非|日))';
 
 my @verbs = qw(
-		中斷
-		交談
-		使用
-		修改
-		停用
-		傳輸
-		傳送
-		允許
-		兼容
-        出現
-		出示
-		分組
-		加入
-		取消
-		同意
-		「咇」
-		執行
-		够
-		夠
-		大於
-		存在
-		安裝
-		完成
-		容許
-		寫
-		感受
-		拒絕
-		拖曳
-		指定
-		捕捉
-		提供
-		支援
-		收到
-		明白
-		服務
-		清除
-		登入
-		發出
-		發生
-		相符
-		知道
-		要求
-		記住
-		設定
-		設定
-		認同
-		請求
-		超出
-		超過
-		輸入
-		送來
-		送出
-		連線
-		達到
-		違反
-		選取
-		選擇
-		選用
-		遺失
-		邀請
-		閒置
-		關閉
-		附加
-		隱身
-		離開
-		顯示
-		飲醉
-	);
+	中斷
+	交談
+	使用
+	修改
+	停用
+	傳輸
+	傳送
+	允許
+	兼容
+	出現
+	出示
+	分組
+	加入
+	取消
+	同意
+	「咇」
+	執行
+	够
+	夠
+	大於
+	存在
+	安裝
+	完成
+	容許
+	寫
+	感受
+	拒絕
+	拖曳
+	指定
+	捕捉
+	提供
+	支援
+	收到
+	明白
+	服務
+	清除
+	登入
+	發出
+	發生
+	相符
+	知道
+	要求
+	記住
+	設定
+	設定
+	認同
+	請求
+	超出
+	超過
+	輸入
+	送來
+	送出
+	連線
+	達到
+	違反
+	選取
+	選擇
+	選用
+	遺失
+	邀請
+	閒置
+	關閉
+	附加
+	隱身
+	離開
+	顯示
+	飲醉
+    );
 
 my @pronouns = qw(
-		我哋
-		我
-		你哋
-		你
-		佢哋
-		佢
-	);
+	我哋
+	我
+	你哋
+	你
+	佢哋
+	佢
+    );
 
 my @nouns = qw(
-		D-BUS
-		Farsight2
-		Farstream
-		GStreamer
-		ID
-		IPC
-		IRC
-		JID
-		Pidgin
-		TinyURL
-		webcam
-		下列
-		下面
-		主機
-		交談
-		人數
-		伺服器
-		伺服器端
-		使用
-		使用者
-		個人資料
-		備註
-		傳輸
-		傳送
-		內容
-		函數
-		分組顯示方法
-		列表
-		剪貼簿
-		功能
-		加密法
-		動作
-		協定模組
-		即時訊息
-		參數
-		名字
-		名稱
-		呢度
-		嘢
-		回捲緩衝區
-		地方
-		域名
-		好友
-		安裝
-		密碼
-		對話視窗
-		帳號
-		情況
-		指令
-		捕捉事件
-		描述
-		擾動
-		支援
-		方式
-		方法
-		日期
-		日誌
-		時間
-		服務
-		標準錯誤輸出
-		標題
-		模組
-		檔案
-		欄位
-		清單
-		瀏覽器
-		特別字符
-		狀態
-		登入
-		目錄
-		目錄
-		空位
-		終端機
-		網名
-		網址
-		網域
-		網絡
-		羣組
-		聊天室
-		訊息
-		設定
-		認證
-		說明
-		請求
-		證書
-		證書鍊
-		資料庫
-		資訊
-		轉碼器
-		通訊協定
-		連線
-		選項
-		錯誤訊息
-		閒置時間
-		除錯選項
-		項目
-		顏色
-		麥克風
-	);
+	D-BUS
+	Farsight2
+	Farstream
+	GStreamer
+	ID
+	IPC
+	IRC
+	JID
+	Pidgin
+	TinyURL
+	webcam
+	下列
+	下面
+	主機
+	交談
+	人數
+	伺服器
+	伺服器端
+	使用
+	使用者
+	個人資料
+	備註
+	傳輸
+	傳送
+	內容
+	函數
+	分組顯示方法
+	列表
+	剪貼簿
+	功能
+	加密法
+	動作
+	協定模組
+	即時訊息
+	參數
+	名字
+	名稱
+	呢度
+	嘢
+	回捲緩衝區
+	地方
+	域名
+	好友
+	安裝
+	密碼
+	對話視窗
+	帳號
+	情況
+	指令
+	捕捉事件
+	描述
+	擾動
+	支援
+	方式
+	方法
+	日期
+	日誌
+	時間
+	服務
+	標準錯誤輸出
+	標題
+	模組
+	檔案
+	欄位
+	清單
+	瀏覽器
+	特別字符
+	狀態
+	登入
+	目錄
+	目錄
+	空位
+	終端機
+	網名
+	網址
+	網域
+	網絡
+	羣組
+	聊天室
+	訊息
+	設定
+	認證
+	說明
+	請求
+	證書
+	證書鍊
+	資料庫
+	資訊
+	轉碼器
+	通訊協定
+	連線
+	選項
+	錯誤訊息
+	閒置時間
+	除錯選項
+	項目
+	顏色
+	麥克風
+    );
 
 my @adjectives = qw(
-		(?:(?:一|兩|\d+)(?:個|份))
-		其他
-		各種
-		呢個
-		唯讀
-		所有
-		新
-		有版權
-		正確
-		無效
-		自動
-		離線
-		離線
-	);
+	(?:(?:一|兩|\d+)(?:個|份))
+	其他
+	各種
+	呢個
+	唯讀
+	所有
+	新
+	有版權
+	正確
+	無效
+	自動
+	離線
+	離線
+    );
 
 my @adverbs = qw(
-		自動
-		重新
-	);
+	自動
+	重新
+    );
 
 sub mkre (@) {
-	return sprintf('(?:%s)', join('|', @_));
+    return sprintf('(?:%s)', join('|', @_));
 }
 
 my $quoted_thing = '(?:「(?:(?!(?:「|」)).)+」)';
@@ -307,254 +307,254 @@ my $verb_phrase = "(?:$adverb*$verb)";
 # Replace word with another
 #
 sub do_trans {
-        my ($tf, $tt) = @_;
-        $msg_str =~ s{$tf}{
-				my($pat, $it) = @_;
-				if (defined $^N) {
-					my $t = "$^N";
-					$it =~ s/[\\\$]1/$t/;
-				}
-				$it;
-			}egp;
+    my ($tf, $tt) = @_;
+    $msg_str =~ s{$tf}{
+	    my($pat, $it) = @_;
+	    if (defined $^N) {
+		    my $t = "$^N";
+		    $it =~ s/[\\\$]1/$t/;
+	    }
+	    $it;
+    }egp;
 }
 
 #
 # Provide multiple choice for words
 #
 sub query_trans {
-        # {{{
-        my ($tf, @tt) = @_;
-        if ( $msg_str =~ m/($tf)/i ) {
+    # {{{
+    my ($tf, @tt) = @_;
+    if ( $msg_str =~ m/($tf)/i ) {
 
-                my $answer;
-                my $i = 0;
-                my $matched_string = $+;
+	    my $answer;
+	    my $i = 0;
+	    my $matched_string = $+;
 
-                # if word conversion is defined in header, just do it, don't ask
-                for my $key (keys %remembered_choice) {
+	    # if word conversion is defined in header, just do it, don't ask
+	    for my $key (keys %remembered_choice) {
 
-                        # can't compare with $tf, $tf may contain PCRE constructs
-                        if ( $matched_string eq $key ) {
-                                do_trans ( $tf, $remembered_choice{$key} );
-                                return;
-                        }
-                }
+		    # can't compare with $tf, $tf may contain PCRE constructs
+		    if ( $matched_string eq $key ) {
+			    do_trans ( $tf, $remembered_choice{$key} );
+			    return;
+		    }
+	    }
 
-                print STDERR "\n" . ('='x75) . "\n${msg_id}\n${msg_str}\n";
+	    print STDERR "\n" . ('='x75) . "\n${msg_id}\n${msg_str}\n";
 
-                my $prompt = "0 - Don't modify the string\n";
-                while ($i++ < @tt) {
-                        $prompt .= sprintf("%d - Change '%s' to '%s'\n", $i, $matched_string, $tt[$i-1]);
-                }
-                print STDERR $prompt;
+	    my $prompt = "0 - Don't modify the string\n";
+	    while ($i++ < @tt) {
+		    $prompt .= sprintf("%d - Change '%s' to '%s'\n", $i, $matched_string, $tt[$i-1]);
+	    }
+	    print STDERR $prompt;
 
-                do {
-                        ($answer = $rl->readline( "Please specify your choice (integer only): " )) =~ s/^\s*(\d+)\s*$/$1/;
-                         
-                } until ( ($answer =~ m/^\d+$/) && ($answer <= @tt) );
-                if ($answer == 0) {
-                        print STDERR "Not changed\n";
-                } else {
-                        printf STDERR ("Result: '%s' --> '%s'\n", $matched_string, $tt[$answer-1]);
-                        do_trans( $tf, $tt[$answer-1] );
-                }
-        }
-        # }}}
+	    do {
+		    ($answer = $rl->readline( "Please specify your choice (integer only): " )) =~ s/^\s*(\d+)\s*$/$1/;
+		     
+	    } until ( ($answer =~ m/^\d+$/) && ($answer <= @tt) );
+	    if ($answer == 0) {
+		    print STDERR "Not changed\n";
+	    } else {
+		    printf STDERR ("Result: '%s' --> '%s'\n", $matched_string, $tt[$answer-1]);
+		    do_trans( $tf, $tt[$answer-1] );
+	    }
+    }
+    # }}}
 }
 
 #
 # Only apply when transforming po file header
 #
 sub translate_header() {
-        # {{{
-        my $curdate = strftime ("%Y-%m-%d %H:%M+0800", localtime());
+    # {{{
+    my $curdate = strftime ("%Y-%m-%d %H:%M+0800", localtime());
 
-        $msg_str =~ s/^("PO-Revision-Date: ).*\\n"/$1$curdate\\n"/m;
-        #$msg_str =~ s/^("Language-Team: ).*?\\n"/$1Cantonese (Hong Kong) <community\@linuxhall.org>\\n"/ms;
-        $msg_str =~ s/^("Language-Team: ).*?\\n"/$1Cantonese (Hong Kong) <https:\/\/www.github.com\/acli\/pidgin-hant>\\n"/ms;
-        $msg_str =~ s/^("Language: ).*\\n"/$1yue_HK\\n"/m;
-        return;
-        # }}}
+    $msg_str =~ s/^("PO-Revision-Date: ).*\\n"/$1$curdate\\n"/m;
+    #$msg_str =~ s/^("Language-Team: ).*?\\n"/$1Cantonese (Hong Kong) <community\@linuxhall.org>\\n"/ms;
+    $msg_str =~ s/^("Language-Team: ).*?\\n"/$1Cantonese (Hong Kong) <https:\/\/www.github.com\/acli\/pidgin-hant>\\n"/ms;
+    $msg_str =~ s/^("Language: ).*\\n"/$1yue_HK\\n"/m;
+    return;
+    # }}}
 }
 
 #
 # List of words to be transformed
 #
 sub translate() {
-        # {{{
+    # {{{
 
-        # order of the words can sometimes be important!
+    # order of the words can sometimes be important!
 
-		# Note to Taiwanese readers:
-		# 乜 = 物 but no one writes 物
-		# 佢 = 渠 but no one writes 渠
-		# 冇 = 無 (and some people actually write 無)
-		# 咗 = 着 but no one writes 着
-		# 喺 = 在 but no one writes 在
-		# 嗰 = 個 but no one writes 個
+    # Note to Taiwanese readers:
+    # 乜 = 物 but no one writes 物
+    # 佢 = 渠 but no one writes 渠
+    # 冇 = 無 (and some people actually write 無)
+    # 咗 = 着 but no one writes 着
+    # 喺 = 在 but no one writes 在
+    # 嗰 = 個 but no one writes 個
 
-        #do_trans('(?<!之)的(?!確)',												'嘅');
-		#do_trans(sprintf('(%s)(?:的|之)(?=%s)', $noun, $noun_phrase),			'\1嘅');
-		do_trans(sprintf('(?:的|之)(%s)', $noun_phrase),						'嘅\1');
-        do_trans('他們/她們|他們（她們）|他（她）們|他們|她們|它們',			'佢哋');
-        do_trans('他/她|他（她）|(?<!其)他|她|它',								'佢');
-        do_trans('誰(?!人)',													'邊個');
-        do_trans('這是個',														'呢個係');
-        do_trans('這是',														'呢個係');
-        do_trans('這樣',														'咁樣');
-        do_trans('這(個|張|種|項)',												'呢\1');
-        do_trans('這些',														'呢啲');
-        do_trans('有些',														'有啲');
-        do_trans('沒有',														'冇');
-        do_trans('忘記了',														'唔記得咗');
-        do_trans('忘記',														'唔記得');
-        do_trans('只在',														'淨係喺');
-        do_trans('都是',														'都係');
-        do_trans("即$是",														'即係');
-        do_trans("或$是",														'或者係');
-        #do_trans('還是',														'定係');
-        do_trans('亦可',														'都得');
-		do_trans('是不是',														'係唔係');
-		do_trans('(?<!恕)不是',													'唔係');
-		do_trans(sprintf('(%s)不\1', mkre((qw( 會 再 到 自動 同 ), @verbs))),	'\1唔\1');
-		do_trans(sprintf('不(%s)', mkre((qw( 會 再 到 自動 同 ), @verbs))),		'唔\1');
-        do_trans("(大概|可能)$是",												'\1係');
-        do_trans("除非$是",														'除非係');
-        do_trans('不為(?!意)',													'唔係');
-        do_trans('不可(?!能)(?:以)?',											'唔可以');
-        do_trans('(?<!吃)喝',													'飲');
-        do_trans('嗶',															'咇');
-        do_trans('現在',														'而今');
-        do_trans('時才',														'嘅時候先至');
-        do_trans('這裏',														'呢度');
-        do_trans('東西(?!南北|薈萃)',											'嘢');
-        do_trans('無法找到',													'搵唔到');
-        do_trans('看見',														'睇見');
+    #do_trans('(?<!之)的(?!確)',						'嘅');
+    #do_trans(sprintf('(%s)(?:的|之)(?=%s)', $noun, $noun_phrase),		'\1嘅');
+    do_trans(sprintf('(?:的|之)(%s)', $noun_phrase),				'嘅\1');
+    do_trans('他們/她們|他們（她們）|他（她）們|他們|她們|它們',		'佢哋');
+    do_trans('他/她|他（她）|(?<!其)他|她|它',					'佢');
+    do_trans('誰(?!人)',							'邊個');
+    do_trans('這是個',								'呢個係');
+    do_trans('這是',								'呢個係');
+    do_trans('這樣',								'咁樣');
+    do_trans('這(個|張|種|項)',							'呢\1');
+    do_trans('這些',								'呢啲');
+    do_trans('有些',								'有啲');
+    do_trans('沒有',								'冇');
+    do_trans('忘記了',								'唔記得咗');
+    do_trans('忘記',								'唔記得');
+    do_trans('只在',								'淨係喺');
+    do_trans('都是',								'都係');
+    do_trans("即$是",								'即係');
+    do_trans("或$是",								'或者係');
+    #do_trans('還是',								'定係');
+    do_trans('亦可',								'都得');
+    do_trans('是不是',								'係唔係');
+    do_trans('(?<!恕)不是',							'唔係');
+    do_trans(sprintf('(%s)不\1', mkre((qw( 會 再 到 自動 同 ), @verbs))),	'\1唔\1');
+    do_trans(sprintf('不(%s)', mkre((qw( 會 再 到 自動 同 ), @verbs))),		'唔\1');
+    do_trans("(大概|可能)$是",							'\1係');
+    do_trans("除非$是",								'除非係');
+    do_trans('不為(?!意)',							'唔係');
+    do_trans('不可(?!能)(?:以)?',						'唔可以');
+    do_trans('(?<!吃)喝',							'飲');
+    do_trans('嗶',								'咇');
+    do_trans('現在',								'而今');
+    do_trans('時才',								'嘅時候先至');
+    do_trans('這裏',								'呢度');
+    do_trans('東西(?!南北|薈萃)',						'嘢');
+    do_trans('無法找到',							'搵唔到');
+    do_trans('看見',								'睇見');
 
-		do_trans(sprintf('這(\s*%s)', $noun_phrase),							'呢個\1');	# XXX this is technically wrong because counters
+    do_trans(sprintf('這(\s*%s)', $noun_phrase),				'呢個\1');	# XXX this is technically wrong because counters
 
-		do_trans('是否(?:為)?',													'係唔係');
-		do_trans(sprintf('(%s\s*)是', $noun_phrase),							'\1係');
-		do_trans(sprintf('是(%s\s*)', $adjective),								'係\1');
+    do_trans('是否(?:為)?',							'係唔係');
+    do_trans(sprintf('(%s\s*)是', $noun_phrase),				'\1係');
+    do_trans(sprintf('是(%s\s*)', $adjective),					'係\1');
 
-		# FIXME: These look sound but they're producing strange, unexpected (albeit often correct) behaviour
-		do_trans(sprintf('在(%s?%s)之?前', $noun_phrase, $verb_phrase),			'喺\1之前');
-		do_trans(sprintf('在(%s?%s)時', $noun_phrase, $verb_phrase),			'喺\1嘅時候');
-		do_trans(sprintf('在(%s?%s)之?後', $noun_phrase, $verb_phrase),			'喺\1之後');
+    # FIXME: These look sound but they're producing strange, unexpected (albeit often correct) behaviour
+    do_trans(sprintf('在(%s?%s)之?前', $noun_phrase, $verb_phrase),		'喺\1之前');
+    do_trans(sprintf('在(%s?%s)時', $noun_phrase, $verb_phrase),		'喺\1嘅時候');
+    do_trans(sprintf('在(%s?%s)之?後', $noun_phrase, $verb_phrase),		'喺\1之後');
 
-		do_trans(sprintf('在(%s?%s)之?前', $verb_phrase, $noun_phrase),			'喺\1之前');
-		do_trans(sprintf('在(%s?%s)時', $verb_phrase, $noun_phrase),			'喺\1嘅時候');
-		do_trans(sprintf('在(%s?%s)之?後', $verb_phrase, $noun_phrase),			'喺\1之後');
+    do_trans(sprintf('在(%s?%s)之?前', $verb_phrase, $noun_phrase),		'喺\1之前');
+    do_trans(sprintf('在(%s?%s)時', $verb_phrase, $noun_phrase),		'喺\1嘅時候');
+    do_trans(sprintf('在(%s?%s)之?後', $verb_phrase, $noun_phrase),		'喺\1之後');
 
-		do_trans(sprintf('不在(%s)', $noun_phrase),								'唔喺\1');
-		do_trans(sprintf('(?<!所)在(%s)', $noun_phrase),						'喺\1');
-		do_trans(sprintf('正在(%s\s*)', $verb_phrase),							'\1緊');
+    do_trans(sprintf('不在(%s)', $noun_phrase),					'唔喺\1');
+    do_trans(sprintf('(?<!所)在(%s)', $noun_phrase),				'喺\1');
+    do_trans(sprintf('正在(%s\s*)', $verb_phrase),				'\1緊');
 
-		do_trans(sprintf('(%s)和(?=%s)', $noun_phrase, $noun_phrase),			'\1同');
+    do_trans(sprintf('(%s)和(?=%s)', $noun_phrase, $noun_phrase),		'\1同');
 
-		# This needs to be near the end
-		do_trans(sprintf('(%s\s*)到了(?!(?:解|結))', $verb_phrase),				'\1到');
-		do_trans(sprintf('(%s\s*)了(?!(?:解|結))', $verb_phrase),				'\1咗');
-        do_trans('了(?=(?:，|；|：|。|！|？|"))',								'');
+    # This needs to be near the end
+    do_trans(sprintf('(%s\s*)到了(?!(?:解|結))', $verb_phrase),			'\1到');
+    do_trans(sprintf('(%s\s*)了(?!(?:解|結))', $verb_phrase),			'\1咗');
+    do_trans('了(?=(?:，|；|：|。|！|？|"))',					'');
 
-        # }}}
+    # }}}
 }
 
 #
 # Main conversion routine
 #
 while (<>) {
-        # {{{
+    # {{{
 
-        if  (/^#/) {
+    if  (/^#/) {
 
-                # using such comment means yue_HK uses specialized translation,
-                # and shouldn't convert from zh_HK
-                if (m/^#\s*yue_HK:\s*(.*)/i) {
+	    # using such comment means yue_HK uses specialized translation,
+	    # and shouldn't convert from zh_HK
+	    if (m/^#\s*yue_HK:\s*(.*)/i) {
 
-                        if ($mode == 0) {
-                                # placing this on po file header means this is a global choice
-                                if (m/^#\s*yue_HK:([^:]*):([^:]*):/i) {
-                                        $remembered_choice{$1} = $2;
-                                }
-                        } else {
-                                # this is a per-string choice
-                                $force_msg_str .= $1;
-                        }
-                }
+		    if ($mode == 0) {
+			    # placing this on po file header means this is a global choice
+			    if (m/^#\s*yue_HK:([^:]*):([^:]*):/i) {
+				    $remembered_choice{$1} = $2;
+			    }
+		    } else {
+			    # this is a per-string choice
+			    $force_msg_str .= $1;
+		    }
+	    }
 
-                # header
-                if ($mode == 0) {
-                        s/traditional\s+chinese/Chinese \(Hong Kong\)/i;
-                        s/chinese\s+\(?(traditional|taiwan)\)?/Chinese \(Hong Kong\)/i;
-                }
+	    # header
+	    if ($mode == 0) {
+		    s/traditional\s+chinese/Chinese \(Hong Kong\)/i;
+		    s/chinese\s+\(?(traditional|taiwan)\)?/Chinese \(Hong Kong\)/i;
+	    }
 
-                print;
+	    print;
 
-        } elsif (/^msgctxt/) {
-                print;
-        } elsif (/^msgid/) {
-                $msg_id .= $_;
-                $mode = 1;
-        } elsif (/^msgstr/) {
-                $msg_str .= $_;
-                $mode = 2;
-        } elsif (/^"/) {
-                if ($mode == 1) {
-                        $msg_id .= $_;
-                } elsif ($mode == 2) {
-                        $msg_str .= $_;
-                        # make sure substitution won't fail because of something like
-                        # 硬"\n"體
-                        $msg_str =~ s/\"\n\"// unless ($msg_id =~ /^msgid ""\n$/);
-                }
-        } else {
-                if ($msg_id || $msg_str) {
-                        if ($msg_id =~ /^msgid ""\n$/) {
-                                translate_header();
-                        } else {
-                                if ($force_msg_str) {
-                                        $msg_str = $force_msg_str . "\n";
-                                } else {
-                                        translate();
-                                }
-                                if ($msg_str =~ /\\n[^"]/) {
-                                        # 2 passes, to account for situation like \n\n
-                                        $msg_str =~ s/\\n([^"])/\\n"\n"$1/g;
-                                        $msg_str =~ s/\\n([^"])/\\n"\n"$1/g;
-                                        $msg_str =~ s/(msgstr(\[\d+\])? )/$1""\n/g;
-                                }
-                        }
-                        print "$msg_id";
-                        print "$msg_str";
-                        $msg_id = "";
-                        $msg_str = "";
-                        $force_msg_str = "";
-                }
-                print $_;
-        }
+    } elsif (/^msgctxt/) {
+	    print;
+    } elsif (/^msgid/) {
+	    $msg_id .= $_;
+	    $mode = 1;
+    } elsif (/^msgstr/) {
+	    $msg_str .= $_;
+	    $mode = 2;
+    } elsif (/^"/) {
+	    if ($mode == 1) {
+		    $msg_id .= $_;
+	    } elsif ($mode == 2) {
+		    $msg_str .= $_;
+		    # make sure substitution won't fail because of something like
+		    # 硬"\n"體
+		    $msg_str =~ s/\"\n\"// unless ($msg_id =~ /^msgid ""\n$/);
+	    }
+    } else {
+	    if ($msg_id || $msg_str) {
+		    if ($msg_id =~ /^msgid ""\n$/) {
+			    translate_header();
+		    } else {
+			    if ($force_msg_str) {
+				    $msg_str = $force_msg_str . "\n";
+			    } else {
+				    translate();
+			    }
+			    if ($msg_str =~ /\\n[^"]/) {
+				    # 2 passes, to account for situation like \n\n
+				    $msg_str =~ s/\\n([^"])/\\n"\n"$1/g;
+				    $msg_str =~ s/\\n([^"])/\\n"\n"$1/g;
+				    $msg_str =~ s/(msgstr(\[\d+\])? )/$1""\n/g;
+			    }
+		    }
+		    print "$msg_id";
+		    print "$msg_str";
+		    $msg_id = "";
+		    $msg_str = "";
+		    $force_msg_str = "";
+	    }
+	    print $_;
+    }
 }
 
 # Last message may or may not followed by new line
 if ($msg_id || $msg_str) {
-        if ($force_msg_str) {
-                $msg_str = $force_msg_str . "\n";
-        } else {
-                translate();
-        }
-        if ($msg_str =~ /\\n[^"]/) {
-                # 2 passes, to account for situation like \n\n
-                $msg_str =~ s/\\n([^"])/\\n"\n"$1/g;
-                $msg_str =~ s/\\n([^"])/\\n"\n"$1/g;
-                $msg_str =~ s/(msgstr(\[\d+\])? )/$1""\n/g;
-        }
-        print "$msg_id";
-        print "$msg_str";
-        $msg_id = "";
-        $msg_str = "";
-        $force_msg_str = "";
+    if ($force_msg_str) {
+	    $msg_str = $force_msg_str . "\n";
+    } else {
+	    translate();
+    }
+    if ($msg_str =~ /\\n[^"]/) {
+	    # 2 passes, to account for situation like \n\n
+	    $msg_str =~ s/\\n([^"])/\\n"\n"$1/g;
+	    $msg_str =~ s/\\n([^"])/\\n"\n"$1/g;
+	    $msg_str =~ s/(msgstr(\[\d+\])? )/$1""\n/g;
+    }
+    print "$msg_id";
+    print "$msg_str";
+    $msg_id = "";
+    $msg_str = "";
+    $force_msg_str = "";
 
-        # }}}
+    # }}}
 }
 
 # ex: sw=4 ts=8 noet ai sm:
