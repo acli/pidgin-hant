@@ -4,6 +4,13 @@
 # =======
 # This is just an experiment to see if this is even feasible.
 # Don't use this. Don't even try.
+#
+# NOTE
+# ====
+# This version supports backreferences in the replacement strings.
+# Backreferences can be written either as $1 or \1. You must make
+# sure that there's only one quoted group in any source string that
+# uses backreferences..
 
 # $Id$
 ######################################################################
@@ -282,7 +289,6 @@ sub translate() {
 		my $adjective = mkre(@adjectives, map { sprintf('%s%s嘅', $_, (/[A-Za-z0-9]$/? '\s*': '')); } ($quoted_thing, @nouns));
 		my $noun_phrase = "(?:$adjective*$quoted_thing?$adjective*$noun)";
 
-		# Patterns would've been useful, but backreferences don't work in do_trans (though it does match on patterns)...
         do_trans('(?<!之)的(?!確)',												'嘅');
         do_trans('他們/她們|他們（她們）|他（她）們|他們|她們',					'佢哋');
         do_trans('他/她|他（她）|(?<!其)他|她',									'佢');
