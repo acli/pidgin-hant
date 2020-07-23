@@ -75,10 +75,13 @@ use charnames qw( :full :short );
 use feature "unicode_strings";
 use POSIX qw(strftime);
 use Term::ReadLine;
+use Getopt::Long;
 
 binmode(STDIN, ":utf8");
 binmode(STDOUT, ":utf8");
 binmode(STDERR, ":utf8");
+
+my $show_progress_p = 0;
 
 my $mode = 0;
 my $rl = Term::ReadLine->new("String Replacement");
@@ -91,8 +94,21 @@ my %remembered_choice = ();
 my $是 = '(?:是(?!(?:非|日)))';
 my $的 = '(?:(?<!(?:目|之))的(?!確))';
 
-# List of verbs - this need not be exhaustive but need to be comprehensive enough the pattern matching works
-my @verbs = qw(
+# Lists of verbs - these need not be exhaustive but need to be comprehensive enough the pattern matching doesn't act too weird
+#
+# Separable verbs:	aspect morphemes act as infixes; e.g., 改正 + 咗 → 改咗正
+# Inseparable verbs:	aspect morphemes act as suffixes; e.g., 取消 + 咗 → 取消咗
+
+my @separable_verbs = qw(
+	分組
+	改正
+	登入
+	註冊
+	連線
+	隱身
+    );
+
+my @inseparable_verbs = qw(
 	中斷
 	交談
 	使用
@@ -102,9 +118,9 @@ my @verbs = qw(
 	傳送
 	允許
 	兼容
+	冇
 	出現
 	出示
-	分組
 	加入
 	取消
 	同意
@@ -127,12 +143,12 @@ my @verbs = qw(
 	提供
 	支援
 	收到
-	改正
 	明白
+	有
 	服務
 	清除
 	瀏覽
-	登入
+	用
 	發出
 	發生
 	相符
@@ -141,8 +157,6 @@ my @verbs = qw(
 	要求
 	記住
 	設定
-	設定
-	註冊
 	認同
 	請求
 	超出
@@ -150,7 +164,6 @@ my @verbs = qw(
 	輸入
 	送來
 	送出
-	連線
 	達到
 	違反
 	選取
@@ -162,13 +175,12 @@ my @verbs = qw(
 	閒置
 	關閉
 	附加
-	隱身
 	離開
 	顯示
 	飲醉
     );
 
-# List of counters - this need not be exhaustive but need to be comprehensive enough the pattern matching works
+# List of counters - this need not be exhaustive but need to be comprehensive enough the pattern matching doesn't act too weird
 my @counters = qw(
 	份
 	個
@@ -177,7 +189,7 @@ my @counters = qw(
 	項
     );
 
-# List of pronouns - this need not be exhaustive but need to be comprehensive enough the pattern matching works
+# List of pronouns - this need not be exhaustive but need to be comprehensive enough the pattern matching doesn't act too weird
 my @pronouns = qw(
 	我哋
 	我
@@ -187,8 +199,9 @@ my @pronouns = qw(
 	佢
     );
 
-# List of nouns - this need not be exhaustive but need to be comprehensive enough the pattern matching works
+# List of nouns - this need not be exhaustive but need to be comprehensive enough the pattern matching doesn't act too weird
 my @nouns = qw(
+	backtrace
 	D-BUS
 	Farsight2
 	Farstream
@@ -200,12 +213,14 @@ my @nouns = qw(
 	Pidgin
 	TinyURL
 	webcam
+	上線狀態
 	上限
 	下列
 	下面
 	串流
 	主機
 	主題
+	乜嘢
 	交談
 	人數
 	代理伺服器
@@ -244,6 +259,7 @@ my @nouns = qw(
 	地方
 	域名
 	好友
+	字符
 	安裝
 	定址
 	密碼
@@ -292,10 +308,12 @@ my @nouns = qw(
 	網絡
 	網頁
 	編碼
+	編碼
 	羣組
 	聊天室
 	聯絡人
 	表情
+	視窗
 	言論
 	訊息
 	設定
@@ -327,7 +345,7 @@ my @nouns = qw(
 	麥克風
     );
 
-# List of adjectives, minus demonstrative pronouns and numbers - this need not be exhaustive but need to be comprehensive enough the pattern matching works
+# List of adjectives, minus demonstrative pronouns and numbers - this need not be exhaustive but need to be comprehensive enough the pattern matching doesn't act too weird
 my @adjectives = qw(
 	不當
 	任何
@@ -348,6 +366,7 @@ my @adjectives = qw(
 	空白
 	自動
 	自簽
+	適當
 	選擇性
 	離線
     );
@@ -418,7 +437,8 @@ my $counter = mkre(@counters);
 my $demonstrative_pronoun = mkre(map { (cat('呢', $_), cat('嗰', $_)); } @counters);
 my $determiner = $demonstrative_pronoun;
 my $noun = tagre('N', sprintf('(?:\s*(?:%s+)\s*)', mkre($wildcard, @nouns, @pronouns)));
-my $verb = tagre('V', mkre(quotable @verbs));
+my $verb = tagre('V', mkre(quotable(@separable_verbs, @inseparable_verbs)));
+my $separable_verb = tagre('Vsep', mkre quotable @separable_verbs);
 my $bare_number = mkre('一', '兩', '\d+\s*');
 my $number = cat($bare_number, $counter);
 my $adjective = tagre('ADJ', mkre(cat($noun, '嘅'), $wildcard, $determiner, $number, @adjectives));
@@ -517,9 +537,11 @@ sub translate() {
     # 咗 = 着 but no one writes 着
     # 喺 = 在 but no one writes 在
     # 嗰 = 個 but no one writes 個
+    # 哋 ← 等 and no one writes 等
 
     do_trans(sprintf("(?:$的|之)(%s)", $noun_phrase),				'嘅\1');
-    do_trans(sprintf("(%s)$的", mkre(@nouns, @verbs, @adjectives)),		'\1嘅');
+    do_trans(sprintf("(%s)$的", mkre(@nouns, @separable_verbs, @inseparable_verbs, @adjectives)),
+    										'\1嘅');
     do_trans('他們/她們|他們（她們）|他（她）們|他們|她們|它們',		'佢哋');
     do_trans('他/她|他（她）|(?<!其)他|她|它',					'佢');
     do_trans('誰(?!人)',							'邊個');
@@ -529,6 +551,7 @@ sub translate() {
     do_trans("這($counter)",							'呢\1');
     do_trans('這些',								'呢啲');
     do_trans('有些',								'有啲');
+    do_trans(sprintf('沒有在(%s)%s', $verb, $eot),				'唔係\1緊');	# must precede 沒有
     do_trans('沒有',								'冇');
     do_trans('忘記了',								'唔記得咗');
     do_trans('忘記',								'唔記得');
@@ -540,13 +563,18 @@ sub translate() {
     do_trans('亦可',								'都得');
     do_trans('是不是',								'係唔係');
     do_trans('(?<!恕)不是',							'唔係');
-    do_trans(sprintf('(%s)不\1', mkre((qw( 會 再 到 自動 同 ), @verbs))),	'\1唔\1');
-    do_trans(sprintf('不(%s)', mkre((qw( 會 再 到 自動 同 ), @verbs))),		'唔\1');
+    do_trans(sprintf('(%s)不\1', mkre((qw( 會 再 到 自動 同 ), @separable_verbs, @inseparable_verbs))),
+    										'\1唔\1');
+    do_trans(sprintf('不(%s)', mkre((qw( 會 再 到 自動 同 ), @separable_verbs, @inseparable_verbs))),
+    										'唔\1');
     do_trans("(大概|可能)$是",							'\1係');
     do_trans("除非$是",								'除非係');
     do_trans('不為(?!意)',							'唔係');
     do_trans('不可(?!能)(?:以)?',						'唔可以');
     do_trans(sprintf('無法%s到', $verb),					'\1唔到');
+    do_trans(sprintf('不用%s', $verb),						'唔使\1');
+    do_trans('大吃一驚',							'嚇死');
+    do_trans('(?<!口)吃(?!喝|虧)',						'食');
     do_trans('(?<!吃)喝',							'飲');
     do_trans('(?<!尋)找',							'搵');
     do_trans('嗶',								'咇');
@@ -554,11 +582,16 @@ sub translate() {
     do_trans('可在',								'可以喺');
     do_trans('時才',								'嘅時候先至');
     do_trans('這裏',								'呢度');
+    do_trans('別人',								'人哋');
     do_trans('東西(?!南北|薈萃)',						'嘢');
-    do_trans('看見',								'睇見');
+    do_trans('(?<!查|觀)看(?!更|守)',						'睇');
+    do_trans('睡覺',								'睏覺');	# NOTE normally written 瞓覺
+    do_trans('洗澡',								'沖涼');
     do_trans('一起',								'一齊');
     do_trans('幹什麼用',							'用來做乜');
     do_trans('幹什麼',								'做乜');
+    do_trans(sprintf('什麼(?:也|都)(%s)', $verb),				'乜都\1');
+    do_trans('什麼',								'乜嘢');
 
     do_trans(sprintf('這(%s)', $noun_phrase),					'呢個\1');	# XXX this is technically wrong because counters
 
@@ -585,7 +618,13 @@ sub translate() {
     do_trans(sprintf('不在(%s)', $noun_phrase),					'唔喺\1');
     do_trans(sprintf('(?<!所)在(%s)', $noun_phrase),				'喺\1');
 
+    #do_trans(sprintf('%s(?!%s)在', $bot, $adjective),				'\1喺');
+
     do_trans(sprintf('(%s)和(?=%s)', $noun_phrase, $noun_phrase),		'\1同');
+
+    # Attempt to fix morpheme insertion in separable verbs
+    # Don't bother with do_trans
+    $msg_str =~ s/(?=$separable_verb)(.)(.)(咗|緊)/$1$3$2/sg;
 
     # This needs to be near the end
     do_trans(sprintf('(%s)到了(?!(?:解|結))', $verb_phrase),			'\1到');
@@ -596,10 +635,24 @@ sub translate() {
     # }}}
 }
 
+GetOptions(
+    'P|show-progress'	=> \$show_progress_p,
+) || exit(1);
+
 #
 # Main conversion routine
 #
+my($input_size, $progress);
 while (<>) {
+    if (!defined $input_size) {
+	my @det = stat ARGV;
+	$input_size = $det[7] if @det;
+    }
+    if ($show_progress_p) {
+	use bytes;
+	$progress += length $_;
+    }
+
     # {{{
 
     if  (/^#/) {
@@ -668,6 +721,7 @@ while (<>) {
 		    $force_msg_str = "";
 	    }
 	    print $_;
+	    printf STDERR "\r%d (%d%%)", $., (100*$progress)/$input_size if defined $input_size && $show_progress_p;
     }
 }
 
@@ -692,5 +746,6 @@ if ($msg_id || $msg_str) {
 
     # }}}
 }
+print STDERR " done.\n" if $show_progress_p;
 
 # ex: sw=4 ts=8 noet ai sm:
