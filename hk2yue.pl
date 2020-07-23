@@ -19,12 +19,6 @@
 # is a university research topic and much more difficult than corresponding
 # English one.
 #
-# To use this script, one should use it as a filter, instead of appending
-# file name as argument (since for some reason any chinese in comment
-# would be converted into garbage, should be fixed later):
-#
-#     hk2yue.pl < zh_HK.po > yue_HK.po
-#
 # In case of multiple choice, you will be prompted for an answer. But
 # only existing choices are accepted for now, translators can't type
 # their own.
@@ -67,7 +61,7 @@
 #
 # NO WARRANTY!
 
-require 5.8.0;
+use v5.14; # //u modifier
 use strict;
 use utf8;
 use open qw( :encoding(UTF-8) :std );
@@ -76,10 +70,6 @@ use feature "unicode_strings";
 use POSIX qw(strftime);
 use Term::ReadLine;
 use Getopt::Long;
-
-binmode(STDIN, ":utf8");
-binmode(STDOUT, ":utf8");
-binmode(STDERR, ":utf8");
 
 my $show_progress_p = 0;
 
