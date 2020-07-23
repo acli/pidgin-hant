@@ -137,6 +137,7 @@ my @verbs = qw(
 	發生
 	相符
 	知道
+	等待
 	要求
 	記住
 	設定
@@ -157,6 +158,7 @@ my @verbs = qw(
 	選用
 	遺失
 	邀請
+	開始
 	閒置
 	關閉
 	附加
@@ -423,7 +425,8 @@ my $adjective = tagre('ADJ', mkre(cat($noun, '嘅'), $wildcard, $determiner, $nu
 my $adverb = tagre('A', mkre(map { cat($_, '咁'); } @adjectives, $wildcard, @adverbs));
 my $noun_phrase = tagre('NP', "(?:$adjective*$noun+)");
 my $verb_phrase = tagre('VP', "(?:$adverb*$verb)");
-my $eot = '(?=(?:，|；|：|。|！|？|"))';
+my $bot = '(?:(?:，|；|：|。|！|？|")(?:「|『|（|《|【)*)\K';	# XXX WARNING DANGER \K used
+my $eot = '(?=(?:，|；|：|。|！|？|……|\.\.\.|"))';
 
 #
 # Replace word with another
@@ -567,6 +570,8 @@ sub translate() {
     do_trans(sprintf('正在(%s)', $verb),					'\1緊');
     #do_trans(sprintf('在(%s)(%s)中', $verb, $noun),				'\1緊\2');	# FIXME... hmm this is going to be hard
     do_trans(sprintf('在(%s)中', $verb),					'\1緊');
+    do_trans(sprintf('%s(%s)(?=%s*%s)?中%s', $bot, $verb, $verb, $noun_phrase, $eot),
+   										 '\1緊');	# jump through hoops to avoid needing \2
 
     # FIXME: These look sound but they're producing strange, unexpected (albeit often correct) behaviour
     do_trans(sprintf('在(%s?%s)之?前', $noun_phrase, $verb_phrase),		'喺\1之前');
