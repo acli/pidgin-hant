@@ -635,6 +635,7 @@ GetOptions(
 # Main conversion routine
 #
 my($input_size, $progress);
+my $start_time = time;
 while (<>) {
     if (!defined $input_size) {
 	my @det = stat ARGV;
@@ -713,7 +714,23 @@ while (<>) {
 		    $force_msg_str = "";
 	    }
 	    print $_;
-	    printf STDERR "\r%d (%d%%)", $., (100*$progress)/$input_size if defined $input_size && $show_progress_p;
+
+	    if ($show_progress_p) {
+		printf STDERR "\r%d line%s", $., ($. == 1? '': 's');
+		if (defined $input_size) {
+		    no integer;
+		    my $ratio_completed = $progress/$input_size;
+		    my $elapsed = time - $start_time;
+		    printf STDERR " (%d%%) elapsed %02d:%02d:%02d", (100*$ratio_completed + 0.5), $elapsed/3600, ($elapsed/60)%60, $elapsed%60;
+		    if ($elapsed > 30) {
+			my $estimated_total_time = (time - $start_time)/$ratio_completed;
+			my $eta = $estimated_total_time - $elapsed;
+			printf STDERR " ETA %02d:%02d:%02d", $eta/3600, ($eta/60)%60, $eta%60;
+		    }
+		} else {
+		    printf STDERR ", %d bytes read"
+		}
+	    }
     }
 }
 

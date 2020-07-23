@@ -14,7 +14,7 @@ zh_HK.po: zh_TW.po tw2hk.pl
 	./tw2hk.pl $< > $@.tmp && mv $@.tmp $@
 
 yue_HK.po: zh_HK.po hk2yue.pl
-	./hk2yue.pl --show-progress $< > $@.tmp && mv $*.tmp $@
+	./hk2yue.pl --show-progress $< > $@.tmp && mv $@.tmp $@
 
 $(dest_po)/%: %
 	msgmerge --no-location -o $@.tmp $< $(gaim_pot) && mv -fv $*.tmp $@
