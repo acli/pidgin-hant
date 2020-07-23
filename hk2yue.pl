@@ -141,6 +141,7 @@ my @verbs = qw(
 	記住
 	設定
 	設定
+	註冊
 	認同
 	請求
 	超出
@@ -200,6 +201,7 @@ my @nouns = qw(
 	上限
 	下列
 	下面
+	串流
 	主機
 	主題
 	交談
@@ -217,16 +219,17 @@ my @nouns = qw(
 	傳送
 	內容
 	公開密碼匙
+	函式庫
 	函數
 	分組顯示方法
 	列表
 	剪貼簿
 	功能
-	功能
 	加密法
 	動作
 	協定
 	即時訊息
+	即時通訊
 	參數
 	名字
 	名稱
@@ -240,13 +243,19 @@ my @nouns = qw(
 	域名
 	好友
 	安裝
+	定址
 	密碼
+	對方
 	對話視窗
+	工作
 	帳號
+	從屬關係
 	情況
+	所在地
 	指令
 	捕捉事件
 	描述
+	搜尋條件
 	擾動
 	支援
 	改正
@@ -255,6 +264,7 @@ my @nouns = qw(
 	日期
 	日誌
 	時間
+	會議
 	服務
 	標準錯誤輸出
 	標題
@@ -267,8 +277,10 @@ my @nouns = qw(
 	瀏覽器
 	特別字符
 	狀態
+	用戶端
 	登入
 	目錄
+	程式
 	空位
 	系統
 	終端機
@@ -277,12 +289,15 @@ my @nouns = qw(
 	網域
 	網絡
 	網頁
+	編碼
 	羣組
 	聊天室
+	聯絡人
 	表情
 	言論
 	訊息
 	設定
+	註冊
 	認證
 	說明
 	請求
@@ -290,16 +305,20 @@ my @nouns = qw(
 	證書鍊
 	資料庫
 	資訊
+	身份
 	轉碼器
 	通知
 	通訊協定
 	速率
 	連線
+	遠端
 	選項
-	錯誤訊息
+	錯誤
 	閒置時間
 	除錯選項
+	階段
 	電子郵件
+	音樂
 	項目
 	頻道
 	顏色
@@ -308,12 +327,17 @@ my @nouns = qw(
 
 # List of adjectives, minus demonstrative pronouns and numbers - this need not be exhaustive but need to be comprehensive enough the pattern matching works
 my @adjectives = qw(
+	不當
+	任何
 	其他
+	受歡迎
 	各種
 	唯讀
+	大部分
 	所有
 	新
 	有版權
+	本地
 	正確
 	無效
 	現有
@@ -321,6 +345,8 @@ my @adjectives = qw(
 	空
 	空白
 	自動
+	自簽
+	選擇性
 	離線
     );
 
@@ -383,8 +409,9 @@ my $valid_beginning_letter = '(?:\p{Latin}|\047|’)';
 my $valid_medial_letter = '(?:\p{Latin}|-|–|:|\047|’|\.)';
 my $valid_terminal_letter = '(?:\p{Latin}|\047|’)';
 my $english_word = "(?:$valid_beginning_letter(?:$valid_medial_letter*$valid_terminal_letter+)?)";
-my $placeholder = '(?:\s*%(?:\d+\$)?(?:\d+\.?|\d*\.\d+)?s\s*)';
-my $wildcard = mkre($quoted_thing, $english_word, $placeholder);
+my $irc_channel_name = '(?:#+\w[-\w]*)';
+my $c_format_s_placeholder = '(?:\s*%(?:\d+\$)?(?:\d+\.?|\d*\.\d+)?s\s*)';
+my $wildcard = mkre($quoted_thing, $english_word, $c_format_s_placeholder, $irc_channel_name);
 my $counter = mkre(@counters);
 my $demonstrative_pronoun = mkre(map { (cat('呢', $_), cat('嗰', $_)); } @counters);
 my $determiner = $demonstrative_pronoun;
@@ -527,6 +554,8 @@ sub translate() {
     do_trans('東西(?!南北|薈萃)',						'嘢');
     do_trans('看見',								'睇見');
     do_trans('一起',								'一齊');
+    do_trans('幹什麼用',							'用來做乜');
+    do_trans('幹什麼',								'做乜');
 
     do_trans(sprintf('這(%s)', $noun_phrase),					'呢個\1');	# XXX this is technically wrong because counters
 
