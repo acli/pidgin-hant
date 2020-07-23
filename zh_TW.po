@@ -2228,7 +2228,7 @@ msgstr ""
 "（只發生在未與傳送者進行交談的情況下）"
 
 msgid "Create a new directory for each user"
-msgstr "給每個使用者建立該使用者專用的目綠"
+msgstr "給每個使用者建立該使用者專用的目錄"
 
 msgid "Escape the filenames"
 msgstr "逸出檔案名稱中的特別字元"
