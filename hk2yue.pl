@@ -91,6 +91,7 @@ my %remembered_choice = ();
 my $是 = '(?:是(?!(?:非|日)))';
 my $的 = '(?:(?<!(?:目|之))的(?!確))';
 
+# List of verbs - this need not be exhaustive but need to be comprehensive enough the pattern matching works
 my @verbs = qw(
 	中斷
 	交談
@@ -164,6 +165,7 @@ my @verbs = qw(
 	飲醉
     );
 
+# List of counters - this need not be exhaustive but need to be comprehensive enough the pattern matching works
 my @counters = qw(
 	份
 	個
@@ -172,6 +174,7 @@ my @counters = qw(
 	項
     );
 
+# List of pronouns - this need not be exhaustive but need to be comprehensive enough the pattern matching works
 my @pronouns = qw(
 	我哋
 	我
@@ -181,6 +184,7 @@ my @pronouns = qw(
 	佢
     );
 
+# List of nouns - this need not be exhaustive but need to be comprehensive enough the pattern matching works
 my @nouns = qw(
 	D-BUS
 	Farsight2
@@ -212,6 +216,7 @@ my @nouns = qw(
 	傳輸
 	傳送
 	內容
+	公開密碼匙
 	函數
 	分組顯示方法
 	列表
@@ -256,6 +261,8 @@ my @nouns = qw(
 	模組
 	檔案
 	欄位
+	權限
+	次數
 	清單
 	瀏覽器
 	特別字符
@@ -273,6 +280,7 @@ my @nouns = qw(
 	羣組
 	聊天室
 	表情
+	言論
 	訊息
 	設定
 	認證
@@ -298,6 +306,7 @@ my @nouns = qw(
 	麥克風
     );
 
+# List of adjectives, minus demonstrative pronouns and numbers - this need not be exhaustive but need to be comprehensive enough the pattern matching works
 my @adjectives = qw(
 	其他
 	各種
@@ -377,7 +386,8 @@ my $english_word = "(?:$valid_beginning_letter(?:$valid_medial_letter*$valid_ter
 my $placeholder = '(?:\s*%(?:\d+\$)?(?:\d+\.?|\d*\.\d+)?s\s*)';
 my $wildcard = mkre($quoted_thing, $english_word, $placeholder);
 my $counter = mkre(@counters);
-my $determiner = mkre(map { (cat('呢', $_), cat('嗰', $_)); } @counters);
+my $demonstrative_pronoun = mkre(map { (cat('呢', $_), cat('嗰', $_)); } @counters);
+my $determiner = $demonstrative_pronoun;
 my $noun = tagre('N', sprintf('(?:\s*(?:%s+)\s*)', mkre($wildcard, @nouns, @pronouns)));
 my $verb = tagre('V', mkre(quotable @verbs));
 my $bare_number = mkre('一', '兩', '\d+\s*');
@@ -387,8 +397,6 @@ my $adverb = tagre('A', mkre(map { cat($_, '咁'); } @adjectives, $wildcard, @ad
 my $noun_phrase = tagre('NP', "(?:$adjective*$noun+)");
 my $verb_phrase = tagre('VP', "(?:$adverb*$verb)");
 my $eot = '(?=(?:，|；|：|。|！|？|"))';
-
-print STDERR "noun_phrase = /$noun_phrase/\n";
 
 #
 # Replace word with another
