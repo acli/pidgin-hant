@@ -6,7 +6,7 @@ The Hong Kong Chinese translations are currently generated from the Taiwanese Ch
 with essentially the same script that was used way back in 2008.
 
 The current project aims to resolve inconsistencies in the existing translation
-and to finish it (often just by resurrecting disappeared msgstr’s that were present 10 years ago).
+and to finish it (a lot have been “translated” just by resurrecting translations that were present 10 years ago).
 The file is currently 100% translated
 but needs to go through copy and comparative editing.
 
