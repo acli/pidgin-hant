@@ -301,7 +301,6 @@ my @nouns = qw(
 my @adjectives = qw(
 	其他
 	各種
-	呢個
 	唯讀
 	所有
 	新
