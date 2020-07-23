@@ -5,7 +5,7 @@ This is a copy of the traditional Chinese PO files for [pidgin](https://pidgin.i
 The Hong Kong Chinese translations are currently generated from the Taiwanese Chinese translations
 with essentially the same script that was used way back in 2008.
 
-My goal was to remove inconsistencies in the existing translation
+My goal was to resolve inconsistencies in the existing translation
 and to finish it (often just by resurrecting disappeared msgstr’s that were present 10 years ago).
 The file is currently 100% translated
 but needs to go through copy and comparative editing.
