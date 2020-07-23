@@ -17,7 +17,7 @@ yue_HK.po: zh_HK.po hk2yue.pl
 	./hk2yue.pl --show-progress $< > $@.tmp && mv $@.tmp $@
 
 $(dest_po)/%: %
-	msgmerge --no-location -o $@.tmp $< $(gaim_pot) && mv -fv $*.tmp $@
+	msgmerge --no-location -o $*.tmp $< $(gaim_pot) && mv -fv $*.tmp $@
 
 
 reports: fuzzies.out untranslated.out
