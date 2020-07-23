@@ -1,0 +1,28 @@
+diff --git a/libpurple/mediamanager.c b/libpurple/mediamanager.c
+--- a/libpurple/mediamanager.c
++++ b/libpurple/mediamanager.c
+@@ -2420,8 +2420,8 @@
+ 		/* "aasink", "AALib", Didn't work for me */
+ 		"directdrawsink", "DirectDraw",
+ 		"glimagesink", "OpenGL",
+-		"ximagesink", "X Window System",
+-		"xvimagesink", "X Window System (Xv)",
++		"ximagesink", N_("X Window System"),
++		"xvimagesink", N_("X Window System (Xv)"),
+ 		NULL
+ 	};
+ 	const gchar **sinks = VIDEO_SINK_PLUGINS;
+diff --git a/pidgin/plugins/vvconfig.c b/pidgin/plugins/vvconfig.c
+--- a/pidgin/plugins/vvconfig.c
++++ b/pidgin/plugins/vvconfig.c
+@@ -74,8 +74,8 @@
+ 	/* "aasink",	"AALib", Didn't work for me */
+ 	"directdrawsink","DirectDraw",
+ 	"glimagesink",	"OpenGL",
+-	"ximagesink",	"X Window System",
+-	"xvimagesink",	"X Window System (Xv)",
++	"ximagesink",	N_("X Window System"),
++	"xvimagesink",	N_("X Window System (Xv)"),
+ 	NULL
+ };
+ 
