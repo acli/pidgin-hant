@@ -3,7 +3,9 @@
 # WARNING
 # =======
 # This is just an experiment to see if this is even feasible.
-# Don't use this. Don't even try.
+# It doesn't reall work, though you are welcome to use what it
+# spits out; it's now giving results that are now less comical
+# than what I expected.
 #
 # NOTE
 # ====
