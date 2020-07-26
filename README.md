@@ -1,7 +1,7 @@
 Traditional Chinese translations for [Pidgin](https://pidgin.im)
 ================================================================
 
-This is a copy of the traditional Chinese [PO files](http://www.transifex.com/pidgin/pidgin/language/zh_TW/)
+This is a copy of the [traditional Chinese PO files](http://www.transifex.com/pidgin/pidgin/language/zh_TW/)
 for [pidgin](https://pidgin.im), release-2.x.y branch.
 The Hong Kong Chinese translations are currently generated from the Taiwanese Chinese translations
 with essentially the same script that was used way back in 2008.
