@@ -1,0 +1,966 @@
+# Chinese (traditional) translation for Guifications.
+# Copyright (C) 2004 Gary Kramlich
+# This file is distributed under the same license as the Guifications package.
+# Ambrose Li <acli@ada.dhs.org>, 2004-2006.
+#
+# $InternalId: zh_TW.po,v 1.23 2006/11/24 08:32:31 acli Rel $
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: guifications 2.13beta5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-12-16 00:37-0500\n"
+"PO-Revision-Date: 2006-11-24 01:56-0500\n"
+"Last-Translator: Ambrose Li <acli@ada.dhs.org>\n"
+"Language-Team: Chinese (Traditional) <zh-l10n@linux.org.tw>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/gf_action.c:199
+msgid "Close"
+msgstr "關閉"
+
+#: ../src/gf_action.c:200
+msgid "Open Conversation"
+msgstr "開啟交談"
+
+#  XXX 蘋果譯「項目特色清單(Contextual Menu) 」，但這明顯是錯的，因為「Menu」
+#  XXX 是「選單」而非「清單」；有一個人譯「智慧型動態選單(Contextual Menu)」
+#  XXX 但要強調的是，那只是「一」個人
+#  XXX 微軟那邊也見不了好，「快顯功能表(Context-Menu)」、「指令選單(context
+#  XXX menu) 」、「右鍵選單」、「右鍵功能表(Context Menu)」
+#  XXX OOo 用「快顯功能表(context menu)」，但OOo的中文翻譯真是不敢恭維……
+#  XXX 參見http://ccca.nctu.edu.tw/~hlb/tavi/TransDictionary/Computer
+#: ../src/gf_action.c:202
+msgid "Context Menu"
+msgstr "右鍵選單"
+
+#: ../src/gf_action.c:204 ../src/gf_action.c:749
+msgid "Get Info"
+msgstr "取得資訊"
+
+#: ../src/gf_action.c:205
+msgid "Display Log"
+msgstr "顯示日誌"
+
+#. we can im anyone.. so..
+#: ../src/gf_action.c:755
+msgid "IM"
+msgstr "即時訊息"
+
+#: ../src/gf_action.c:766
+msgid "Add Buddy Pounce"
+msgstr "新增好友狀態捕捉"
+
+#: ../src/gf_action.c:775
+msgid "View IM log"
+msgstr "讀取即時訊息日誌"
+
+#  XXX
+#. add the alias and remove button
+#: ../src/gf_action.c:795
+msgid "Alias Buddy"
+msgstr "為好友加別名"
+
+#: ../src/gf_action.c:798
+msgid "Remove Buddy"
+msgstr "移除好友"
+
+#: ../src/gf_action.c:802
+msgid "Add Buddy"
+msgstr "新增好友"
+
+#. add the join item, possibly redundant..
+#: ../src/gf_action.c:821 ../src/gf_event.c:703
+msgid "Join"
+msgstr "加入"
+
+#: ../src/gf_action.c:825
+msgid "Auto-join"
+msgstr "自動加入"
+
+#: ../src/gf_action.c:842
+msgid "View Chat Log"
+msgstr "讀取聊天日誌"
+
+#  XXX
+#. add the alias and remove buttons
+#: ../src/gf_action.c:856
+msgid "Alias Chat"
+msgstr "為聊天室加別名"
+
+#: ../src/gf_action.c:860
+msgid "Remove Chat"
+msgstr "移除聊天室"
+
+#: ../src/gf_action.c:867
+msgid "Add Chat"
+msgstr "新增聊天室"
+
+#  FIXME 目前的 Gaim 譯法無法分辨「Buddy」和「Contact」!
+#: ../src/gf_blist.c:148
+#, c-format
+msgid "Please select a theme for the buddy %s"
+msgstr "請為（個別）好友「%s」選擇一個主題"
+
+#  FIXME 目前的 Gaim 譯法無法分辨「Buddy」和「Contact」!
+#  XXX WARNING: This is translated differently than in gaim
+#: ../src/gf_blist.c:161
+#, c-format
+msgid "Please select a theme for the contact %s"
+msgstr "請為好友（群組）「%s」選擇一個主題"
+
+#: ../src/gf_blist.c:165
+#, c-format
+msgid "Please select a theme for the group %s"
+msgstr "請為「%s」群組選擇一個主題"
+
+#: ../src/gf_blist.c:175
+msgid "_Theme"
+msgstr "主題(_T)"
+
+#  XXX
+#: ../src/gf_blist.c:178
+msgid "Clear setting"
+msgstr "清除設定"
+
+#: ../src/gf_blist.c:180
+msgid "Random"
+msgstr "隨機"
+
+#: ../src/gf_blist.c:184
+msgid "None"
+msgstr "無"
+
+#: ../src/gf_blist.c:208
+msgid "Select Guifications theme"
+msgstr "請選擇一個 Guifications 主題"
+
+#  NOTE I really wanted to put 「好！」 here and smuggle in a Macintoshism...
+#: ../src/gf_blist.c:210
+msgid "OK"
+msgstr "確定"
+
+#: ../src/gf_blist.c:211
+msgid "Cancel"
+msgstr "取消"
+
+#. add our menu item
+#: ../src/gf_blist.c:250
+msgid "Guifications Theme"
+msgstr "Guifications 主題"
+
+#. create all of our default events
+#: ../src/gf_event.c:665
+msgid "Sign on"
+msgstr "登入"
+
+#: ../src/gf_event.c:666
+msgid "Displayed when a buddy comes online."
+msgstr "好友登入時顯示通知。"
+
+#: ../src/gf_event.c:668
+msgid "Sign off"
+msgstr "登出"
+
+#: ../src/gf_event.c:669
+msgid "Displayed when a buddy goes offline."
+msgstr "好友登出時顯示通知。"
+
+#: ../src/gf_event.c:672
+msgid "Away"
+msgstr "離開"
+
+#: ../src/gf_event.c:673
+msgid "Displayed when a buddy goes away."
+msgstr "好友離開時顯示通知。"
+
+#: ../src/gf_event.c:675
+msgid "Back"
+msgstr "返回"
+
+#: ../src/gf_event.c:676
+msgid "Displayed when a buddy returns from away."
+msgstr "好友由離開返回時顯示通知。"
+
+#: ../src/gf_event.c:679
+msgid "Idle"
+msgstr "閒置"
+
+#: ../src/gf_event.c:680
+msgid "Displayed when a buddy goes idle."
+msgstr "好友閒置時顯示通知。"
+
+#: ../src/gf_event.c:682
+msgid "Unidle"
+msgstr "不再閒置"
+
+#: ../src/gf_event.c:683
+msgid "Displayed when a buddy returns from idle."
+msgstr "好友由閒置返回時顯示通知。"
+
+#: ../src/gf_event.c:686
+msgid "IM message"
+msgstr "即時訊息"
+
+#: ../src/gf_event.c:687
+msgid "Displayed when someone sends you a message."
+msgstr "有人對您送出訊息時顯示通知。"
+
+#  XXX 暫譯
+#: ../src/gf_event.c:689
+msgid "Typing"
+msgstr "輸入訊息"
+
+#  XXX 暫譯
+#: ../src/gf_event.c:690
+msgid "Displayed when someone is typing a message to you."
+msgstr "有人開始輸入給您的訊息時顯示通知。"
+
+#  XXX 暫譯
+#: ../src/gf_event.c:692
+msgid "Stopped typing"
+msgstr "停止輸入"
+
+#  XXX 暫譯
+#: ../src/gf_event.c:693
+msgid "Displayed when someone has stopped typing a message to you."
+msgstr "有人停止輸入給您的訊息時顯示通知。"
+
+#: ../src/gf_event.c:696
+msgid "Chat message"
+msgstr "聊天訊息"
+
+#: ../src/gf_event.c:697
+msgid "Displayed when someone talks in a chat."
+msgstr "有人在聊天室內說話時顯示通知。"
+
+#: ../src/gf_event.c:699
+msgid "Name spoken"
+msgstr "有人提到您的名字"
+
+#: ../src/gf_event.c:700
+msgid "Displayed when someone says your nick in a chat"
+msgstr "有人在聊天室內提到您的暱稱時顯示通知。"
+
+#: ../src/gf_event.c:704
+msgid "Displayed when someone joins a chat."
+msgstr "有人加入聊天室時顯示通知。"
+
+#  XXX 不能單譯成「離開」，因為「Away」也是「離開」
+#: ../src/gf_event.c:706
+msgid "Leave"
+msgstr "離開聊天室"
+
+#: ../src/gf_event.c:707
+msgid "Displayed when someone leaves a chat."
+msgstr "有人離開聊天室時顯示通知。"
+
+#: ../src/gf_event.c:710
+msgid "Invited"
+msgstr "被邀"
+
+#: ../src/gf_event.c:711
+msgid "Displayed when someone invites you to a chat."
+msgstr "有人邀請您加入聊天室時顯示通知。"
+
+#: ../src/gf_event.c:714
+msgid "Topic changed"
+msgstr "聊天主題改變"
+
+#: ../src/gf_event.c:715
+msgid "Displayed when a topic is changed in a chat."
+msgstr "有人修改聊天主題時顯示通知。"
+
+#: ../src/gf_event.c:718
+msgid "Email"
+msgstr "電子郵件"
+
+#: ../src/gf_event.c:719
+msgid "Displayed when you receive new email."
+msgstr "您收到新郵件時顯示通知。"
+
+#  NOTE (23:29:48) grim: theme editor only..
+#  NOTE (23:30:10) grim: when a theme has one, whenever a new notification is created, the contents of the master notification are copied to the new notification
+#: ../src/gf_event.c:723
+msgid "Master"
+msgstr "樣本"
+
+# FIXME 譯文不通順
+#: ../src/gf_event.c:723
+msgid "Master notification for the theme editor."
+msgstr "主題編輯器用的通知樣本。"
+
+#: ../src/gf_event.c:726
+msgid "File receive cancelled"
+msgstr "取消檔案傳輸"
+
+#: ../src/gf_event.c:727
+msgid "Displayed when the buddy cancels the file transfer."
+msgstr "好友取消檔案傳輸時顯示通知。"
+
+#: ../src/gf_event.c:729
+msgid "File receive completed"
+msgstr "成功接收檔案"
+
+#: ../src/gf_event.c:730
+msgid "Displayed when file transfer completes for a file you are receiving."
+msgstr "成功接收一個檔案後顯示通知"
+
+#: ../src/gf_event.c:732
+msgid "File send completed"
+msgstr "成功傳送檔案"
+
+#: ../src/gf_event.c:733
+msgid "Displayed when file transfer completes for a file you are sending."
+msgstr "成功傳送一個檔案後顯示通知"
+
+#: ../src/gf_item.c:50
+msgid "Icon"
+msgstr "圖示"
+
+#: ../src/gf_item.c:50
+msgid "Image"
+msgstr "圖像"
+
+#: ../src/gf_item.c:50
+msgid "Text"
+msgstr "文字"
+
+#: ../src/gf_item.c:56
+msgid "North West"
+msgstr "西北"
+
+#: ../src/gf_item.c:56
+msgid "North"
+msgstr "北"
+
+#: ../src/gf_item.c:57
+msgid "North East"
+msgstr "東北"
+
+#: ../src/gf_item.c:57
+msgid "West"
+msgstr "西"
+
+#: ../src/gf_item.c:57
+msgid "Center"
+msgstr "正中"
+
+#: ../src/gf_item.c:58
+msgid "East"
+msgstr "東"
+
+#: ../src/gf_item.c:58
+msgid "South West"
+msgstr "西南"
+
+#: ../src/gf_item.c:58
+msgid "South"
+msgstr "南"
+
+#: ../src/gf_item.c:59
+msgid "South East"
+msgstr "東南"
+
+#: ../src/gf_menu.c:98
+msgid "Top Left"
+msgstr "左上角"
+
+#: ../src/gf_menu.c:103
+msgid "Top Right"
+msgstr "右上角"
+
+#: ../src/gf_menu.c:108
+msgid "Bottom Left"
+msgstr "左下角"
+
+#: ../src/gf_menu.c:113
+msgid "Bottom Right"
+msgstr "右下角"
+
+#: ../src/gf_menu.c:257
+msgid "Buddy"
+msgstr "好友"
+
+#: ../src/gf_menu.c:260
+msgid "Protocol"
+msgstr "協定"
+
+#: ../src/gf_menu.c:263
+msgid "Status"
+msgstr "狀態"
+
+#: ../src/gf_menu.c:286
+msgid "Huge (144x144)"
+msgstr "超特大 (144x144)"
+
+#: ../src/gf_menu.c:291
+msgid "Large (96x96)"
+msgstr "特大 (96x96)"
+
+#: ../src/gf_menu.c:296
+msgid "Big (64x64)"
+msgstr "大 (64x64)"
+
+#: ../src/gf_menu.c:301
+msgid "Normal (48x48)"
+msgstr "中 (48x48)"
+
+#: ../src/gf_menu.c:306
+msgid "Little (32x32)"
+msgstr "小 (32x32)"
+
+#: ../src/gf_menu.c:311
+msgid "Small (24x24)"
+msgstr "特小 (24x24)"
+
+#: ../src/gf_menu.c:316
+msgid "Tiny (16x16)"
+msgstr "超特小 (16x16)"
+
+# TODO 要覆查
+#: ../src/gf_menu.c:339
+msgid "Truncate"
+msgstr "截斷"
+
+#: ../src/gf_menu.c:344
+msgid "Ellipsis at the end"
+msgstr "在後面使用省略號"
+
+#: ../src/gf_menu.c:349
+msgid "Ellipsis in the middle"
+msgstr "在中間使用省略號"
+
+#: ../src/gf_menu.c:354
+msgid "Ellipsis at the beginning"
+msgstr "在前面使用省略號"
+
+#: ../src/gf_preferences.c:215
+msgid "General"
+msgstr "一般"
+
+#. Display Options
+#: ../src/gf_preferences.c:221 ../src/gf_preferences.c:1275
+msgid "Display Options"
+msgstr "顯示選項"
+
+#: ../src/gf_preferences.c:224 ../src/gf_theme_editor.c:2487
+msgid "_Position:"
+msgstr "位置(_P)："
+
+#: ../src/gf_preferences.c:228
+msgid "_Stack:"
+msgstr "堆疊方式(_S)："
+
+#: ../src/gf_preferences.c:230
+msgid "Vertically"
+msgstr "縱向排列"
+
+#: ../src/gf_preferences.c:231
+msgid "Horizontally"
+msgstr "橫向排列"
+
+#: ../src/gf_preferences.c:236
+msgid "Show _while away:"
+msgstr "離開時仍顯示Guifications通知(_W)"
+
+#: ../src/gf_preferences.c:239 ../src/gf_preferences.c:247
+msgid "Yes"
+msgstr "是"
+
+#: ../src/gf_preferences.c:240 ../src/gf_preferences.c:248
+msgid "No"
+msgstr "否"
+
+#: ../src/gf_preferences.c:245
+msgid "_Animate:"
+msgstr "使用動畫(_A)："
+
+#: ../src/gf_preferences.c:253
+msgid "_Display Time:"
+msgstr "顯示時間(_D)："
+
+#: ../src/gf_preferences.c:256
+msgid "seconds"
+msgstr "秒"
+
+#. Mouse Options
+#: ../src/gf_preferences.c:260
+msgid "Mouse"
+msgstr "滑鼠"
+
+#: ../src/gf_preferences.c:263
+msgid "_Left:"
+msgstr "左(_L)："
+
+#: ../src/gf_preferences.c:266
+msgid "_Middle:"
+msgstr "中(_M)："
+
+#: ../src/gf_preferences.c:269
+msgid "_Right:"
+msgstr "右(_R)："
+
+#: ../src/gf_preferences.c:429
+msgid "Show"
+msgstr "顯示"
+
+#: ../src/gf_preferences.c:435
+msgid "Event"
+msgstr "事件"
+
+#: ../src/gf_preferences.c:441 ../src/gf_preferences.c:1200
+msgid "Description"
+msgstr "說明"
+
+#: ../src/gf_preferences.c:453
+msgid "Notifications"
+msgstr "通知"
+
+#: ../src/gf_preferences.c:919
+msgid "Delete theme?"
+msgstr "移除主題？"
+
+#: ../src/gf_preferences.c:920
+msgid "Are you sure you want to delete this theme?"
+msgstr "是否真的要移除這個主題？"
+
+# TODO 要覆查
+#: ../src/gf_preferences.c:999
+msgid "New"
+msgstr "新增"
+
+# TODO 要覆查
+#: ../src/gf_preferences.c:1011
+msgid "Edit"
+msgstr "修改"
+
+#: ../src/gf_preferences.c:1015 ../src/gf_theme_editor.c:2676
+msgid "Delete"
+msgstr "移除"
+
+# XXX 暫譯
+#: ../src/gf_preferences.c:1026
+msgid "Refresh"
+msgstr "重新整理"
+
+# XXX 暫譯
+#: ../src/gf_preferences.c:1071
+msgid "Loaded"
+msgstr "載入"
+
+#: ../src/gf_preferences.c:1078 ../src/gf_preferences.c:1176
+msgid "Name"
+msgstr "名稱"
+
+#: ../src/gf_preferences.c:1085
+msgid "Summary"
+msgstr "簡述"
+
+# TODO 要覆查
+#: ../src/gf_preferences.c:1106
+msgid "_Edit"
+msgstr "修改(_E)"
+
+#: ../src/gf_preferences.c:1136
+msgid "_Get More"
+msgstr "下載(_G)"
+
+#: ../src/gf_preferences.c:1152
+msgid "Themes"
+msgstr "主題"
+
+#: ../src/gf_preferences.c:1188
+msgid "Version"
+msgstr "版本"
+
+#: ../src/gf_preferences.c:1212
+msgid "Author"
+msgstr "作者"
+
+#: ../src/gf_preferences.c:1224
+msgid "Website"
+msgstr "網站"
+
+#  XXX
+#: ../src/gf_preferences.c:1236
+msgid "Supports"
+msgstr "支援"
+
+#: ../src/gf_preferences.c:1248
+msgid "Filename"
+msgstr "檔案名稱"
+
+#: ../src/gf_preferences.c:1273
+msgid "Advanced"
+msgstr "進階"
+
+#: ../src/gf_preferences.c:1277
+msgid "Max _Visible Guifications:"
+msgstr "可見的Guifications通知個數上限(_V)："
+
+#: ../src/gf_preferences.c:1284
+msgid "Placement"
+msgstr "配置方式"
+
+#  NOTE (23:21:32) grim: wing: screen is if you're using xinerama/dual view, monitor if you have multihead without xinerama/dualview..
+#  NOTE 暫定意譯，參見下條，譯文有待改進
+#: ../src/gf_preferences.c:1288
+msgid "Show notifications on _screen:"
+msgstr "使用的 Xinerama/Dualview 熒幕號碼(_S)："
+
+#  NOTE 暫定意譯，見上條，譯文有待改進
+#: ../src/gf_preferences.c:1295
+msgid "Show notifications on _monitor:"
+msgstr "使用的 X Display 顯示器號碼(_M)："
+
+#: ../src/gf_theme_editor.c:344
+msgid "Theme"
+msgstr "主題"
+
+# TODO 要覆查
+#: ../src/gf_theme_editor.c:349
+msgid "Info"
+msgstr "資訊"
+
+#: ../src/gf_theme_editor.c:354
+msgid "Options"
+msgstr "選項"
+
+#: ../src/gf_theme_editor.c:731
+msgid "Would you like to save before closing?"
+msgstr "關閉前是否先行存檔？"
+
+#: ../src/gf_theme_editor.c:733
+msgid "Would you like to save before creating a new theme?"
+msgstr "建立新主題前是否先行存檔？"
+
+#: ../src/gf_theme_editor.c:735
+#, c-format
+msgid "Would you like to save before opening %s?"
+msgstr "開啟 %s 前是否先行存檔？"
+
+#  NOTE Window Title
+#: ../src/gf_theme_editor.c:746
+msgid "Confirm"
+msgstr "確認"
+
+#: ../src/gf_theme_editor.c:860
+#, c-format
+msgid "Are you sure you want to delete this %s notification?"
+msgstr "是否真的要移除這個 %s 通知？"
+
+#: ../src/gf_theme_editor.c:862
+msgid "Confirm delete notification"
+msgstr "確認移除通知"
+
+#: ../src/gf_theme_editor.c:868
+#, c-format
+msgid "Are you sure you want to delete this %s item?"
+msgstr "是否真的要移除這個 %s 項目？"
+
+#: ../src/gf_theme_editor.c:870
+msgid "Confirm delete item"
+msgstr "確認移除項目"
+
+#: ../src/gf_theme_editor.c:1025
+msgid "New Notification"
+msgstr "新通知"
+
+#: ../src/gf_theme_editor.c:1038
+msgid "New notification type:"
+msgstr "通知類別："
+
+#: ../src/gf_theme_editor.c:1180
+msgid "New Item"
+msgstr "新項目"
+
+#: ../src/gf_theme_editor.c:1194
+msgid "New item type:"
+msgstr "新項目類別："
+
+#: ../src/gf_theme_editor.c:1967
+msgid "Open"
+msgstr "開啟"
+
+#: ../src/gf_theme_editor.c:1972
+msgid "Select font"
+msgstr "選擇字型"
+
+#: ../src/gf_theme_editor.c:1979 ../src/guifications.c:143
+msgid "Guifications"
+msgstr "Guifications"
+
+#: ../src/gf_theme_editor.c:2001
+msgid "Select color"
+msgstr "選擇顏色"
+
+#: ../src/gf_theme_editor.c:2376
+msgid "Name:"
+msgstr "名稱："
+
+#: ../src/gf_theme_editor.c:2380
+msgid "Version:"
+msgstr "版本："
+
+#: ../src/gf_theme_editor.c:2384
+msgid "Summary:"
+msgstr "簡述："
+
+#: ../src/gf_theme_editor.c:2388
+msgid "Description:"
+msgstr "說明："
+
+#: ../src/gf_theme_editor.c:2392
+msgid "Author:"
+msgstr "作者："
+
+#: ../src/gf_theme_editor.c:2396
+msgid "Website:"
+msgstr "網站："
+
+#: ../src/gf_theme_editor.c:2414
+msgid "Date Format:"
+msgstr "日期格式："
+
+#: ../src/gf_theme_editor.c:2418
+msgid "Time Format:"
+msgstr "時間格式："
+
+#: ../src/gf_theme_editor.c:2422
+msgid "Warning:"
+msgstr "警告："
+
+#: ../src/gf_theme_editor.c:2426
+msgid "Ellipsis:"
+msgstr "省略號："
+
+#: ../src/gf_theme_editor.c:2444
+msgid "Alias:"
+msgstr "別名："
+
+#: ../src/gf_theme_editor.c:2450
+msgid "Use Gtk theme background"
+msgstr "使用 GTK 主題之背景"
+
+#: ../src/gf_theme_editor.c:2455
+msgid "Background:"
+msgstr "背景："
+
+#: ../src/gf_theme_editor.c:2468 ../src/gf_theme_editor.c:2584
+msgid "Width:"
+msgstr "闊度："
+
+#: ../src/gf_theme_editor.c:2474
+msgid "Height:"
+msgstr "高度："
+
+# XXX 暫譯
+#: ../src/gf_theme_editor.c:2493
+msgid "_Horizontal Offset:"
+msgstr "距離螢幕最左／右邊緣(_H)："
+
+# XXX 這個很難譯
+# NOTE (00:48:43) wing: but what does it mean in gf2?
+# NOTE (00:48:48) grim: flags if the value in the spin button should be treated as a percentage..
+#: ../src/gf_theme_editor.c:2498 ../src/gf_theme_editor.c:2508
+msgid "Percentage"
+msgstr "百分比"
+
+# XXX 暫譯
+#: ../src/gf_theme_editor.c:2503
+msgid "_Vertical Offset:"
+msgstr "距離螢幕最上／下邊緣(_V)："
+
+#: ../src/gf_theme_editor.c:2527
+msgid "_Type:"
+msgstr "類型(_T)："
+
+#: ../src/gf_theme_editor.c:2532
+msgid "_Size:"
+msgstr "大小(_S)："
+
+#: ../src/gf_theme_editor.c:2552
+msgid "Image:"
+msgstr "圖像："
+
+#: ../src/gf_theme_editor.c:2579
+msgid "Format:"
+msgstr "格式："
+
+# XXX 暫譯
+# NOTE (00:54:38) wing: what is "clipping"?
+# NOTE (00:54:56) grim: like truncating..
+# NOTE (00:55:06) grim: what to do with the text if its too wide to fit..
+#: ../src/gf_theme_editor.c:2589
+msgid "Clipping:"
+msgstr "剪裁："
+
+#: ../src/gf_theme_editor.c:2654
+msgid "New theme"
+msgstr "新增主題"
+
+#: ../src/gf_theme_editor.c:2656
+msgid "Save theme"
+msgstr "儲存主題"
+
+#: ../src/gf_theme_editor.c:2662
+msgid "New notification"
+msgstr "新增通知"
+
+#: ../src/gf_theme_editor.c:2667
+msgid "New item"
+msgstr "新增項目"
+
+#  XXX
+#: ../src/gf_theme_editor.c:2671
+msgid "Duplicate"
+msgstr "複製"
+
+#  XXX
+#: ../src/gf_theme_editor.c:2682
+msgid "Move up"
+msgstr "上移"
+
+#  XXX
+#: ../src/gf_theme_editor.c:2685
+msgid "Move down"
+msgstr "下移"
+
+#: ../src/gf_theme_editor.c:2690
+msgid "Help"
+msgstr "說明"
+
+# FIXME 譯文不通順
+#: ../src/gf_theme_editor.c:2743
+msgid "Guifications Theme Editor"
+msgstr "Guifications 主題編輯器"
+
+#: ../src/guifications.c:144
+msgid "The end all, be all, toaster popup plugin"
+msgstr "功能最強的彈出通知模組"
+
+#: ../src/guifications.c:145
+msgid ""
+"Guifications:\n"
+"The end all, be all, toaster popup plugin"
+msgstr ""
+"Guifications:\n"
+"功能最強的彈出通知模組"
+
+#~ msgid "Release Notification"
+#~ msgstr "新版本通知"
+
+#~ msgid "_Check for new releases"
+#~ msgstr "不時檢查有沒有新版本(_C)"
+
+#~ msgid "Guifications %s is available, you are running version %s."
+#~ msgstr "Guifications 出了第 %s 版，您目前使用的是第 %s 版。"
+
+#~ msgid "ChangeLog:"
+#~ msgstr "更新履歷："
+
+#  NOTE 網址在訊息之下，故譯成「下列」
+#~ msgid "You can download version %s from"
+#~ msgstr "下載第 %s 版，可到下列網址："
+
+#~ msgid "New version available"
+#~ msgstr "有新版本"
+
+#~ msgid "There is a new version of Guifications available!"
+#~ msgstr "Guifications 有新版本！"
+
+#~ msgid "Anonymous"
+#~ msgstr "暱名者"
+
+#~ msgid "Warned"
+#~ msgstr "被警告"
+
+#~ msgid "Displayed when you are warned."
+#~ msgstr "您被警告時顯示通知。"
+
+#~ msgid "buddy"
+#~ msgstr "好友"
+
+#  XXX WARNING: This is translated differently than in gaim
+#~ msgid "contact"
+#~ msgstr "好友群組"
+
+#~ msgid "group"
+#~ msgstr "群組"
+
+#~ msgid "200%"
+#~ msgstr "200%"
+
+#~ msgid "175%"
+#~ msgstr "175%"
+
+#~ msgid "150%"
+#~ msgstr "150%"
+
+#~ msgid "125%"
+#~ msgstr "125%"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "75%"
+#~ msgstr "75%"
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "25%"
+#~ msgstr "25%"
+
+# XXX 暫譯
+#~ msgid "Behavior"
+#~ msgstr "基本設定"
+
+#, fuzzy
+#~ msgid "_Show Guifications while screensaver is active"
+#~ msgstr "離開時仍顯示Guifications通知"
+
+# XXX 暫譯
+#~ msgid "Appearance"
+#~ msgstr "外觀"
+
+#~ msgid "Position Options"
+#~ msgstr "位置選項"
+
+#~ msgid "_Zoom:"
+#~ msgstr "放大倍數(_Z)："
+
+#~ msgid "Show _alias if set"
+#~ msgstr "顯示別名(_A)"
+
+# NOTE 這很不通順，但沒分「Buddy」和「Contact」的後果就是這樣 :-(
+#~ msgid "Show _contacts as one guification"
+#~ msgstr "若果好友其實概括了好幾個好友帳號，顯示通知時就只視為一個好友(_C)"
+
+#~ msgid "Buttons:"
+#~ msgstr "按鍵："
+
+# XXX 微秒
+#~ msgid "Sign on delay:"
+#~ msgstr "登入後延遲發出通知時間："
+
+#~ msgid "milliseconds"
+#~ msgstr "微秒"
+
+#~ msgid "Conversations"
+#~ msgstr "交談"
+
+#~ msgid "Hide notifications for focused conversations"
+#~ msgstr "不為焦點的交談顯示通知"
+
+#~ msgid "Hide chat join / leave messages"
+#~ msgstr "不顯示加入/離開訊息"
+
+#~ msgid "pixels"
+#~ msgstr "個像素"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "其他"
