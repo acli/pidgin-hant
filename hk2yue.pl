@@ -93,6 +93,7 @@ my $的 = '(?:(?<!(?:目|之))的(?!確))';
 
 my @separable_verbs = qw(
 	分組
+	存檔
 	改正
 	登入
 	註冊
@@ -431,6 +432,7 @@ my $determiner = $demonstrative_pronoun;
 my $noun = tagre('N', sprintf('(?:\s*(?:%s+)\s*)', mkre($wildcard, @nouns, @pronouns)));
 my $verb = tagre('V', mkre(quotable(@separable_verbs, @inseparable_verbs)));
 my $separable_verb = tagre('Vsep', mkre quotable @separable_verbs);
+my $inseparable_verb = tagre('Vinsep', mkre quotable @inseparable_verbs);
 my $bare_number = mkre('一', '兩', '\d+\s*');
 my $number = cat($bare_number, $counter);
 my $adjective = tagre('ADJ', mkre(cat($noun, '嘅'), $wildcard, $determiner, $number, @adjectives));
@@ -587,6 +589,9 @@ sub translate() {
 
     do_trans(sprintf('這(%s)', $noun_phrase),					'呢個\1');	# XXX this is technically wrong because counters
 
+    $msg_str =~ s{是否先行(?=$separable_verb)(.)(.)}				{\1唔\1\2先}sg;
+    do_trans(sprintf('是否先行(%s)', $inseparable_verb),			'要唔要\1先');
+    do_trans('是否真的',							'係唔係真係');
     do_trans('是否(?:為)?',							'係唔係');
     do_trans(sprintf("(%s)$是", $noun_phrase),					'\1係');
     do_trans(sprintf("$是(%s|%s)", $adjective, $noun),				'係\1');
